@@ -1,0 +1,24 @@
+[project]
+name = "pvsk2012-1-gaia"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "vv910", email = "huangwzh33@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "gaia-lang>=0.4.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.10,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "pvsk2012_1"
+
+
+[tool.gaia]
+type = "knowledge-package"
+uuid = "39318dbe-e378-479d-8f69-a53898812520"

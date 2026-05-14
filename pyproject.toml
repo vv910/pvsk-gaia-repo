@@ -1,0 +1,16 @@
+[project]
+name = "pvsk-gaia-workspace"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "gaia-lang",
+]
+
+[tool.uv.workspace]
+members = [
+    "packages/*",
+    "pvsk-gaia",
+]
+exclude = [
+    "sources",
+]

@@ -1,0 +1,17 @@
+{
+  "pvsk2009": {
+    "type": "article-journal",
+    "title": "Organometal Halide Perovskites as Visible-Light Sensitizers for Photovoltaic Cells",
+    "author": [
+      {"family": "Kojima", "given": "Akihiro"},
+      {"family": "Teshima", "given": "Kenjiro"},
+      {"family": "Shirai", "given": "Yasuo"},
+      {"family": "Miyasaka", "given": "Tsutomu"}
+    ],
+    "issued": {"date-parts": [[2009]]},
+    "container-title": "Journal of the American Chemical Society",
+    "volume": "131",
+    "page": "6050-6051",
+    "DOI": "10.1021/ja809598r"
+  }
+}

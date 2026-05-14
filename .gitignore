@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# Gaia artifacts (generated)
+packages/*/.gaia/
+packages/*/.github-output/
+packages/*/docs/
+packages/*/wiki/
+pvsk-gaia/.gaia/
+pvsk-gaia/.github-output/
+pvsk-gaia/docs/
+pvsk-gaia/wiki/
+
+# Sources (original papers - do not commit)
+sources/
+
+# OS
+.DS_Store
+*.swp
+*.swo
