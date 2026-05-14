@@ -71,7 +71,7 @@ strat_panchromatic_absorption = support(
         "The panchromatic absorption of CH3NH3PbI3 combined with well-aligned band positions "
         " jointly explain the high JSC of 17.6 mA/cm^2 achieved in submicron-thick films."
     ),
-    prior=0.5,
+    prior=0.75,
 )
 
 # Charge separation reasoning
@@ -83,7 +83,7 @@ strat_charge_separation = support(
         "confirm hole injection from excited perovskite into spiro-MeOTAD, followed by electron "
         "transfer to TiO2."
     ),
-    prior=0.5,
+    prior=0.7,
 )
 
 # Stability reasoning
@@ -94,7 +94,7 @@ strat_stability = support(
         "The solid-state configuration eliminates the electrolyte dissolution problem that plagued "
         "liquid junction cells, leading to dramatically improved stability over 500+ hours."
     ),
-    prior=0.5,
+    prior=0.75,
 )
 
 # PCE conclusion - abduction pattern
@@ -111,7 +111,7 @@ strat_bandgap_evidence = support(
         "The bandgap of 1.5 eV for CH3NH3PbI3 (direct transition) and 3.1 eV for TiO2 (indirect transition) "
         " establish the energy level positions that enable favorable band alignment for charge separation."
     ),
-    prior=0.5,
+    prior=0.75,
 )
 
 strat_pce_conclusion = support(
@@ -122,7 +122,7 @@ strat_pce_conclusion = support(
         "independently and together yield PCE = 9.7%, representing the highest efficiency for solid-state "
         "perovskite-sensitized solar cells at that time."
     ),
-    prior=0.5,
+    prior=0.85,
 )
 
 # Long term stability reasoning - induction pattern for multiple observations
@@ -146,5 +146,5 @@ strat_stability_obs = support(
     [stability_observation_1, stability_observation_2, stability_observation_3],
     solid_state_dramatically_improved_stability,
     reason="Three independent stability indicators (JSC, VOC, and FF) all demonstrate stability of the solid-state device over 500+ hours",
-    prior=0.5,
+    prior=0.85,
 )
