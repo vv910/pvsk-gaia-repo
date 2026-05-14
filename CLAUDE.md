@@ -524,7 +524,23 @@ Expected outputs:
     TARGET_PACKAGE/.github-output/
     TARGET_PACKAGE/docs/detailed-reasoning.md
 
-After github rendering, use /gaia:publish to create or update README.md.
+## Publishing Package README
+
+After successful inference, run github rendering followed by the publish skill:
+
+```bash
+/home/hwz/miniconda3/bin/gaia render TARGET_PACKAGE --target github
+/home/hwz/miniconda3/bin/gaia render TARGET_PACKAGE --target docs
+```
+
+Then invoke `/gaia:publish` to generate the narrative README. After publishing, commit the updated files:
+
+```bash
+cd TARGET_PACKAGE
+git add README.md ANALYSIS.md docs/detailed-reasoning.md
+git commit -m "docs: update README via /gaia:publish"
+git push
+```
 
 The README should be a scientific evidence assessment, not a generic paper summary.
 

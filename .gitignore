@@ -5,6 +5,9 @@ __pycache__/
 *.pyo
 .python-version
 
+# Package artifacts (sources and generated content)
+packages/*/artifacts/
+
 # Gaia artifacts (generated)
 packages/*/.gaia/
 packages/*/.github-output/
