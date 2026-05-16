@@ -1,0 +1,22 @@
+{
+  "Zhao2022": {
+    "type": "article-journal",
+    "title": "Accelerated aging of all-inorganic, interface-stabilized perovskite solar cells",
+    "author": [
+      {"family": "Zhao", "given": "Xiaoming"},
+      {"family": "Liu", "given": "Tianran"},
+      {"family": "Burlingame", "given": "Quinn C."},
+      {"family": "Liu", "given": "Tianjun"},
+      {"family": "Holley", "given": "Rudolph"},
+      {"family": "Cheng", "given": "Guangming"},
+      {"family": "Yao", "given": "Nan"},
+      {"family": "Gao", "given": "Feng"},
+      {"family": "Loo", "given": "Yueh-Lin"}
+    ],
+    "issued": {"date-parts": [[2022]]},
+    "container-title": "Science",
+    "volume": "377",
+    "number": "6603",
+    "DOI": "10.1126/science.abn5679"
+  }
+}
