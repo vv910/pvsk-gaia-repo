@@ -1,0 +1,37 @@
+{
+  "Jeong2021": {
+    "type": "article-journal",
+    "title": "Pseudo-halide anion engineering for α-FAPbI3 perovskite solar cells",
+    "author": [
+      {"family": "Jeong", "given": "Jaeki"},
+      {"family": "Kim", "given": "Minjin"},
+      {"family": "Seo", "given": "Jongdeuk"},
+      {"family": "Lu", "given": "Haizhou"},
+      {"family": "Ahlawat", "given": "Paramvir"},
+      {"family": "Mishra", "given": "Aditya"},
+      {"family": "Yang", "given": "Yingguo"},
+      {"family": "Hope", "given": "Michael A."},
+      {"family": "Eickemeyer", "given": "Felix T."},
+      {"family": "Kim", "given": "Maengsuk"},
+      {"family": "Yoon", "given": "Yung Jin"},
+      {"family": "Choi", "given": "In Woo"},
+      {"family": "Darwich", "given": "Barbara Primera"},
+      {"family": "Choi", "given": "Seung Ju"},
+      {"family": "Jo", "given": "Yimhyun"},
+      {"family": "Lee", "given": "Jun Hee"},
+      {"family": "Walker", "given": "Bright"},
+      {"family": "Zakeeruddin", "given": "Shaik M."},
+      {"family": "Emsley", "given": "Lyndon"},
+      {"family": "Rothlisberger", "given": "Ursula"},
+      {"family": "Hagfeldt", "given": "Anders"},
+      {"family": "Kim", "given": "Dong Suk"},
+      {"family": "Grätzel", "given": "Michael"},
+      {"family": "Kim", "given": "Jin Young"}
+    ],
+    "issued": {"date-parts": [[2021, 4, 5]]},
+    "container-title": "Nature",
+    "volume": "592",
+    "page": "627-632",
+    "DOI": "10.1038/s41586-021-03406-5"
+  }
+}
