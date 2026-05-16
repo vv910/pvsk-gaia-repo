@@ -1,0 +1,32 @@
+{
+  "Weerasinghe2024": {
+    "type": "article-journal",
+    "title": "The first demonstration of entirely roll-to-roll fabricated perovskite solar cell modules under ambient room conditions",
+    "author": [
+      {"family": "Weerasinghe", "given": "Hasitha C."},
+      {"family": "Macadam", "given": "Nasiruddin"},
+      {"family": "Kim", "given": "Jueng-Eun"},
+      {"family": "Sutherland", "given": "Luke J."},
+      {"family": "Angmo", "given": "Dechan"},
+      {"family": "Ng", "given": "Leonard W. T."},
+      {"family": "Scully", "given": "Andrew D."},
+      {"family": "Glenn", "given": "Fiona"},
+      {"family": "Chantler", "given": "Regine"},
+      {"family": "Chang", "given": "Nathan L."},
+      {"family": "Dehghanimadvar", "given": "Mohammad"},
+      {"family": "Shi", "given": "Lei"},
+      {"family": "Ho-Baillie", "given": "Anita W. Y."},
+      {"family": "Egan", "given": "Renate"},
+      {"family": "Chesman", "given": "Anthony S. R."},
+      {"family": "Gao", "given": "Mei"},
+      {"family": "Jasieniak", "given": "Jacek J."},
+      {"family": "Hasan", "given": "Tawfique"},
+      {"family": "Vak", "given": "Doojin"}
+    ],
+    "issued": {"date-parts": [[2024, 3, 12]]},
+    "container-title": "Nature Communications",
+    "volume": "15",
+    "page": "46016",
+    "DOI": "10.1038/s41467-024-46016-1"
+  }
+}
