@@ -27,8 +27,8 @@ config:
 ---
 graph TB
     perovskite_sensitization_demonstrated["★ Perovskite sensitization of TiO2 for visible-light conversion\n(0.85 → 0.85)"]:::exported
-    iodide_cell_efficiency["★ CH3NH3PbI3 cell efficiency 3.81%\n(0.50 → 0.71)"]:::exported
-    bromide_cell_high_voltage["★ CH3NH3PbBr3 cell Voc 0.96 V\n(0.50 → 0.71)"]:::exported
+    iodide_cell_efficiency["★ CH3NH3PbI3 cell efficiency 3.81%\n(0.50 → 0.86)"]:::exported
+    bromide_cell_high_voltage["★ CH3NH3PbBr3 cell Voc 0.96 V\n(0.50 → 0.86)"]:::exported
     bromide_cubic_structure["★ CH3NH3PbBr3 cubic perovskite structure\n(0.88 → 0.88)"]:::exported
     iodide_tetragonal_structure["★ CH3NH3PbI3 tetragonal perovskite structure\n(0.88 → 0.88)"]:::exported
     bromide_ipce_spectrum["★ CH3NH3PbBr3 IPCE spectrum 65% max\n(0.90 → 0.90)"]:::exported
@@ -39,7 +39,7 @@ graph TB
     jsc_comparison["★ Jsc for iodide cell twice that of bromide cell\n(0.50 → 0.70)"]:::exported
     voc_comparison["★ Bromide cell Voc 0.96 V vs iodide cell Voc 0.61 V\n(0.50 → 0.70)"]:::exported
     ru_complex_voc_comparison["★ CH3NH3PbBr3 Voc exceeds Ru complex maximal Voc\n(0.50 → 0.68)"]:::exported
-    efficiency_comparison["★ Perovskite efficiency exceeds prior quantum dot sensitizers\n(0.50 → 0.70)"]:::exported
+    efficiency_comparison["★ Perovskite efficiency exceeds prior quantum dot sensitizers\n(0.50 → 0.84)"]:::exported
     pv_performance_table["★ Photovoltaic performance summary table\n(0.50 → 0.70)"]:::exported
     efficient_sensitization_confirmation["★ High IPCE confirms efficient TiO2 sensitization by perovskite\n(0.50 → 0.70)"]:::exported
     durability_observation["★ Photocurrent decay observed under continuous irradiation\n(0.50 → 0.72)"]:::exported
@@ -49,10 +49,10 @@ graph TB
     bromide_redox_coupling["★ Bromide redox coupling expands photovoltage range\n(0.50 → 0.66)"]:::exported
     quantum_confinement_assessment["★ Quantum confinement effect not dominant\n(0.50 → 0.70)"]:::exported
     bathochromic_shift_explanation["★ Bathochromic shift from bromide to iodide analogous to silver halides\n(0.50 → 0.70)"]:::exported
-    charge_separation_mechanism["★ Charge separation mechanism in perovskite-sensitized TiO2\n(0.50 → 0.65)"]:::exported
-    conclusion_perovskite_sensitization["★ Perovskite efficiently sensitizes TiO2 for visible-light conversion\n(0.50 → 0.61)"]:::exported
-    conclusion_high_voltage["★ Perovskite enables high photovoltages close to 1.0 V\n(0.50 → 0.62)"]:::exported
-    efficiency_milestone["★ 3.81% efficiency marks first perovskite-sensitized solar cell\n(0.50 → 0.58)"]:::exported
+    charge_separation_mechanism["★ Charge separation mechanism in perovskite-sensitized TiO2\n(0.50 → 0.76)"]:::exported
+    conclusion_perovskite_sensitization["★ Perovskite efficiently sensitizes TiO2 for visible-light conversion\n(0.50 → 0.64)"]:::exported
+    conclusion_high_voltage["★ Perovskite enables high photovoltages close to 1.0 V\n(0.50 → 0.64)"]:::exported
+    efficiency_milestone["★ 3.81% efficiency marks first perovskite-sensitized solar cell\n(0.50 → 0.74)"]:::exported
     strat_0(["infer\n0.20 bits"]):::weak
     bromide_cell_high_voltage --> strat_0
     ru_complex_voc_comparison --> strat_0
@@ -147,7 +147,7 @@ The central finding of this paper is that nanocrystalline particles of CH3NH3PbX
 - **Photovoltaic performance** (weakest link: iodide_iv_characteristics at 0.90): Power conversion efficiency of 3.81% (iodide) and Voc of 0.96 V (bromide) under AM 1.5 illumination demonstrates functional photovoltaic devices driven by perovskite sensitization.
 - **Crystal structure confirmation** (weakest link: bromide_cubic_structure at 0.88): XRD peaks match standard perovskite patterns, confirming the material is correctly identified and not an alternate phase.
 
-### CH3NH3PbI3 achieves 3.81% power conversion efficiency (belief: 0.71)
+### CH3NH3PbI3 achieves 3.81% power conversion efficiency (belief: 0.86)
 
 Under 100 mW/cm2 AM 1.5 simulated sunlight, the CH3NH3PbI3-sensitized cell yields Jsc = 11.0 mA/cm2, Voc = 0.61 V, fill factor (FF) = 0.57, and power conversion efficiency (η) = 3.81%. This efficiency is described by the authors as "significantly higher than those obtained to date with nonorganic sensitizers and quantum dots" including CdS, CdSe, PbS, InP, and InAs. The Jsc of 11.0 mA/cm2 is twice that of the bromide cell (5.57 mA/cm2), reflecting the integrated area of the IPCE spectrum which extends to 800 nm for the iodide cell. The optimal TiO2 film thickness for the iodide cell is 8 μm.
 
@@ -155,7 +155,7 @@ Under 100 mW/cm2 AM 1.5 simulated sunlight, the CH3NH3PbI3-sensitized cell yield
 - **I-V characterization** (weakest link: iodide_iv_characteristics at 0.90): The 3.81% efficiency is directly measured under standard test conditions (solar simulator PEC-L10, AM 1.5, 100 mW/cm2) with 0.238 cm2 effective area and black mask to define illumination region.
 - **IPCE integration** (weakest link: iodide_ipce_spectrum at 0.88): The extended spectral response to 800 nm (reflecting the narrower bandgap of iodide vs bromide) contributes to the higher Jsc. The IPCE spectrum area correlates with the measured Jsc.
 
-### CH3NH3PbBr3 achieves Voc of 0.96 V, exceeding Ru complex sensitizers (belief: 0.71)
+### CH3NH3PbBr3 achieves Voc of 0.96 V, exceeding Ru complex sensitizers (belief: 0.86)
 
 The bromide cell yields Voc = 0.96 V, notably higher than both the iodide cell (0.61 V) and the maximal Voc of 0.86–0.93 V previously achieved with Ru complex sensitizers and TiO2. The high Voc is attributed to two factors: (1) the higher conduction band of CH3NH3PbBr3 (3.36 eV) relative to CH3NH3PbI3 (4.0 eV) allowing favorable electronic interaction with TiO2 surface conduction-band levels, and (2) the bromide redox couple (Br2/Br−) having a more positive oxidation potential (5.1–5.6 eV) compared to iodide (I2/I−, 4.5–5.0 eV), which expands the achievable photovoltage range.
 
@@ -205,7 +205,7 @@ Continuous irradiation caused photocurrent decay for open cells exposed to air. 
 | Label | Content | Prior | Belief |
 |-------|---------|-------|--------|
 | bathochromic_shift_explanation | The bathochromic shift (red-shift) of the IPCE spectrum from bromide to iodid... | 0.50 | 0.70 |
-| bromide_cell_high_voltage | A CH3NH3PbBr3-based photovoltaic cell achieved a high open-circuit voltage (V... | 0.50 | 0.71 |
+| bromide_cell_high_voltage | A CH3NH3PbBr3-based photovoltaic cell achieved a high open-circuit voltage (V... | 0.50 | 0.86 |
 | bromide_conduction_band_higher | The conduction band of CH3NH3PbBr3 (approximately 3.36 eV) is higher than tha... | 0.50 | 0.64 |
 | bromide_cubic_structure | CH3NH3PbBr3 has a cubic perovskite structure with lattice constant a = 5.9 An... | 0.88 | 0.88 |
 | bromide_electrolyte | The CH3NH3PbBr3/TiO2-based cell employed an electrolyte consisting of 0.4 M L... | 0.50 | — |
@@ -215,19 +215,19 @@ Continuous irradiation caused photocurrent decay for open cells exposed to air. 
 | bromide_precursor_synthesis | CH3NH3Br was synthesized from HBr and 40% methylamine in methanol solution fo... | 0.50 | — |
 | bromide_redox_coupling | The origin of the high Voc (0.96 V) with CH3NH3PbBr3 is the bromide employed ... | 0.50 | 0.66 |
 | cell_construction | The photovoltaic cell was constructed by combining the CH3NH3PbX3/TiO2 electr... | 0.50 | — |
-| charge_separation_mechanism | The efficient sensitization is enabled by: (1) favorable energy band alignmen... | 0.50 | 0.65 |
-| conclusion_high_voltage | The perovskite materials are especially promising for realizing high photovol... | 0.50 | 0.62 |
-| conclusion_perovskite_sensitization | The organolead halide perovskite compounds efficiently sensitize TiO2 for vis... | 0.50 | 0.61 |
+| charge_separation_mechanism | The efficient sensitization is enabled by: (1) favorable energy band alignmen... | 0.50 | 0.76 |
+| conclusion_high_voltage | The perovskite materials are especially promising for realizing high photovol... | 0.50 | 0.64 |
+| conclusion_perovskite_sensitization | The organolead halide perovskite compounds efficiently sensitize TiO2 for vis... | 0.50 | 0.64 |
 | conduction_band_levels | The conduction-band levels calculated from the wavelengths of the optical abs... | 0.50 | 0.69 |
 | durability_observation | Continuous irradiation caused photocurrent decay for an open cell exposed to ... | 0.50 | 0.72 |
 | dye_sensitized_tiO2_established | Dye-sensitized mesoscopic TiO2 films have been established as high-efficiency... | 0.50 | — |
-| efficiency_comparison | The highest power conversion efficiency of 3.81% obtained with CH3NH3PbI3 is ... | 0.50 | 0.70 |
-| efficiency_milestone | The demonstration of 3.81% power conversion efficiency with CH3NH3PbI3 repres... | 0.50 | 0.58 |
+| efficiency_comparison | The highest power conversion efficiency of 3.81% obtained with CH3NH3PbI3 is ... | 0.50 | 0.84 |
+| efficiency_milestone | The demonstration of 3.81% power conversion efficiency with CH3NH3PbI3 repres... | 0.50 | 0.74 |
 | efficient_sensitization_confirmation | The anodic photocurrent with high IPCE values (65% for bromide, 45% for iodid... | 0.50 | 0.70 |
 | fto_substrate_preparation | Fluorine-doped SnO2 transparent conductive glass (FTO, 10 ohm/sq) was used as... | 0.50 | — |
 | future_directions | A series of organic-inorganic perovskite materials CH3NH3MX3 (M = Pb, Sn; X =... | 0.50 | — |
 | halide_oxidation_potentials | The valence-band levels of the perovskites are considered to be more positive... | 0.50 | — |
-| iodide_cell_efficiency | A CH3NH3PbI3-based photovoltaic cell achieved a power conversion efficiency o... | 0.50 | 0.71 |
+| iodide_cell_efficiency | A CH3NH3PbI3-based photovoltaic cell achieved a power conversion efficiency o... | 0.50 | 0.86 |
 | iodide_electrolyte | The CH3NH3PbI3/TiO2-based cell employed an electrolyte consisting of 0.15 M L... | 0.50 | — |
 | iodide_ipce_spectrum | The CH3NH3PbI3/TiO2 cell showed a low IPCE of 45% but an extended spectral re... | 0.88 | 0.88 |
 | iodide_iv_characteristics | Under 100 mW/cm2 AM 1.5 irradiation, the CH3NH3PbI3-sensitized cell yielded J... | 0.90 | 0.90 |
@@ -265,7 +265,7 @@ The most notable finding is that the bromide cell achieved 0.96 V Voc, surpassin
 
 The paper reports photocurrent decay under continuous irradiation for open cells exposed to air, yet provides no mechanistic explanation or pathway to improvement. This is not a hypothesis subject to testing—it is an uncharacterized phenomenon. The belief of 0.72 reflects uncertainty about the practical viability of perovskite solar cells. Many subsequent studies in the field have focused on understanding and addressing this instability, which ultimately limited the commercial potential of early perovskite devices.
 
-**2. Efficiency milestone belief is lowest among conclusions (efficiency_milestone, belief: 0.58)**
+**2. Efficiency milestone belief is lowest among conclusions (efficiency_milestone, belief: 0.74)**
 
 The conclusion that "3.81% efficiency marks the first perovskite-sensitized solar cell" has the lowest belief among exported conclusions. This stems from a 4-premise reasoning chain (bromide_cell_high_voltage + efficiency_comparison + iodide_cell_efficiency + perovskite_sensitization_demonstrated → efficiency_milestone) that propagates multiplicative uncertainty. While each individual premise has high belief (0.71–0.85), the chain's information gain is only 0.10 bits — the weakest in the graph. If any premise is later found to be less reliable than assumed, the efficiency milestone conclusion would be significantly impacted.
 
@@ -277,7 +277,7 @@ The conduction band levels (3.36 eV for bromide, 4.0 eV for iodide) are calculat
 
 The claim that quantum confinement effect "may not dominate" the perovskite system is hedged with "may not" and "if it partially exists." This is not a strong conclusion but rather an observation that the IPCE spectra show band-edge characteristic behavior rather than strongly shifted excitonic features. The 0.70 belief reflects this tentativeness. The actual quantum confinement behavior in these 2–3 nm particles would need further study with more definitive spectroscopic measurements.
 
-**5. The charge separation mechanism is a composite summary (charge_separation_mechanism, belief: 0.65)**
+**5. The charge separation mechanism is a composite summary (charge_separation_mechanism, belief: 0.76)**
 
 The charge separation mechanism is presented as a conjunction of three factors, but these factors are independently argued elsewhere in the paper. The mechanism claim itself does not add new evidence — it synthesizes existing claims. The belief of 0.65 reflects this derived nature and the uncertainty propagated from the band alignment claims, particularly the conduction band calculation.
 
