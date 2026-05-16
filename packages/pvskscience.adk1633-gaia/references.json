@@ -1,0 +1,32 @@
+{
+  "Liu2024": {
+    "type": "article-journal",
+    "title": "Bimolecularly passivated interface enables efficient and stable inverted perovskite solar cells",
+    "author": [
+      {"family": "Liu", "given": "Cheng"},
+      {"family": "Yang", "given": "Yi"},
+      {"family": "Chen", "given": "Hao"},
+      {"family": "Xu", "given": "Jian"},
+      {"family": "Liu", "given": "Ao"},
+      {"family": "Bati", "given": "Abdulaziz S. R."},
+      {"family": "Zhu", "given": "Huihui"},
+      {"family": "Grater", "given": "Luke"},
+      {"family": "Hadke", "given": "Shreyash Sudhakar"},
+      {"family": "Huang", "given": "Chuying"},
+      {"family": "Sangwan", "given": "Vinod K."},
+      {"family": "Cai", "given": "Tong"},
+      {"family": "Shin", "given": "Donghoon"},
+      {"family": "Chen", "given": "Lin X."},
+      {"family": "Hersam", "given": "Mark C."},
+      {"family": "Mirkin", "given": "Chad A."},
+      {"family": "Chen", "given": "Bin"},
+      {"family": "Kanatzidis", "given": "Mercouri G."},
+      {"family": "Sargent", "given": "Edward H."}
+    ],
+    "container-title": "Science",
+    "volume": "382",
+    "issue": "6672",
+    "DOI": "10.1126/science.adk1633",
+    "issued": {"date-parts": [[2024]]}
+  }
+}
