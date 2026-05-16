@@ -75,7 +75,7 @@ strat_efficiency_from_sensitization = support(
     reason="The demonstrated perovskite sensitization of TiO2 directly produces the "
            "photovoltaic effect; the 3.81% efficiency is the measured outcome of this "
            "sensitization under AM 1.5 illumination [@pvsk2009].",
-    prior=0.5,
+    prior=0.85,
 )
 
 # Perovskite sensitization demonstrated -> bromide cell high voltage
@@ -85,7 +85,7 @@ strat_voltage_from_sensitization = support(
     reason="The efficient sensitization enables high photovoltage; the bromide perovskite's "
            "higher conduction band (3.36 eV vs 4.0 eV for iodide) combined with the bromide "
            "redox couple produces the notably high Voc of 0.96 V [@pvsk2009].",
-    prior=0.5,
+    prior=0.85,
 )
 
 # ===== Energy band alignment supports charge separation =====
@@ -97,7 +97,7 @@ strat_charge_sep_from_bands = support(
            "potentials (4.5-5.6 eV), and conduction bands (3.36-4.0 eV) allowing electron "
            "injection to TiO2 (4.0 eV), establishes the energy alignment for efficient "
            "charge separation [@pvsk2009].",
-    prior=0.5,
+    prior=0.85,
 )
 
 # ===== Results supporting performance comparisons =====
@@ -200,7 +200,7 @@ strat_efficiency_vs_qdots = support(
            "results with nonorganic sensitizers and quantum dots (CdS, CdSe, PbS, InP, "
            "InAs) which suffered from light utilization and charge separation losses at "
            "the semiconductor-sensitizer interface [@pvsk2009].",
-    prior=0.5,
+    prior=0.85,
 )
 
 strat_durability = support(
@@ -220,7 +220,7 @@ strat_efficiency_milestone = support(
            "CH3NH3PbBr3 and the significant improvement over quantum dot sensitizers, "
            "establishes organometal halide perovskites as a new class of visible-light "
            "sensitizers for photovoltaic cells [@pvsk2009].",
-    prior=0.5,
+    prior=0.80,
 )
 
 strat_conclusion_sensitization = support(
