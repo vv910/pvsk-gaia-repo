@@ -4,9 +4,16 @@ __pycache__/
 *.pyc
 *.pyo
 .python-version
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# Package artifacts (sources and generated content)
-packages/*/artifacts/
+# Agent/tooling scratch directories
+.agents/
+.codex/
+packages/.agents/
+packages/.codex/
 
 # Gaia artifacts (generated)
 packages/*/.gaia/

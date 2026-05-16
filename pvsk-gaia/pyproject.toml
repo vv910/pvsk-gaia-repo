@@ -8,7 +8,8 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "gaia-lang>=0.4.4",
+    "pvsk2009-gaia",
+    "pvsk2012-1-gaia",
 ]
 
 [build-system]
@@ -17,6 +18,10 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-name = "pvsk"
+
+[tool.uv.sources]
+pvsk2009-gaia = { workspace = true }
+pvsk2012-1-gaia = { workspace = true }
 
 [tool.gaia]
 type = "knowledge-package"
