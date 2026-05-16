@@ -1,0 +1,31 @@
+{
+  "Lee2012": {
+    "type": "article-journal",
+    "title": "Efficient Hybrid Solar Cells Based on Meso-Superstructured Organometal Halide Perovskites",
+    "author": [
+      {"family": "Lee", "given": "Michael M."},
+      {"family": "Teuscher", "given": "Joël"},
+      {"family": "Miyasaka", "given": "Tsutomu"},
+      {"family": "Murakami", "given": "Takurou N."},
+      {"family": "Snaith", "given": "Henry J."}
+    ],
+    "issued": {"date-parts": [[2012]]},
+    "container-title": "Science",
+    "volume": "338",
+    "page": "643",
+    "DOI": "10.1126/science.1228604"
+  },
+  "pvsk2012_2": {
+    "type": "article-journal",
+    "title": "Entangling Light's Orbital Angular Momentum",
+    "author": [
+      {"family": "Romero", "given": "J."},
+      {"family": "Giovannini", "given": "D."}
+    ],
+    "issued": {"date-parts": [[2012]]},
+    "container-title": "Science",
+    "volume": "338",
+    "page": "640",
+    "DOI": "10.1126/science.1227193"
+  }
+}
