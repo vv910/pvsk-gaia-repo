@@ -1,0 +1,20 @@
+{
+  "Burschka2013": {
+    "type": "article-journal",
+    "title": "Sequential deposition as a route to high-performance perovskite-sensitized solar cells",
+    "author": [
+      {"family": "Burschka", "given": "Julian"},
+      {"family": "Pellet", "given": "Norman"},
+      {"family": "Moon", "given": "Soo-Jin"},
+      {"family": "Humphry-Baker", "given": "Robin"},
+      {"family": "Gao", "given": "Peng"},
+      {"family": "Nazeeruddin", "given": "Mohammad K."},
+      {"family": "Graetzel", "given": "Michael"}
+    ],
+    "issued": {"date-parts": [[2013]]},
+    "container-title": "Nature",
+    "volume": "499",
+    "page": "316-319",
+    "DOI": "10.1038/nature12340"
+  }
+}
