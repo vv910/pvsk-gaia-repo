@@ -1,0 +1,36 @@
+{
+  "Lin2025": {
+    "type": "article-journal",
+    "title": "All-perovskite tandem solar cells with dipolar passivation",
+    "author": [
+      {"family": "Lin", "given": "Renxing"},
+      {"family": "Gao", "given": "Han"},
+      {"family": "Lou", "given": "Jing"},
+      {"family": "Xu", "given": "Jian"},
+      {"family": "Yin", "given": "Mengran"},
+      {"family": "Wu", "given": "Pu"},
+      {"family": "Liu", "given": "Chenshuaiyu"},
+      {"family": "Guo", "given": "Yijia"},
+      {"family": "Wang", "given": "Enzuo"},
+      {"family": "Yang", "given": "Shuncheng"},
+      {"family": "Liu", "given": "Runnan"},
+      {"family": "Zhou", "given": "Dong"},
+      {"family": "Ding", "given": "Changzeng"},
+      {"family": "Bui", "given": "Anh Dinh"},
+      {"family": "Yin", "given": "Ni"},
+      {"family": "Macdonald", "given": "Daniel H."},
+      {"family": "Ma", "given": "Chang-Qi"},
+      {"family": "Chen", "given": "Qi"},
+      {"family": "Xiao", "given": "Ke"},
+      {"family": "Luo", "given": "Xin"},
+      {"family": "Liu", "given": "Ye"},
+      {"family": "Li", "given": "Ludong"},
+      {"family": "Li", "given": "Yongxi"},
+      {"family": "Chang", "given": "Chao"},
+      {"family": "Tan", "given": "Hairen"}
+    ],
+    "issued": {"date-parts": [[2025]]},
+    "container-title": "Nature",
+    "DOI": "10.1038/s41586-025-09773-7"
+  }
+}

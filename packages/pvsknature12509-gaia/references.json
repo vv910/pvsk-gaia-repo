@@ -1,0 +1,48 @@
+{
+  "Liu2013": {
+    "type": "article-journal",
+    "title": "Efficient planar heterojunction perovskite solar cells by vapour deposition",
+    "author": [
+      {"family": "Liu", "given": "Mingzhen"},
+      {"family": "Johnston", "given": "Michael B."},
+      {"family": "Snaith", "given": "Henry J."}
+    ],
+    "issued": {"date-parts": [[2013]]},
+    "container-title": "Nature",
+    "volume": "501",
+    "page": "395-398",
+    "DOI": "10.1038/nature12509"
+  },
+  "Lee2012": {
+    "type": "article-journal",
+    "title": "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites",
+    "container-title": "Science",
+    "volume": "338",
+    "page": "643-647",
+    "year": "2012"
+  },
+  "Ball2013": {
+    "type": "article-journal",
+    "title": "Low-temperature processed mesosuperstructured to thin-film perovskite solar cells",
+    "container-title": "Energy & Environmental Science",
+    "volume": "6",
+    "page": "1739-1743",
+    "year": "2013"
+  },
+  "Kojima2009": {
+    "type": "article-journal",
+    "title": "Organometal halide perovskites as visible-light sensitizers for photovoltaic cells",
+    "container-title": "Journal of the American Chemical Society",
+    "volume": "131",
+    "page": "6050-6051",
+    "year": "2009"
+  },
+  "Mosconi2013": {
+    "type": "article-journal",
+    "title": "First principles modeling of mixed halide organometal perovskites for photovoltaic applications",
+    "container-title": "Journal of Physical Chemistry C",
+    "volume": "117",
+    "page": "13902-13913",
+    "year": "2013"
+  }
+}

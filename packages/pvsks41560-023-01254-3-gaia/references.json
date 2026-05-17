@@ -1,0 +1,24 @@
+{
+  "Gu2023": {
+    "type": "article-journal",
+    "title": "Design optimization of bifacial perovskite minimodules for improved efficiency and stability",
+    "author": [
+      {"family": "Gu", "given": "Hangyu"},
+      {"family": "Fei", "given": "Chengbin"},
+      {"family": "Yang", "given": "Guang"},
+      {"family": "Chen", "given": "Bo"},
+      {"family": "Uddin", "given": "Md Aslam"},
+      {"family": "Zhang", "given": "Hengkai"},
+      {"family": "Ni", "given": "Zhenyi"},
+      {"family": "Jiao", "given": "Haoyang"},
+      {"family": "Xu", "given": "Wenzhan"},
+      {"family": "Yan", "given": "Zijie"},
+      {"family": "Huang", "given": "Jinsong"}
+    ],
+    "issued": {"date-parts": [[2023]]},
+    "container-title": "Nature Energy",
+    "volume": "8",
+    "pages": "628-637",
+    "DOI": "10.1038/s41560-023-01254-3"
+  }
+}

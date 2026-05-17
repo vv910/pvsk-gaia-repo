@@ -1,8 +1,167 @@
-from gaia.lang import claim, setting, noisy_and
+"""
+PVSK 2017: One-Year Stable Perovskite Solar Cells by 2D/3D Interface Engineering.
 
-context = setting("Background context for this package.")
-hypothesis = claim("A scientific hypothesis.")
-evidence = claim("Supporting evidence.")
-_strat = noisy_and([hypothesis], evidence, reason="Hypothesis supports evidence.")
+Package for formalizing Grancini et al. (Nat. Commun. 2017) paper into Gaia knowledge package.
+"""
 
-__all__ = ["context", "hypothesis", "evidence"]
+from .motivation import (
+    perovskite_pce_record,
+    instability_barrier,
+    perovskite_degradation_mechanisms,
+    stability_limiting_factors,
+    two_d_perovskite_stability,
+    research_objective,
+    key_innovation,
+)
+
+from .s2_methods import (
+    avai_synthesis,
+    two_d_three_d_composite_preparation,
+    absorption_spectroscopy,
+    raman_spectroscopy,
+    xrd_method,
+    steady_state_pl,
+    pl_excitation_selectivity,
+    dft_methodology,
+    interface_model,
+)
+
+from .s3_results import (
+    two_d_absorption,
+    two_d_raman_modes,
+    two_d_xrd_pattern,
+    two_d_three_d_absorption,
+    two_d_three_d_raman,
+    two_d_three_d_xrd,
+    phase_structure_conclusion,
+    pl_oxide_side,
+    pl_phase_separation,
+    pl_730nm_fast_decay,
+    oxide_templating_role,
+    cb_upshift_2d_3d,
+    cb_alignment_favorable,
+    graded_structure_dft,
+)
+
+from .s4_discussion import (
+    spiro_omeTAD_architecture,
+    htm_free_architecture,
+    spiro_cell_efficiency,
+    spiro_cell_stability,
+    htm_free_cell_performance,
+    module_performance,
+    module_stability_test,
+    hysteresis_observation,
+    module_gff,
+    reproducibility,
+    one_year_stability_record,
+    upscale_potential,
+)
+
+from .strategies import (
+    strat_instability_supports_motivation,
+    strat_degradation_supports_barrier,
+    strat_2d_stability_supports_solution,
+    strat_synthesis_enables_characterization,
+    strat_raman_confirms_2d_structure,
+    strat_xrd_confirms_2d_structure,
+    strat_composite_absorption_proves_mixture,
+    strat_composite_raman_confirms_ordering,
+    strat_composite_xrd_confirms_orientation,
+    strat_structural_evidence_supports_phase_model,
+    strat_pl_oxide_side_identifies_2d,
+    strat_pl_phase_separation,
+    strat_pl_decay_supports_interface_phase,
+    strat_oxide_templating_role,
+    strat_dft_predicts_cb_upshift,
+    strat_cb_alignment_supports_device_function,
+    strat_dft_confirms_graded_structure,
+    strat_abduction_pl_shift,
+    strat_spiro_cell_performance,
+    strat_spiro_stability,
+    strat_htm_free_cell_performance,
+    strat_module_performance,
+    strat_module_stability,
+    strat_key_innovation,
+    strat_record_stability,
+    strat_upscale_potential,
+    dft_2d3d_pred,
+    dft_standard_pred,
+    pl_observed,
+)
+
+__all__ = [
+    # Motivation
+    "perovskite_pce_record",
+    "instability_barrier",
+    "perovskite_degradation_mechanisms",
+    "stability_limiting_factors",
+    "two_d_perovskite_stability",
+    "research_objective",
+    "key_innovation",
+    # Methods
+    "avai_synthesis",
+    "two_d_three_d_composite_preparation",
+    "absorption_spectroscopy",
+    "raman_spectroscopy",
+    "xrd_method",
+    "steady_state_pl",
+    "pl_excitation_selectivity",
+    "dft_methodology",
+    "interface_model",
+    # Results
+    "two_d_absorption",
+    "two_d_raman_modes",
+    "two_d_xrd_pattern",
+    "two_d_three_d_absorption",
+    "two_d_three_d_raman",
+    "two_d_three_d_xrd",
+    "phase_structure_conclusion",
+    "pl_oxide_side",
+    "pl_phase_separation",
+    "pl_730nm_fast_decay",
+    "oxide_templating_role",
+    "cb_upshift_2d_3d",
+    "cb_alignment_favorable",
+    "graded_structure_dft",
+    # Discussion
+    "spiro_omeTAD_architecture",
+    "htm_free_architecture",
+    "spiro_cell_efficiency",
+    "spiro_cell_stability",
+    "htm_free_cell_performance",
+    "module_performance",
+    "module_stability_test",
+    "hysteresis_observation",
+    "module_gff",
+    "reproducibility",
+    "one_year_stability_record",
+    "upscale_potential",
+    # Strategies
+    "strat_instability_supports_motivation",
+    "strat_degradation_supports_barrier",
+    "strat_2d_stability_supports_solution",
+    "strat_synthesis_enables_characterization",
+    "strat_raman_confirms_2d_structure",
+    "strat_xrd_confirms_2d_structure",
+    "strat_composite_absorption_proves_mixture",
+    "strat_composite_raman_confirms_ordering",
+    "strat_composite_xrd_confirms_orientation",
+    "strat_structural_evidence_supports_phase_model",
+    "strat_pl_oxide_side_identifies_2d",
+    "strat_pl_phase_separation",
+    "strat_pl_decay_supports_interface_phase",
+    "strat_oxide_templating_role",
+    "strat_dft_predicts_cb_upshift",
+    "strat_cb_alignment_supports_device_function",
+    "strat_dft_confirms_graded_structure",
+    "strat_abduction_pl_shift",
+    "strat_spiro_cell_performance",
+    "strat_spiro_stability",
+    "strat_htm_free_cell_performance",
+    "strat_module_performance",
+    "strat_module_stability",
+    "strat_key_innovation",
+    "strat_record_stability",
+    "strat_upscale_potential",
+]

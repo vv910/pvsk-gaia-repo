@@ -1,0 +1,24 @@
+{
+  "Grancini2017": {
+    "type": "article-journal",
+    "title": "One-Year stable perovskite solar cells by 2D/3D interface engineering",
+    "author": [
+      {"family": "Grancini", "given": "G."},
+      {"family": "Roldán-Carmona", "given": "C."},
+      {"family": "Zimmermann", "given": "I."},
+      {"family": "Mosconi", "given": "E."},
+      {"family": "Lee", "given": "X."},
+      {"family": "Martineau", "given": "D."},
+      {"family": "Narbey", "given": "S."},
+      {"family": "Oswald", "given": "F."},
+      {"family": "De Angelis", "given": "F."},
+      {"family": "Graetzel", "given": "M."},
+      {"family": "Nazeeruddin", "given": "M. K."}
+    ],
+    "issued": {"date-parts": [[2017]]},
+    "container-title": "Nature Communications",
+    "volume": "8",
+    "page": "15684",
+    "DOI": "10.1038/ncomms15684"
+  }
+}

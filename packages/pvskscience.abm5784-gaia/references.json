@@ -1,0 +1,33 @@
+{
+  "Azmi2022": {
+    "type": "article-journal",
+    "title": "Damp heat-stable perovskite solar cells with tailored-dimensionality 2D/3D heterojunctions",
+    "author": [
+      {"family": "Azmi", "given": "Randi"},
+      {"family": "Ugur", "given": "Esma"},
+      {"family": "Seitkhan", "given": "Akmaral"},
+      {"family": "Aljamaan", "given": "Faisal"},
+      {"family": "Subbiah", "given": "Anand S."},
+      {"family": "Liu", "given": "Jiang"},
+      {"family": "Harrison", "given": "George T."},
+      {"family": "Nugraha", "given": "Mohamad I."},
+      {"family": "Eswaran", "given": "Mathan K."},
+      {"family": "Babics", "given": "Maxime"},
+      {"family": "Chen", "given": "Yuan"},
+      {"family": "Xu", "given": "Fuzong"},
+      {"family": "Allen", "given": "Thomas G."},
+      {"family": "ur Rehman", "given": "Atteq"},
+      {"family": "Wang", "given": "Chien-Lung"},
+      {"family": "Anthropopoulos", "given": "Thomas D."},
+      {"family": "Schwingenschloegl", "given": "Udo"},
+      {"family": "De Bastiani", "given": "Michele"},
+      {"family": "Aydin", "given": "Erkan"},
+      {"family": "De Wolf", "given": "Stefaan"}
+    ],
+    "issued": {"date-parts": [[2022]]},
+    "container-title": "Science",
+    "volume": "376",
+    "page": "6588",
+    "DOI": "10.1126/science.abm5784"
+  }
+}

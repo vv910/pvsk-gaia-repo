@@ -1,0 +1,22 @@
+{
+  "Jeon2014": {
+    "type": "article-journal",
+    "title": "Solvent engineering for high-performance inorganic–organic hybrid perovskite solar cells"
+  },
+  "Burschka2013": {
+    "type": "article-journal",
+    "title": "Sequential deposition as a route to high-performance perovskite-sensitized solar cells"
+  },
+  "Liu2013": {
+    "type": "article-journal",
+    "title": "Efficient planar heterojunction perovskite solar cells by vapour deposition"
+  },
+  "Eperon2014": {
+    "type": "article-journal",
+    "title": "Morphological control for high performance, solution-processed planar heterojunction perovskite solar cells"
+  },
+  "Noh2013": {
+    "type": "article-journal",
+    "title": "Chemical management for colorful, efficient, and stable inorganic–organic hybrid nanostructured solar cells"
+  }
+}

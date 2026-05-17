@@ -1,0 +1,16 @@
+{
+  "Jia2025": {
+    "type": "article-journal",
+    "title": "Efficient perovskite/silicon tandem with asymmetric self-assembly molecule",
+    "author": [
+      {"family": "Jia", "given": "Lingbo"},
+      {"family": "Xia", "given": "Simeng"},
+      {"family": "Li", "given": "Jian"},
+      {"family": "Qin", "given": "Yuan"},
+      {"family": "He", "given": "Bo"}
+    ],
+    "issued": {"date-parts": [[2025]]},
+    "container-title": "Nature",
+    "DOI": "10.1038/s41586-025-09333-z"
+  }
+}
