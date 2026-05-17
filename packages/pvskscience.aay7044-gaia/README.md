@@ -2,8 +2,8 @@
 
 > **Original work:** Hanul Min, Maengsuk Kim, Seung-Un Lee, Hyeonwoo Kim, Gwisu Kim, Keunsu Choi, Jun Hee Lee, Sang II Seok. "Efficient, stable solar cells by using inherent bandgap of alpha-phase formamidinium lead iodide." *Science* 366, 749 (2019). DOI: 10.1126/science.aay7044
 
-<!-- badges:start -->
-<!-- badges:end -->
+[![DOI](https://img.shields.io/badge/DOI-10.1126%2Fscience.aay7044-blue)](https://doi.org/10.1126/science.aay7044)
+[![Science](https://img.shields.io/badge/Journal-Science%20366%2C%20749-red)](https://www.science.org/doi/10.1126/science.aay7044)
 
 > [!NOTE]
 > This README is an AI-generated analysis based on a [Gaia](https://github.com/SiliconEinstein/Gaia) reasoning graph formalization of the original work. Belief values reflect the graph's probabilistic assessment of each claim's support, not the original authors' confidence. See [ANALYSIS.md](ANALYSIS.md) for detailed verification results.
