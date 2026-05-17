@@ -2,9 +2,6 @@
 
 > **Original work:** Lee, M. M., Teuscher, J., Miyasaka, T., Murakami, T. N., & Snaith, H. J. "Efficient hybrid solar cells based on meso-superstructured organometal halide perovskites." *Science* 338 (6107), 643-650 (2012). DOI: 10.1126/science.1228604
 
-<!-- badges:start -->
-<!-- badges:end -->
-
 ## Overview
 
 This package formalizes the 2012 Science paper by Lee et al. that demonstrated a breakthrough in perovskite solar cell efficiency through a novel device architecture called the meso-superstructured solar cell (MSSC). The key innovation was replacing the conventional n-type TiO2 scaffold with an insulating Al2O3 scaffold, which forces electrons to travel through the perovskite layer itself rather than through disordered metal oxide networks. This change reduced fundamental energy losses, enabling a power conversion efficiency of 10.9% under simulated AM1.5 full sunlight — competitive with the best thin-film technologies at the time. The paper showed that the perovskite absorber itself acts as an effective n-type semiconductor, transporting charge much faster than mesoporous TiO2, while the chemical capacitance of sub-band gap states in TiO2 was identified as the origin of voltage losses in sensitized devices.
@@ -163,13 +160,6 @@ The claim that a solution-processable solar cell overcoming fundamental losses w
 **Structural concern:**
 
 Many conclusions have belief values near 0.5-0.7 because they are derived from multi-premise inference chains (e.g., `main_achievement` depends on 9 premises). This multiplicative uncertainty is expected for complex conclusions, but it means the overall argument is only as strong as its weakest premise link. The most robust conclusions are the direct experimental measurements with single-premise support (device performance, XRD, IPCE).
-
----
-
-## Detailed Analysis
-
-For structural integrity verification (Pass 5), standalone readability checks (Pass 6),
-and complete package statistics, see [ANALYSIS.md](ANALYSIS.md).
 
 > [!NOTE]
 > **[Per-module reasoning graphs with full claim details →](docs/detailed-reasoning.md)**
