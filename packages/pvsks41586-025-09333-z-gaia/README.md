@@ -2,8 +2,9 @@
 
 > **Original work:** Jia, L., Xia, S., Li, J., Qin, Y., et al. "Efficient perovskite/silicon tandem with asymmetric self-assembly molecule." *Nature* (2025). [DOI: 10.1038/s41586-025-09333-z](https://doi.org/10.1038/s41586-025-09333-z)
 
-<!-- badges:start -->
-<!-- badges:end -->
+[![Gaia Formalized](https://img.shields.io/badge/Gaia-Formalized-green)](https://github.com/SiliconEinstein/Gaia)
+[![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41586--025--09333--z-blue)](https://doi.org/10.1038/s41586-025-09333-z)
+[![Nature](https://img.shields.io/badge/Journal-Nature-red)](https://www.nature.com)
 
 ## Overview
 
@@ -134,5 +135,4 @@ All strategies in this package use `prior=0.5` for the reasoning warrant, meanin
 
 ## Detailed Analysis
 
-For structural integrity verification (Pass 5), standalone readability checks (Pass 6),
-and complete package statistics, see [ANALYSIS.md](ANALYSIS.md).
+For per-module reasoning graphs and complete claim details, see [docs/detailed-reasoning.md](docs/detailed-reasoning.md).
