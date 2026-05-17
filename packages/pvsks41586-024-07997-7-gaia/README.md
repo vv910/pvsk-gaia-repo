@@ -3,6 +3,8 @@
 Perovskite/silicon tandem solar cells with bilayer interface passivation
 
 <!-- badges:start -->
+[![DOI](https://img.shields.io/badge/DOI-10.1038%2Fs41586--024--07997--7-blue)](https://doi.org/10.1038/s41586-024-07997-7)
+[![Gaia Package](https://img.shields.io/badge/Gaia-Package-green)](https://github.com/SiliconEinstein/Gaia)
 <!-- badges:end -->
 
 ## Overview
