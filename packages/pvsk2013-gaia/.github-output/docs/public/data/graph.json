@@ -108,7 +108,7 @@
       "module": "motivation",
       "content": "The sequential deposition method permits much better control over perovskite morphology than the previously employed single-step route [@Burschka2013].",
       "prior": null,
-      "belief": 0.8509179576000001,
+      "belief": 0.8509179576,
       "exported": true,
       "metadata": {
         "gaia": {

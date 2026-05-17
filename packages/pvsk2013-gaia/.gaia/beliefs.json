@@ -76,7 +76,7 @@
       "label": "color_change_observed"
     },
     {
-      "belief": 0.8509179576000001,
+      "belief": 0.8509179576,
       "knowledge_id": "github:pvsk2013::control_improvement",
       "label": "control_improvement"
     },
@@ -289,7 +289,7 @@
         0.5
       ],
       "github:pvsk2013::control_improvement": [
-        0.8509179576000001
+        0.8509179576
       ],
       "github:pvsk2013::conversion_facilitation": [
         0.76596130641

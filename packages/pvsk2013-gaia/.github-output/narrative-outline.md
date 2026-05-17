@@ -45,21 +45,21 @@ Auto-generated from the coarse reasoning graph. Sections are grouped by connecti
 11. **Batch average PCE: 12.0% +/- 0.5% ★** (prior: 0.90 → belief: 0.90)
    - → supports: reproducibility_improvement
 
+## APCE exceeds 90% indicating near-unity quantum yield
+
+12. **IPCE peak exceeds 90% in short wavelengths ★** (prior: 0.90 → belief: 0.90)
+   - → supports: integrated_current_match
+
+13. **APCE exceeds 90% indicating near-unity quantum yield ★** (prior: 0.90 → belief: 0.90)
+   - → supports: integrated_current_match
+
 ## Sequential deposition method introduced
 
-12. **PbI2 completely contained within TiO2 nanopores ★** (prior: 0.90 → belief: 0.90)
+14. **PbI2 completely contained within TiO2 nanopores ★** (prior: 0.90 → belief: 0.90)
    - → supports: control_improvement
 
-13. **Sequential deposition method introduced ★** (prior: 0.92 → belief: 0.92)
+15. **Sequential deposition method introduced ★** (prior: 0.92 → belief: 0.92)
    - → supports: control_improvement
-
-## IPCE peak exceeds 90% in short wavelengths
-
-14. **APCE exceeds 90% indicating near-unity quantum yield ★** (prior: 0.90 → belief: 0.90)
-   - → supports: integrated_current_match
-
-15. **IPCE peak exceeds 90% in short wavelengths ★** (prior: 0.90 → belief: 0.90)
-   - → supports: integrated_current_match
 
 ## Nanoporous confinement facilitates perovskite conversion
 
