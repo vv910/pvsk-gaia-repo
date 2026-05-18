@@ -1,7 +1,7 @@
 [project]
 name = "pvsks41560-023-01254-3-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gaia knowledge package for the 2023 bifacial perovskite minimodule optimization paper."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }

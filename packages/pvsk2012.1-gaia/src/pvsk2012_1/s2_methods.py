@@ -11,7 +11,8 @@ __all__ = [
     "pia_spectroscopy",
     "femtosecond_tas",
     "impedance_spectroscopy",
-    "material_synthesis",
+    "perovskite_synthesis",
+    "tiO2_nanoparticle_synthesis",
     "device_fabrication",
 ]
 

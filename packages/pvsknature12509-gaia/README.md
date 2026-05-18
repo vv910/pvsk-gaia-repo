@@ -1,6 +1,6 @@
 # pvsknature12509-gaia
 
-Add your description here
+> **Original work:** Liu, M., Johnston, M. B. & Snaith, H. J. "Efficient planar heterojunction perovskite solar cells by vapour deposition." *Nature* 501, 395-398 (2013). [DOI: 10.1038/nature12509](https://doi.org/10.1038/nature12509)
 
 <!-- badges:start -->
 <!-- badges:end -->

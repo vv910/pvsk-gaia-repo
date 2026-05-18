@@ -130,7 +130,7 @@ jv_measurement = setting(
     title="J-V measurement configuration",
 )
 
- SunsVoc_measurement = setting(
+SunsVoc_measurement = setting(
     "Suns-Voc measurements were conducted using the WaveLabs SINUS-230 system. Suns-Voc directly "
     "measures Voc as a function of light intensity varying from approximately 0.01 to 1.1 suns. "
     "Final pseudo-J-V curves were obtained by shifting data at 1 sun to the Voc point.",

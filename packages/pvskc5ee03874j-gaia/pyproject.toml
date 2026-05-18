@@ -1,7 +1,7 @@
 [project]
 name = "pvskc5ee03874j-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gaia knowledge package for the cesium-containing triple-cation perovskite solar cell paper."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }

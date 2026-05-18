@@ -211,7 +211,7 @@ __all__ = [
     "tofsims_composition_method",
     "afm_roughness_method",
     "device_configuration",
-    "spiro_ome tad_composition",
+    "spiro_ometad_composition",
     "j_v_measurement_method",
     "eqe_measurement_method",
     "eqe_el_measurement_method",

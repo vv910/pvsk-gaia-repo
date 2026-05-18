@@ -1,7 +1,7 @@
 [project]
 name = "pvsks41467-024-46016-1-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gaia knowledge package for the 2024 roll-to-roll fabricated perovskite solar cell modules paper."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }

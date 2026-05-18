@@ -1,7 +1,7 @@
 [project]
 name = "pvskscience-abn5679-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gaia knowledge package for the 2022 accelerated-aging interface-stabilized perovskite solar cell paper."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }

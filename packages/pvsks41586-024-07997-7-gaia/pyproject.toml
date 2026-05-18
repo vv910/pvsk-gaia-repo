@@ -1,7 +1,7 @@
 [project]
 name = "pvsks41586-024-07997-7-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gaia knowledge package for the bilayer interface passivated perovskite/silicon tandem solar cell paper."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }

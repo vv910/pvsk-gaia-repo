@@ -466,7 +466,6 @@ __all__ = [
     "strat_manufacturing_challenge",
     "strat_pfsd_demonstration",
     # PFSD strategies
-    "strat_pfsd_technique",
     "strat_pfsd_advantage",
     "strat_shallow_angle",
     "strat_edge_blowing_result",
@@ -476,15 +475,11 @@ __all__ = [
     "strat_pfsd_record_pce",
     # Automated fabrication strategies
     "strat_carbon_replacement",
-    "strat_previous_r2r",
-    "strat_throughput_platform",
     "strat_throughput_example",
     "strat_maistoi_ratio",
     "strat_thicker_film",
     "strat_composition_dependence",
     "strat_htab_p3ht_intro",
-    "strat_htab_passivation",
-    "strat_p3ht_heating",
     "strat_htab_outperforms",
     "strat_reliable_production",
     "strat_film_thickness",
@@ -499,7 +494,6 @@ __all__ = [
     "strat_module_gff",
     "strat_module_performance",
     # Cost strategies
-    "strat_cost_model",
     "strat_seq_a",
     "strat_seq_b",
     "strat_seq_c",
@@ -520,6 +514,5 @@ __all__ = [
     "strat_cost_conclusion",
     "strat_future_direction",
     # Methods strategies
-    "strat_ink_prep",
     "strat_stripe_flow",
 ]

@@ -1,7 +1,7 @@
 [project]
 name = "pvsks41560-024-01667-8-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gaia knowledge package for the 2024 homogeneous low-dimensional perovskite passivation layer paper."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }
