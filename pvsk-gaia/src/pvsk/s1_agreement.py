@@ -1,84 +1,223 @@
 """
 S1: Cross-paper agreement claims.
 
-Claims where pvsk2009 and pvsk2012.1 reach the same conclusion,
-providing independent confirmation.
+These local claims represent convergent conclusions across paper packages.  The
+paper-level claims are not restated as observations; they are imported from each
+package's public API and used directly as evidence.
 """
 
-from gaia.lang import equivalence
+from gaia.lang import claim, support
 
-# Import claims from pvsk2009
-# Using aliases to avoid any label collision issues
-from pvsk2009 import (
-    conclusion_perovskite_sensitization as pvsk2009_sensitization,
-    bromide_conduction_band_higher as pvsk2009_bromide_voc,
-    iodide_ipce_spectrum as pvsk2009_iodide_spectral,
-    conduction_band_levels as pvsk2009_conduction_band,
-    iodide_cell_efficiency as pvsk2009_efficiency,
-)
-
-# Import claims from pvsk2012.1
-from pvsk2012_1 import (
-    charge_separation_mechanism as pvsk2012_charge_sep,
-    panchromatic_absorption_leads_to_high_jsc as pvsk2012_panchromatic,
-    charge_separation_well_aligned as pvsk2012_band_alignment,
-    absorption_coefficient as pvsk2012_absorption,
-    stability_improvement as pvsk2012_stability,
-    pce_9_7_percent as pvsk2012_pce,
-)
-
-
-# Agreement 1: Perovskite sensitization is valid (equivalence)
-# Both papers independently confirm perovskites sensitize TiO2 effectively
-agreement_perovskite_sensitization_valid = equivalence(
+from ._imports import (
     pvsk2009_sensitization,
-    pvsk2012_panchromatic,
-    reason="Both Kojima 2009 and Kim 2012 independently confirm that CH3NH3PbI3 perovskite nanocrystals effectively sensitize TiO2 for visible-light conversion.",
-    prior=0.95,
+    pvsk2012_1_panchromatic,
+    pvsk2012_1_solid_stability,
+    pvsk2012_2_al2o3_best,
+    pvsk2012_2_semiconductor,
+    pvsk2013_certified,
+    pvsk2014_certified_efficiency,
+    pvsk2014_negligible_hysteresis,
+    pvsk2015_phase_stabilization,
+    pvsk_triple_cation_best_pce,
+    pvsk_triple_cation_strategy,
+    pvsk2017_one_year_stability,
+    pvsk2017_2d3d_composite,
+    pvsk_mda_alpha_stabilization,
+    pvsk_damp_heat_dual_passivation,
+    pvsk_damp_heat_t95,
+    pvsk_all_inorganic_ion_migration,
+    pvsk_formate_recombination_reduction,
+    pvsk_all_tandem_deep_states,
+    pvsk_all_tandem_certified,
+    pvsk_3d3d_type2_alignment,
+    pvsk_persik_2024_nrel_certified,
+    pvsk_htl201_certified,
+    pvsk_dipolar_strategy,
+    pvsk_dipolar_jet_certified,
+    pvsk_r2r_cells,
+    pvsk_r2r_modules,
+    pvsk_bifacial_nrel_front,
+    pvsk_homogeneous_2d_large_module,
 )
 
-# Agreement 2: Charge separation mechanism (equivalence)
-# Use 2012 charge_separation_mechanism and 2009 conclusion that describes the same mechanism
-# (avoiding duplicate label with 2009's charge_separation_mechanism claim)
-agreement_charge_separation_mechanism = equivalence(
-    pvsk2012_charge_sep,
-    pvsk2012_band_alignment,
-    reason="Kim 2012 describes the charge separation mechanism via hole injection to spiro-MeOTAD and electron transfer to TiO2. The well-aligned band positions confirm this mechanism.",
-    prior=0.95,
+
+agreement_perovskite_absorber_validated = claim(
+    "Independent packages agree that organometal halide perovskites are effective "
+    "photovoltaic absorbers rather than merely experimental dye replacements.",
+    title="Perovskite absorbers are validated across early architectures",
 )
 
-# Agreement 3: Bromide enables high Voc (equivalence)
-# 2009 demonstrates 0.96V with bromide; 2012 confirms band alignment enables high voltage
-agreement_bromide_enables_high_voc = equivalence(
-    pvsk2009_bromide_voc,
-    pvsk2012_band_alignment,
-    reason="Kojima 2009 demonstrates CH3NH3PbBr3 achieves 0.96 V Voc due to higher conduction band. Kim 2012 confirms well-aligned band positions enable high Voc.",
-    prior=0.85,
+strat_agreement_perovskite_absorber_validated = support(
+    [
+        pvsk2009_sensitization,
+        pvsk2012_1_panchromatic,
+        pvsk2012_2_semiconductor,
+        pvsk2014_certified_efficiency,
+    ],
+    agreement_perovskite_absorber_validated,
+    reason=(
+        "The 2009 sensitizer result, 2012 solid-state panchromatic response, "
+        "2012 meso-superstructured semiconductor behavior, and 2014 certified "
+        "bilayer efficiency all point to the same absorber-level conclusion."
+    ),
+    prior=0.94,
 )
 
-# Agreement 4: Iodide extends spectral range (equivalence)
-# Both papers note iodide extends absorption to ~800 nm
-agreement_iodide_extends_spectral_range = equivalence(
-    pvsk2009_iodide_spectral,
-    pvsk2012_panchromatic,
-    reason="Both Kojima 2009 (IPCE to 800 nm) and Kim 2012 (panchromatic absorption) confirm CH3NH3PbI3 extends spectral response into the near-infrared.",
+
+agreement_solid_state_architectures_raise_efficiency = claim(
+    "The early efficiency jump is consistently associated with solid-state and "
+    "architecturally controlled devices, not with liquid-electrolyte sensitization.",
+    title="Solid-state architectures raise efficiency",
+)
+
+strat_agreement_solid_state_architectures_raise_efficiency = support(
+    [
+        pvsk2012_1_solid_stability,
+        pvsk2012_2_al2o3_best,
+        pvsk2013_certified,
+        pvsk2014_certified_efficiency,
+    ],
+    agreement_solid_state_architectures_raise_efficiency,
+    reason=(
+        "Kim 2012, Lee 2012, Burschka 2013, and Jeon 2014 all connect solid-state "
+        "device design or controlled architecture with much higher performance."
+    ),
+    prior=0.91,
+)
+
+
+agreement_phase_and_composition_control_matter = claim(
+    "Composition and phase control are repeated enabling themes for high-efficiency "
+    "and stable perovskite devices.",
+    title="Composition and phase control are repeated enablers",
+)
+
+strat_agreement_phase_and_composition_control_matter = support(
+    [
+        pvsk2015_phase_stabilization,
+        pvsk_triple_cation_strategy,
+        pvsk_triple_cation_best_pce,
+        pvsk_mda_alpha_stabilization,
+    ],
+    agreement_phase_and_composition_control_matter,
+    reason=(
+        "Mixed-cation stabilization, triple-cation stabilization, and MDA-based "
+        "alpha-FAPbI3 stabilization independently support a composition-control "
+        "design principle."
+    ),
+    prior=0.89,
+)
+
+
+agreement_passivation_reduces_recombination = claim(
+    "Surface, grain-boundary, and buried-interface passivation repeatedly reduce "
+    "non-radiative recombination or its device-level signatures.",
+    title="Passivation reduces recombination across interfaces",
+)
+
+strat_agreement_passivation_reduces_recombination = support(
+    [
+        pvsk_formate_recombination_reduction,
+        pvsk_all_tandem_deep_states,
+        pvsk_damp_heat_dual_passivation,
+        pvsk_dipolar_strategy,
+    ],
+    agreement_passivation_reduces_recombination,
+    reason=(
+        "Formate, CF3-PA, tailored-dimensionality 2D/3D, and dipolar strategies "
+        "all target recombination-active defects at interfaces or grain surfaces."
+    ),
     prior=0.90,
 )
 
-# Agreement 5: Strong absorption in perovskites (equivalence)
-# 2012 quantifies high absorption coefficient
-agreement_absorption_strength = equivalence(
-    pvsk2012_absorption,
-    pvsk2012_panchromatic,
-    reason="Kim 2012 quantifies CH3NH3PbI3 absorption coefficient as 1.5 x 10^4 cm^-1 at 550 nm and demonstrates panchromatic absorption enabling high JSC.",
-    prior=0.85,
+
+agreement_dimensional_interfaces_improve_stability = claim(
+    "Dimensional interface engineering, including 2D/3D interfaces and capping "
+    "layers, repeatedly improves moisture, thermal, or operational stability.",
+    title="Dimensional interfaces improve stability",
 )
 
-# Agreement 6: TiO2 conduction band injection (equivalence)
-# Both confirm electron injection to TiO2 conduction band
-agreement_tio2_conduction_band_injection = equivalence(
-    pvsk2009_conduction_band,
-    pvsk2012_band_alignment,
-    reason="Kojima 2009 calculates perovskite conduction band allows electron injection to TiO2. Kim 2012 confirms well-aligned band positions enable this pathway.",
-    prior=0.90,
+strat_agreement_dimensional_interfaces_improve_stability = support(
+    [
+        pvsk2017_one_year_stability,
+        pvsk2017_2d3d_composite,
+        pvsk_damp_heat_t95,
+        pvsk_all_inorganic_ion_migration,
+    ],
+    agreement_dimensional_interfaces_improve_stability,
+    reason=(
+        "The 2017 2D/3D result, 2022 damp-heat-stable 2D/3D devices, and "
+        "all-inorganic 2D capping all connect dimensional interface control with "
+        "stability gains."
+    ),
+    prior=0.88,
+)
+
+
+agreement_hysteresis_can_be_suppressed_by_architecture = claim(
+    "Device architecture and interface design can suppress current-density "
+    "hysteresis to a practical level.",
+    title="Architecture can suppress hysteresis",
+)
+
+strat_agreement_hysteresis_can_be_suppressed_by_architecture = support(
+    [
+        pvsk2014_negligible_hysteresis,
+        pvsk2017_2d3d_composite,
+        pvsk_dipolar_strategy,
+    ],
+    agreement_hysteresis_can_be_suppressed_by_architecture,
+    reason=(
+        "Bilayer engineering, 2D/3D interface engineering, and buried-interface "
+        "dipolar passivation all address interface-controlled loss pathways linked "
+        "to hysteresis."
+    ),
+    prior=0.84,
+)
+
+
+agreement_tandems_raise_efficiency_ceiling = claim(
+    "Perovskite-based tandem architectures repeatedly raise the efficiency ceiling "
+    "beyond single-junction perovskite cells.",
+    title="Tandems raise the efficiency ceiling",
+)
+
+strat_agreement_tandems_raise_efficiency_ceiling = support(
+    [
+        pvsk_all_tandem_certified,
+        pvsk_3d3d_type2_alignment,
+        pvsk_persik_2024_nrel_certified,
+        pvsk_htl201_certified,
+        pvsk_dipolar_jet_certified,
+    ],
+    agreement_tandems_raise_efficiency_ceiling,
+    reason=(
+        "All-perovskite tandem, 3D/3D bilayer, perovskite/silicon, HTL201, and "
+        "dipolar passivation packages independently support tandem-level efficiency "
+        "growth."
+    ),
+    prior=0.95,
+)
+
+
+agreement_scalability_has_multiple_routes = claim(
+    "Scalable perovskite manufacturing is supported by multiple routes rather than "
+    "a single deposition platform.",
+    title="Scalability has multiple manufacturing routes",
+)
+
+strat_agreement_scalability_has_multiple_routes = support(
+    [
+        pvsk_r2r_cells,
+        pvsk_r2r_modules,
+        pvsk_bifacial_nrel_front,
+        pvsk_homogeneous_2d_large_module,
+    ],
+    agreement_scalability_has_multiple_routes,
+    reason=(
+        "Roll-to-roll cells and modules, bifacial minimodules, and homogeneous 2D "
+        "large modules show that scale-up can be pursued through distinct process "
+        "families."
+    ),
+    prior=0.86,
 )

@@ -1,124 +1,245 @@
 """
-S5: Final synthesis conclusions.
+S5: Final scientific synthesis conclusions.
 
-These are the top-level conclusions exported from the PVSK synthesis package,
-representing cross-paper findings that advance the field.
+The warrants here avoid broad multi-premise conjunctions and also avoid many
+duplicative independent supports.  Each conclusion receives a small number of
+non-overlapping warrants so BP can raise belief without saturating it.
 """
 
 from gaia.lang import claim, support
 
-from pvsk2009 import (
-    iodide_cell_efficiency as pvsk2009_efficiency,
-    bromide_cell_high_voltage as pvsk2009_bromide_voc,
-    perovskite_sensitization_demonstrated as pvsk2009_sensitization,
+from . import s2_support as _directed_support_edges
+from ._imports import (
+    pvsk2009_bromide_voc,
+    pvsk2009_iodide_ipce,
+    pvsk2015_bandgap_tradeoff,
+    pvsk_htl201_certified,
 )
-
-from pvsk2012_1 import (
-    pce_9_7_percent as pvsk2012_pce,
-    voc_0_888_v as pvsk2012_voc,
-    stability_improvement as pvsk2012_stability,
-    charge_separation_well_aligned as pvsk2012_band_alignment,
-    absorption_coefficient as pvsk2012_absorption,
-    bandgap_1_5_ev as pvsk2012_bandgap,
-)
-
 from .s1_agreement import (
-    agreement_perovskite_sensitization_valid,
-    agreement_charge_separation_mechanism,
+    agreement_dimensional_interfaces_improve_stability,
+    agreement_hysteresis_can_be_suppressed_by_architecture,
+    agreement_passivation_reduces_recombination,
+    agreement_perovskite_absorber_validated,
+    agreement_phase_and_composition_control_matter,
+    agreement_solid_state_architectures_raise_efficiency,
+    agreement_tandems_raise_efficiency_ceiling,
 )
-from .s3_contradictions import resolution_durability_stability
+from .s3_contradictions import (
+    tension_conventional_vs_dipolar_buried_passivation,
+    tension_hysteresis_has_multiple_sources,
+    tension_liquid_vs_solid_stability,
+    tension_passivation_mechanisms_are_complementary,
+    tension_passivation_transport_tradeoff_is_conditional,
+    tension_stability_routes_are_condition_specific,
+)
 from .s4_induction import (
-    law_perovskite_sensitization_effective,
-    law_solid_state_stability,
+    law_band_alignment_controls_charge_selectivity,
+    law_interface_passivation_reduces_nonradiative_loss,
+    law_perovskite_absorbers_scale_across_architectures,
+    law_stability_needs_phase_and_interface_control,
+    law_tandems_raise_perovskite_efficiency_ceiling,
 )
 
 
-# Synthesis 1: Perovskite sensitization is validated
-synthesis_perovskite_sensitization_valid = claim(
-    "Organometal halide perovskites (CH3NH3PbX3, X=I, Br) function as effective "
-    "visible-light sensitizers for TiO2-based photovoltaic cells, demonstrated "
-    "independently in Kojima 2009 (3.81% PCE) and Kim 2012 (9.7% PCE) [@pvsk2009; @pvsk2012.1].",
-    title="Perovskite sensitization validated across independent studies",
+synthesis_perovskites_are_validated_pv_platform = claim(
+    "The 22-package evidence base supports perovskite photovoltaics as a validated "
+    "photovoltaic platform: the absorber works across architectures, and the later "
+    "performance gains come from controlling interfaces, composition, and contacts.",
+    title="Perovskites are a validated photovoltaic platform",
 )
 
-# Synthesis 2: Efficiency progression
-synthesis_efficiency_progress_3p81_to_9p7 = claim(
-    "Perovskite-sensitized photovoltaic cells achieved power conversion efficiency "
-    "of 3.81% in 2009 (liquid electrolyte) and 9.7% in 2012 (solid-state), "
-    "representing a 2.5x improvement through configuration optimization [@pvsk2009; @pvsk2012.1].",
-    title="PCE improved from 3.81% to 9.7% across studies",
-)
-
-# Synthesis 3: Solid-state eliminates electrolyte degradation
-synthesis_solid_state_eliminates_electrolyte_degradation = claim(
-    "The replacement of liquid electrolyte with solid-state hole-transporting material "
-    "(spiro-MeOTAD) eliminates perovskite dissolution and dramatically improves device "
-    "stability from rapid photocurrent decay to 500+ hours of stable operation [@pvsk2009; @pvsk2012.1].",
-    title="Solid-state configuration eliminates liquid electrolyte degradation",
-)
-
-# Synthesis 4: Band alignment critical for charge separation
-synthesis_band_alignment_critical_for_charge_separation = claim(
-    "Favorable band alignment between perovskite, TiO2, and hole-transporting material "
-    "is critical for efficient charge separation: perovskite ECB (-3.93 eV) above TiO2 "
-    "ECB enables electron injection; perovskite EVB (-5.43 eV) allows hole transfer "
-    "to spiro-MeOTAD [@pvsk2012.1].",
-    title="Band alignment enables efficient charge separation",
-)
-
-# Synthesis 5: Iodide vs bromide tradeoff
-synthesis_iodide_bromide_tradeoff = claim(
-    "CH3NH3PbI3 offers narrower bandgap (1.5 eV) extending spectral response to ~800 nm "
-    "and higher photocurrent, while CH3NH3PbBr3 offers higher conduction band position "
-    "enabling higher open-circuit voltage (0.96 V vs 0.61 V for iodide) [@pvsk2009].",
-    title="Iodide-bromide tradeoff: current vs voltage",
-)
-
-# Synthesis 6: Voc determined by conduction band offset
-synthesis_voc_determined_by_conduction_band_offset = claim(
-    "The open-circuit voltage in perovskite-sensitized cells is determined by the "
-    "conduction band offset between the perovskite and TiO2, with higher perovskite "
-    "conduction band (as in CH3NH3PbBr3 at ~3.36 eV vs TiO2 at ~4.0 eV) enabling "
-    "higher Voc up to 0.96 V [@pvsk2009].",
-    title="Voc determined by perovskite-TiO2 conduction band offset",
-)
-
-# Synthesis 7: High IPCE confirmed independently
-synthesis_high_ipce_confirmed_independent = claim(
-    "High incident photon-to-electron conversion efficiency (IPCE) in perovskite "
-    "sensitized cells is confirmed independently: 65% max for bromide and 45% for "
-    "iodide in 2009, and >50% from 450-750 nm in 2012, demonstrating efficient "
-    "light harvesting [@pvsk2009; @pvsk2012.1].",
-    title="High IPCE confirmed across independent studies",
-)
-
-# Synthesis 8: Promising future directions
-synthesis_promising_future_directions = claim(
-    "Organometal halide perovskites represent a promising class of materials for "
-    "photovoltaic applications, with demonstrated efficiency milestones (3.81% in 2009, "
-    "9.7% in 2012), excellent stability potential with solid-state configuration, and "
-    "tunable bandgaps through halide composition (Br, I) for optimal light harvesting "
-    "[@pvsk2009; @pvsk2012.1].",
-    title="Perovskites are promising for photovoltaic applications",
-)
-
-
-# Strategy for the main synthesis conclusion
-strat_synthesis_main = support(
+strat_synthesis_platform_from_absorber_and_law = support(
     [
-        agreement_perovskite_sensitization_valid,
-        agreement_charge_separation_mechanism,
-        resolution_durability_stability,
-        law_perovskite_sensitization_effective,
-        law_solid_state_stability,
+        agreement_perovskite_absorber_validated,
+        law_perovskite_absorbers_scale_across_architectures,
     ],
-    synthesis_perovskite_sensitization_valid,
+    synthesis_perovskites_are_validated_pv_platform,
     reason=(
-        "Multiple independent lines of evidence confirm perovskite sensitization: "
-        "(1) equivalence between papers on sensitization effectiveness, "
-        "(2) equivalence on charge separation mechanism, "
-        "(3) resolution of durability/stability contradiction via device configuration, "
-        "(4) induction over independent PCE demonstrations."
+        "The platform conclusion requires both cross-paper absorber agreement and "
+        "the induction law that the absorber works across architectures."
     ),
-    prior=0.90,
+    prior=0.82,
+)
+
+strat_synthesis_platform_from_architecture = support(
+    [agreement_solid_state_architectures_raise_efficiency],
+    synthesis_perovskites_are_validated_pv_platform,
+    reason="Solid-state architecture progress independently supports platform validity.",
+    prior=0.68,
+)
+
+
+synthesis_efficiency_progression_is_interface_driven = claim(
+    "The long-run efficiency progression is best explained by interface, architecture, "
+    "composition, and contact engineering rather than by a change in the basic "
+    "absorber concept.",
+    title="Efficiency progression is interface and architecture driven",
+)
+
+strat_synthesis_efficiency_from_composition_and_passivation = support(
+    [
+        agreement_phase_and_composition_control_matter,
+        agreement_passivation_reduces_recombination,
+    ],
+    synthesis_efficiency_progression_is_interface_driven,
+    reason="Composition control and passivation convergence jointly support the efficiency-growth mechanism.",
+    prior=0.78,
+)
+
+strat_synthesis_efficiency_from_record_contact = support(
+    [pvsk_htl201_certified],
+    synthesis_efficiency_progression_is_interface_driven,
+    reason="The HTL201 record supplies a later contact-engineering check on the synthesis.",
+    prior=0.68,
+)
+
+
+synthesis_passivation_is_general_design_rule = claim(
+    "Passivation is a general PVSK design rule: chemically bound passivators, "
+    "field-effect molecules, dimensional barriers, and dipolar interfaces all work "
+    "when they reduce recombination without blocking extraction.",
+    title="Passivation is a general design rule",
+)
+
+strat_synthesis_passivation_from_agreement_and_law = support(
+    [
+        agreement_passivation_reduces_recombination,
+        law_interface_passivation_reduces_nonradiative_loss,
+    ],
+    synthesis_passivation_is_general_design_rule,
+    reason="Agreement and induction jointly support passivation as a general design rule.",
+    prior=0.82,
+)
+
+strat_synthesis_passivation_from_tension_resolution = support(
+    [
+        tension_passivation_mechanisms_are_complementary,
+        tension_passivation_transport_tradeoff_is_conditional,
+    ],
+    synthesis_passivation_is_general_design_rule,
+    reason="Mechanistic complementarity and conditional transport penalties define the rule's scope.",
+    prior=0.62,
+)
+
+
+synthesis_stability_requires_integrated_control = claim(
+    "Durable PVSK devices require integrated control of phase stability, dimensional "
+    "interface protection, ion migration, and device-stack chemistry; no single "
+    "stability mechanism explains all successful packages.",
+    title="Stability requires integrated control",
+)
+
+strat_synthesis_stability_from_law_and_agreement = support(
+    [
+        law_stability_needs_phase_and_interface_control,
+        agreement_dimensional_interfaces_improve_stability,
+    ],
+    synthesis_stability_requires_integrated_control,
+    reason="The stability law and dimensional-interface agreement jointly support integrated control.",
+    prior=0.84,
+)
+
+strat_synthesis_stability_from_conditional_routes = support(
+    [tension_stability_routes_are_condition_specific],
+    synthesis_stability_requires_integrated_control,
+    reason="Condition-specific stability routes show why no single mechanism is sufficient.",
+    prior=0.72,
+)
+
+
+synthesis_hysteresis_is_practically_suppressed = claim(
+    "Current-density hysteresis is not a single solved microscopic mechanism, but it "
+    "has become practically suppressible through architecture, dimensional interface "
+    "design, and buried-interface passivation.",
+    title="Hysteresis is practically suppressible",
+)
+
+strat_synthesis_hysteresis_from_architecture = support(
+    [agreement_hysteresis_can_be_suppressed_by_architecture],
+    synthesis_hysteresis_is_practically_suppressed,
+    reason="Architecture-level agreement supports practical suppression.",
+    prior=0.76,
+)
+
+strat_synthesis_hysteresis_from_multisource_tension = support(
+    [tension_hysteresis_has_multiple_sources],
+    synthesis_hysteresis_is_practically_suppressed,
+    reason="A multi-source mechanism explains why practical suppression need not solve one universal microscopic cause.",
+    prior=0.62,
+)
+
+
+synthesis_bandgap_and_contact_engineering_define_tradeoff_space = claim(
+    "PVSK optimization is governed by a bandgap-contact trade-off space: iodide, "
+    "bromide, mixed cations, and selective contacts tune current, voltage, and "
+    "extraction rather than optimizing all metrics independently.",
+    title="Bandgap and contact engineering define the trade-off space",
+)
+
+strat_synthesis_bandgap_from_material_tradeoff = support(
+    [pvsk2009_bromide_voc, pvsk2009_iodide_ipce, pvsk2015_bandgap_tradeoff],
+    synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
+    reason="Early halide contrast and later composition tuning define the material side of the trade-off space.",
+    prior=0.72,
+)
+
+strat_synthesis_bandgap_from_contact_law = support(
+    [law_band_alignment_controls_charge_selectivity],
+    synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
+    reason="The band-alignment law supplies the contact-selectivity side of the trade-off space.",
+    prior=0.74,
+)
+
+
+synthesis_tandems_are_primary_high_efficiency_path = claim(
+    "Tandem architectures are the primary high-efficiency path for PVSK: their "
+    "advantage depends on bandgap tunability, interfacial selectivity, and low-loss "
+    "contacts rather than on tandem stacking alone.",
+    title="Tandems are the primary high-efficiency path",
+)
+
+strat_synthesis_tandem_from_agreement_and_law = support(
+    [
+        agreement_tandems_raise_efficiency_ceiling,
+        law_tandems_raise_perovskite_efficiency_ceiling,
+    ],
+    synthesis_tandems_are_primary_high_efficiency_path,
+    reason="Tandem agreement and tandem induction jointly support the high-efficiency path.",
+    prior=0.84,
+)
+
+strat_synthesis_tandem_from_buried_interface_scope = support(
+    [tension_conventional_vs_dipolar_buried_passivation],
+    synthesis_tandems_are_primary_high_efficiency_path,
+    reason="Buried-interface passivation tension explains why tandem records depend on contact design.",
+    prior=0.58,
+)
+
+
+synthesis_mechanistic_tensions_are_conditionally_resolved = claim(
+    "The major apparent conflicts across PVSK papers are conditionally resolved: "
+    "they usually reflect different architectures, stress tests, interfaces, or "
+    "optimization targets rather than mutually exclusive physical laws.",
+    title="Mechanistic tensions are conditionally resolved",
+)
+
+strat_synthesis_tensions_from_architecture_and_stability = support(
+    [
+        tension_liquid_vs_solid_stability,
+        tension_stability_routes_are_condition_specific,
+    ],
+    synthesis_mechanistic_tensions_are_conditionally_resolved,
+    reason="Architecture-dependent stability and condition-specific stability routes support conditional resolution.",
+    prior=0.76,
+)
+
+strat_synthesis_tensions_from_interface_mechanisms = support(
+    [
+        tension_hysteresis_has_multiple_sources,
+        tension_passivation_mechanisms_are_complementary,
+        tension_passivation_transport_tradeoff_is_conditional,
+    ],
+    synthesis_mechanistic_tensions_are_conditionally_resolved,
+    reason="Interface-related mechanism tensions are resolved by scope conditions rather than exclusive mechanisms.",
+    prior=0.68,
 )

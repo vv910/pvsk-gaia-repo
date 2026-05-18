@@ -1,7 +1,7 @@
 [project]
 name = "pvsk-gaia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Cross-paper Gaia synthesis of 22 perovskite solar-cell formalizations."
 readme = "README.md"
 authors = [
     { name = "vv910", email = "huangwzh33@gmail.com" }
@@ -10,6 +10,26 @@ requires-python = ">=3.12"
 dependencies = [
     "pvsk2009-gaia",
     "pvsk2012-1-gaia",
+    "pvsk2012-2-gaia",
+    "pvsk2013-gaia",
+    "pvsk2014-gaia",
+    "pvsk2015-gaia",
+    "pvsk2017-gaia",
+    "pvskc5ee03874j-gaia",
+    "pvsknature12509-gaia",
+    "pvsks41467-024-46016-1-gaia",
+    "pvsks41560-023-01254-3-gaia",
+    "pvsks41560-024-01667-8-gaia",
+    "pvsks41586-021-03406-5-gaia",
+    "pvsks41586-021-04372-8-gaia",
+    "pvsks41586-023-06278-z-gaia",
+    "pvsks41586-024-07997-7-gaia",
+    "pvsks41586-025-09333-z-gaia",
+    "pvsks41586-025-09773-7-gaia",
+    "pvskscience-aay7044-gaia",
+    "pvskscience-abm5784-gaia",
+    "pvskscience-abn5679-gaia",
+    "pvskscience-adk1633-gaia",
 ]
 
 [build-system]
@@ -22,6 +42,26 @@ module-name = "pvsk"
 [tool.uv.sources]
 pvsk2009-gaia = { workspace = true }
 pvsk2012-1-gaia = { workspace = true }
+pvsk2012-2-gaia = { workspace = true }
+pvsk2013-gaia = { workspace = true }
+pvsk2014-gaia = { workspace = true }
+pvsk2015-gaia = { workspace = true }
+pvsk2017-gaia = { workspace = true }
+pvskc5ee03874j-gaia = { workspace = true }
+pvsknature12509-gaia = { workspace = true }
+pvsks41467-024-46016-1-gaia = { workspace = true }
+pvsks41560-023-01254-3-gaia = { workspace = true }
+pvsks41560-024-01667-8-gaia = { workspace = true }
+pvsks41586-021-03406-5-gaia = { workspace = true }
+pvsks41586-021-04372-8-gaia = { workspace = true }
+pvsks41586-023-06278-z-gaia = { workspace = true }
+pvsks41586-024-07997-7-gaia = { workspace = true }
+pvsks41586-025-09333-z-gaia = { workspace = true }
+pvsks41586-025-09773-7-gaia = { workspace = true }
+pvskscience-aay7044-gaia = { workspace = true }
+pvskscience-abm5784-gaia = { workspace = true }
+pvskscience-abn5679-gaia = { workspace = true }
+pvskscience-adk1633-gaia = { workspace = true }
 
 [tool.gaia]
 type = "knowledge-package"

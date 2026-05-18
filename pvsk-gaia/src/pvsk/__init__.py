@@ -1,64 +1,41 @@
 """
-PVSK Synthesis Package - Cross-paper reasoning across Kojima 2009 and Kim 2012.1
+PVSK synthesis package.
 
-This package synthesizes findings from:
-- pvsk2009: Kojima et al. (2009) - first perovskite sensitization (3.81% PCE)
-- pvsk2012.1: Kim et al. (2012) - solid-state optimization (9.7% PCE)
+This package builds a cross-package reasoning graph over the exported public
+claims of 22 perovskite solar-cell Gaia packages.  It does not re-formalize the
+source papers; it imports their top-level public claims and adds synthesis-layer
+agreement, support, tension, induction, and final conclusion nodes.
 """
 
-from .s1_agreement import (
-    agreement_perovskite_sensitization_valid,
-    agreement_charge_separation_mechanism,
-    agreement_bromide_enables_high_voc,
-    agreement_iodide_extends_spectral_range,
-    agreement_absorption_strength,
-    agreement_tio2_conduction_band_injection,
-)
-
-from .s3_contradictions import (
-    contradiction_durability_stability,
-    resolution_durability_stability,
-)
-
-from .s4_induction import (
-    law_perovskite_sensitization_effective,
-    law_solid_state_stability,
-    law_panchromatic_absorption,
-)
-
 from .s5_synthesis import (
-    synthesis_perovskite_sensitization_valid,
-    synthesis_efficiency_progress_3p81_to_9p7,
-    synthesis_solid_state_eliminates_electrolyte_degradation,
-    synthesis_band_alignment_critical_for_charge_separation,
-    synthesis_iodide_bromide_tradeoff,
-    synthesis_voc_determined_by_conduction_band_offset,
-    synthesis_high_ipce_confirmed_independent,
-    synthesis_promising_future_directions,
+    synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
+    synthesis_efficiency_progression_is_interface_driven,
+    synthesis_hysteresis_is_practically_suppressed,
+    synthesis_mechanistic_tensions_are_conditionally_resolved,
+    synthesis_passivation_is_general_design_rule,
+    synthesis_perovskites_are_validated_pv_platform,
+    synthesis_stability_requires_integrated_control,
+    synthesis_tandems_are_primary_high_efficiency_path,
 )
+from .s6_cost_analysis import (
+    synthesis_bifacial_modules_add_system_value,
+    synthesis_industrialization_requires_three_way_alignment,
+    synthesis_low_cost_path_depends_on_printable_contacts,
+    synthesis_scalable_manufacturing_is_demonstrated,
+)
+
 
 __all__ = [
-    # Agreement claims
-    "agreement_perovskite_sensitization_valid",
-    "agreement_charge_separation_mechanism",
-    "agreement_bromide_enables_high_voc",
-    "agreement_iodide_extends_spectral_range",
-    "agreement_absorption_strength",
-    "agreement_tio2_conduction_band_injection",
-    # Contradiction resolutions
-    "contradiction_durability_stability",
-    "resolution_durability_stability",
-    # Induction laws
-    "law_perovskite_sensitization_effective",
-    "law_solid_state_stability",
-    "law_panchromatic_absorption",
-    # Synthesis conclusions
-    "synthesis_perovskite_sensitization_valid",
-    "synthesis_efficiency_progress_3p81_to_9p7",
-    "synthesis_solid_state_eliminates_electrolyte_degradation",
-    "synthesis_band_alignment_critical_for_charge_separation",
-    "synthesis_iodide_bromide_tradeoff",
-    "synthesis_voc_determined_by_conduction_band_offset",
-    "synthesis_high_ipce_confirmed_independent",
-    "synthesis_promising_future_directions",
+    "synthesis_perovskites_are_validated_pv_platform",
+    "synthesis_efficiency_progression_is_interface_driven",
+    "synthesis_passivation_is_general_design_rule",
+    "synthesis_stability_requires_integrated_control",
+    "synthesis_hysteresis_is_practically_suppressed",
+    "synthesis_bandgap_and_contact_engineering_define_tradeoff_space",
+    "synthesis_tandems_are_primary_high_efficiency_path",
+    "synthesis_mechanistic_tensions_are_conditionally_resolved",
+    "synthesis_scalable_manufacturing_is_demonstrated",
+    "synthesis_low_cost_path_depends_on_printable_contacts",
+    "synthesis_bifacial_modules_add_system_value",
+    "synthesis_industrialization_requires_three_way_alignment",
 ]
