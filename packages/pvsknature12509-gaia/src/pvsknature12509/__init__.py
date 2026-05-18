@@ -1,8 +1,152 @@
-from gaia.lang import claim, setting, noisy_and
+"""
+Liu et al. 2013 Nature paper: Efficient planar heterojunction perovskite solar cells by vapour deposition.
 
-context = setting("Background context for this package.")
-hypothesis = claim("A scientific hypothesis.")
-evidence = claim("Supporting evidence.")
-_strat = noisy_and([hypothesis], evidence, reason="Hypothesis supports evidence.")
+This Gaia knowledge package formalizes the Nature paper demonstrating
+high-efficiency planar heterojunction perovskite solar cells using vapour deposition.
+"""
 
-__all__ = ["context", "hypothesis", "evidence"]
+# Re-export all public symbols from content modules
+from . import s5_strategies  # noqa: F401 - loads strategies into the package
+
+from .motivation import (
+    photovoltaic_generations,
+    perovskite_material_introduction,
+    meso_superstructured_improvement,
+    meso_superstructured_mechanism,
+    meso_efficiency_progress,
+    solution_planarHeterojunction,
+    planar_vs_meso_question,
+    high_efficiency_planar_demonstrated,
+    device_architecture_description,
+    vapour_deposition_enables_uniform_films,
+    study_rationale,
+)
+
+from .s2_methods import (
+    substrate_preparation_method,
+    compact_tio2_deposition,
+    dual_source_evaporation_system,
+    precursor_materials,
+    deposition_pressure,
+    optimized_deposition_rate,
+    as_deposited_molar_ratio,
+    film_annealing,
+    hole_transporter_deposition,
+    device_completion,
+    tooling_factor_method,
+    film_thickness_optimization,
+    composition_optimization,
+)
+
+from .s3_results import (
+    xrd_peak_positions,
+    xrd_phase_purity,
+    xrd_c_axis_contraction,
+    crystal_structure_description,
+    vapour_deposited_morphology,
+    solution_processed_morphology,
+    vapour_deposited_cross_section,
+    solution_processed_cross_section,
+    crystal_size_limited,
+    vapour_best_Jsc,
+    vapour_best_Voc,
+    vapour_best_FF,
+    vapour_best_PCE,
+    solution_best_Jsc,
+    solution_best_Voc,
+    solution_best_FF,
+    solution_best_PCE,
+    vapour_batch_Jsc_avg,
+    vapour_batch_Voc_avg,
+    vapour_batch_FF_avg,
+    vapour_batch_PCE_avg,
+    diffusion_length_lower_bound,
+    uniformity_advantage,
+    pinhole_shunting,
+    solution_efficiency_surprise,
+)
+
+from .s4_discussion import (
+    perovskite_versatility,
+    vapour_deposition_maturity,
+    oled_vapour_deposition_compatibility,
+    tandem_top_cell_potential,
+    all_perovskite_multijunction,
+    infra_compatibility,
+    manufacturing_route_question,
+    diffusion_length_needs_work,
+    wider_bandgap_top_cell_target,
+    threshold_15_percent,
+    planar_architecture_sufficiency,
+    future_directions,
+    vapour_vs_solution_fom_comparison,
+)
+
+__all__ = [
+    # motivation
+    "photovoltaic_generations",
+    "perovskite_material_introduction",
+    "meso_superstructured_improvement",
+    "meso_superstructured_mechanism",
+    "meso_efficiency_progress",
+    "solution_planarHeterojunction",
+    "planar_vs_meso_question",
+    "high_efficiency_planar_demonstrated",
+    "device_architecture_description",
+    "vapour_deposition_enables_uniform_films",
+    "study_rationale",
+    # s2_methods
+    "substrate_preparation_method",
+    "compact_tio2_deposition",
+    "dual_source_evaporation_system",
+    "precursor_materials",
+    "deposition_pressure",
+    "optimized_deposition_rate",
+    "as_deposited_molar_ratio",
+    "film_annealing",
+    "hole_transporter_deposition",
+    "device_completion",
+    "tooling_factor_method",
+    "film_thickness_optimization",
+    "composition_optimization",
+    # s3_results
+    "xrd_peak_positions",
+    "xrd_phase_purity",
+    "xrd_c_axis_contraction",
+    "crystal_structure_description",
+    "vapour_deposited_morphology",
+    "solution_processed_morphology",
+    "vapour_deposited_cross_section",
+    "solution_processed_cross_section",
+    "crystal_size_limited",
+    "vapour_best_Jsc",
+    "vapour_best_Voc",
+    "vapour_best_FF",
+    "vapour_best_PCE",
+    "solution_best_Jsc",
+    "solution_best_Voc",
+    "solution_best_FF",
+    "solution_best_PCE",
+    "vapour_batch_Jsc_avg",
+    "vapour_batch_Voc_avg",
+    "vapour_batch_FF_avg",
+    "vapour_batch_PCE_avg",
+    "diffusion_length_lower_bound",
+    "uniformity_advantage",
+    "pinhole_shunting",
+    "solution_efficiency_surprise",
+    # s4_discussion
+    "perovskite_versatility",
+    "vapour_deposition_maturity",
+    "oled_vapour_deposition_compatibility",
+    "tandem_top_cell_potential",
+    "all_perovskite_multijunction",
+    "infra_compatibility",
+    "manufacturing_route_question",
+    "diffusion_length_needs_work",
+    "wider_bandgap_top_cell_target",
+    "threshold_15_percent",
+    "planar_architecture_sufficiency",
+    "future_directions",
+    "vapour_vs_solution_fom_comparison",
+]
