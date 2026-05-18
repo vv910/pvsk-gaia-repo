@@ -6,7 +6,9 @@ device performance (J-V curves, EQE), defect characterization (SCLC, TRPL),
 elemental analysis (XPS, ToF-SIMS), and stability tests (humidity, thermal, photostability).
 """
 
-from gaia.lang import claim
+from gaia.lang import (
+    claim,
+)
 
 # -----------------------------------------------------------------------------
 # Optical absorption and bandgap results

@@ -5,7 +5,17 @@ This module covers the introduction content: the motivation for stabilizing
 alpha-phase FAPbI3 while maintaining its inherent narrow bandgap.
 """
 
-from gaia.lang import claim, setting, question
+from gaia.lang import (
+    claim,
+    setting,
+    question,
+    support,
+    deduction,
+    composite,
+    compare,
+    abduction,
+    infer,
+)
 
 # -----------------------------------------------------------------------------
 # Background settings (mathematical definitions, established principles)

@@ -6,7 +6,10 @@ methods including UV-vis, PL, XRD, GIWAXS, XPS, ToF-SIMS, SCLC, and photostabili
 testing.
 """
 
-from gaia.lang import claim, setting
+from gaia.lang import (
+    claim,
+    setting,
+)
 
 # -----------------------------------------------------------------------------
 # Deposition and fabrication methods

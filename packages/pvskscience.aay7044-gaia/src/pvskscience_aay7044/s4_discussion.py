@@ -5,7 +5,9 @@ This module covers the mechanistic interpretation of results: phase stabilizatio
 mechanisms, Cl interstitial role, stability mechanisms, and final conclusions.
 """
 
-from gaia.lang import claim, setting
+from gaia.lang import (
+    claim,
+)
 
 # -----------------------------------------------------------------------------
 # Stabilization mechanisms

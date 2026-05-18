@@ -13,7 +13,9 @@
 Formamidinium lead triiodide (FAPbI3) has the narrowest bandgap (~1.45-1.51 eV) among lead halide perovskites, enabling broader solar-light absorption and superior thermal stability compared to methylammonium-based analogs. However, FAPbI3 spontaneously converts from the desired black alpha-phase to an unwanted wide-bandgap yellow delta-phase at room temperature. Prior approaches stabilized the alpha-phase using mixed cations/anions (MA, Cs, Rb, Br), but these additives widen the bandgap (reducing photocurrent) or introduce thermal instability (MA evaporates at 150C). This paper reports that doping FAPbI3 with 3.8 mol% methylenediammonium dichloride (MDACl2) stabilizes the alpha-phase while preserving its inherent narrow bandgap. The resulting devices achieve certified power conversion efficiencies (PCE) of 23.73% with certified short-circuit current density (JSC) of 26.70 mA/cm2 (the highest reported for any FAPbI3-based PSC), along with operational stability retaining >90% of initial PCE after 600 hours of maximum power point tracking under full AM 1.5G illumination.
 
 > [!TIP]
-> **Mutual Information:** 0.000 bits (0 strategies, 0 operators connecting 64 nodes)
+> **Reasoning graph information gain: `1.8 bits`**
+>
+> Total mutual information between leaf premises and exported conclusions — measures how much the reasoning structure reduces uncertainty about the results.
 
 ```mermaid
 ---
@@ -23,6 +25,136 @@ config:
     nodeSpacing: 30
 ---
 graph TB
+    ftir_confirms_mda["★ FT-IR confirmation of MDA incorporation\n(0.80 → 0.96)"]:::exported
+    xrd_phase_analysis["★ XRD phase stability under humidity\n(0.93 → 0.97)"]:::exported
+    giwaxs_analysis["★ GIWAXS analysis of crystal phases\n(0.85 → 0.89)"]:::exported
+    xps_cl_content["★ XPS Cl depth profile\n(0.82 → 0.88)"]:::exported
+    tofsims_cl_mapping["★ ToF-SIMS Cl mapping\n(0.80 → 0.87)"]:::exported
+    defect_density_sclc["★ SCLC defect density measurements\n(0.82 → 0.88)"]:::exported
+    pl_lifetime["★ TRPL charge carrier lifetime\n(0.88 → 0.93)"]:::exported
+    j_v_measurement["★ J-V measurement conditions\n(0.93 → 0.97)"]:::exported
+    xrd_peak_shift["★ XRD peak shift indicating lattice expansion\n(0.88 → 0.92)"]:::exported
+    uvvis_blue_shift["★ UV-vis blue shift minimal with MDACl2\n(0.92 → 0.95)"]:::exported
+    pl_peak_shifts["★ PL peak shifts confirm minimal bandgap change\n(0.92 → 0.95)"]:::exported
+    bandgap_values["★ Bandgap values for different compositions\n(0.90 → 1.00)"]:::exported
+    dft_bandgap_fa_vacancy["★ DFT bandgap for FA vacancy composition\n(0.70 → 1.00)"]:::exported
+    dft_bandgap_cl_interstitial["★ DFT bandgap for Cl interstitial composition\n(0.70 → 1.00)"]:::exported
+    pl_quality_enhancement["★ PL quantum yield enhancement at optimal MDACl2\n(0.82 → 0.93)"]:::exported
+    humidity_phase_stability["★ Humidity-induced phase transition results\n(0.93 → 0.96)"]:::exported
+    alpha_phase_retention_38["★ 3.8 mol% MDACl2 prevents humidity-induced phase transition\n(0.93 → 1.00)"]:::exported
+    alpha_phase_retention_57["★ 5.7 mol% MDACl2 also prevents phase transition\n(0.92 → 0.96)"]:::exported
+    xrd_peak_lower_angle["★ XRD peak shift to lower angle indicates interstitial Cl\n(0.87 → 0.92)"]:::exported
+    pce_distributions["★ PCE distributions across compositions\n(0.88 → 0.93)"]:::exported
+    target_best_jv["★ Best target vs control J-V parameters\n(0.92 → 1.00)"]:::exported
+    certified_pce["★ Certified PCE measurements\n(0.95 → 0.99)"]:::exported
+    highest_jsc["★ Highest JSC for FA-based PSCs\n(0.95 → 1.00)"]:::exported
+    eqe_expanded_range["★ EQE confirms expanded absorption range\n(0.85 → 0.95)"]:::exported
+    electron_trap_density["★ Electron trap density measurements\n(0.82 → 0.98)"]:::exported
+    carrier_lifetime_target["★ Carrier lifetime doubled in target\n(0.88 → 0.99)"]:::exported
+    cl_enriched_interface["★ Cl enrichment at TiO2 interface\n(0.83 → 1.00)"]:::exported
+    humidity_stability["★ Humidity stability: target retains >90% PCE at 70h\n(0.90 → 0.98)"]:::exported
+    thermal_stability["★ Thermal stability: target retains >90% PCE after 20h at 150C\n(0.90 → 0.98)"]:::exported
+    photostability["★ Photostability: >90% PCE retained after 600 hours MPP tracking\n(0.88 → 0.98)"]:::exported
+    optimal_composition["★ Optimal MDACl2 composition is 3.8 mol%\n(0.88 → 1.00)"]:::exported
+    mda_superior_to_mapbbr3["★ MDACl2 stabilization outperforms MAPbBr3 control\n(0.88 → 1.00)"]:::exported
+    stabilization_mechanism_h_bonding["★ H-bonding stabilization mechanism\n(0.78 → 0.86)"]:::exported
+    stabilization_mechanism_entropic["★ Entropic stabilization from cation mixing\n(0.72 → 0.82)"]:::exported
+    stabilization_mechanism_tolerance_factor["★ Tolerance factor adjustment by MDA substitution\n(0.70 → 0.80)"]:::exported
+    stabilization_mechanism_cl_interstitial["★ Interstitial Cl- ions contribute to stabilization\n(0.75 → 0.99)"]:::exported
+    v_fa_defects_shallow["★ FA vacancy defects are shallow and non-trapping\n(0.72 → 0.81)"]:::exported
+    phase_stability_summary["★ Multi-factor alpha-phase stabilization mechanism\n(0.80 → 1.00)"]:::exported
+    cl_interface_photostability["★ Interface Cl improves photostability\n(0.78 → 0.86)"]:::exported
+    photostability_mechanism["★ Dual mechanism for photostability\n(0.78 → 0.99)"]:::exported
+    literature_comparison["★ Performance exceeds prior art mp-TiO2 PSCs\n(0.88 → 0.96)"]:::exported
+    aberration_free_stability["★ No efficiency-stability trade-off with MDACl2\n(0.80 → 0.92)"]:::exported
+    conclusion_alpha_stabilization["★ MDACl2 stabilizes alpha-FAPbI3 with high efficiency and stability\n(0.88 → 1.00)"]:::exported
+    conclusion_no_tradeoff["★ MDACl2 eliminates the efficiency-stability trade-off in FAPbI3 PSCs\n(0.85 → 0.99)"]:::exported
+    strat_0(["infer\n0.29 bits"]):::weak
+    aberration_free_stability --> strat_0
+    conclusion_alpha_stabilization --> strat_0
+    humidity_stability --> strat_0
+    literature_comparison --> strat_0
+    optimal_composition --> strat_0
+    thermal_stability --> strat_0
+    strat_0 --> conclusion_no_tradeoff
+    strat_1(["infer\n0.02 bits"]):::weak
+    alpha_phase_retention_38 --> strat_1
+    cl_enriched_interface --> strat_1
+    humidity_stability --> strat_1
+    photostability --> strat_1
+    thermal_stability --> strat_1
+    strat_1 --> mda_superior_to_mapbbr3
+    strat_2(["infer\n0.11 bits"]):::weak
+    alpha_phase_retention_38 --> strat_2
+    bandgap_values --> strat_2
+    humidity_stability --> strat_2
+    pce_distributions --> strat_2
+    photostability --> strat_2
+    pl_peak_shifts --> strat_2
+    thermal_stability --> strat_2
+    uvvis_blue_shift --> strat_2
+    strat_2 --> optimal_composition
+    strat_3(["infer\n0.01 bits"]):::weak
+    alpha_phase_retention_38 --> strat_3
+    alpha_phase_retention_57 --> strat_3
+    electron_trap_density --> strat_3
+    humidity_phase_stability --> strat_3
+    pl_quality_enhancement --> strat_3
+    stabilization_mechanism_entropic --> strat_3
+    stabilization_mechanism_h_bonding --> strat_3
+    stabilization_mechanism_tolerance_factor --> strat_3
+    v_fa_defects_shallow --> strat_3
+    strat_3 --> phase_stability_summary
+    strat_4(["infer\n0.24 bits"]):::weak
+    alpha_phase_retention_38 --> strat_4
+    cl_enriched_interface --> strat_4
+    cl_interface_photostability --> strat_4
+    photostability --> strat_4
+    strat_4 --> photostability_mechanism
+    strat_5(["infer\n0.14 bits"]):::weak
+    bandgap_values --> strat_5
+    certified_pce --> strat_5
+    eqe_expanded_range --> strat_5
+    target_best_jv --> strat_5
+    strat_5 --> highest_jsc
+    strat_6(["infer\n0.09 bits"]):::weak
+    carrier_lifetime_target --> strat_6
+    electron_trap_density --> strat_6
+    pl_quality_enhancement --> strat_6
+    tofsims_cl_mapping --> strat_6
+    xps_cl_content --> strat_6
+    strat_6 --> cl_enriched_interface
+    strat_7(["infer\n0.14 bits"]):::weak
+    certified_pce --> strat_7
+    eqe_expanded_range --> strat_7
+    highest_jsc --> strat_7
+    literature_comparison --> strat_7
+    mda_superior_to_mapbbr3 --> strat_7
+    optimal_composition --> strat_7
+    phase_stability_summary --> strat_7
+    strat_7 --> conclusion_alpha_stabilization
+    strat_8(["infer\n0.13 bits"]):::weak
+    defect_density_sclc --> strat_8
+    j_v_measurement --> strat_8
+    strat_8 --> electron_trap_density
+    strat_9(["infer\n0.05 bits"]):::weak
+    dft_bandgap_cl_interstitial --> strat_9
+    dft_bandgap_fa_vacancy --> strat_9
+    strat_9 --> bandgap_values
+    strat_10(["infer\n0.15 bits"]):::weak
+    dft_bandgap_cl_interstitial --> strat_10
+    xrd_peak_lower_angle --> strat_10
+    xrd_peak_shift --> strat_10
+    xrd_phase_analysis --> strat_10
+    strat_10 --> stabilization_mechanism_cl_interstitial
+    strat_11(["infer\n0.26 bits"]):::weak
+    giwaxs_analysis --> strat_11
+    xrd_phase_analysis --> strat_11
+    strat_11 --> ftir_confirms_mda
+    strat_12(["infer\n0.17 bits"]):::weak
+    j_v_measurement --> strat_12
+    pl_lifetime --> strat_12
+    strat_12 --> carrier_lifetime_target
 
     classDef premise fill:#ddeeff,stroke:#4488bb,color:#333
     classDef exported fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#333
@@ -35,7 +167,7 @@ graph TB
 
 ## Reasoning Structure
 
-### MDACl2 doping at 3.8 mol% prevents humidity-induced alpha-to-delta phase transition in FAPbI3 (belief: 0.93)
+### MDACl2 doping at 3.8 mol% prevents humidity-induced alpha-to-delta phase transition in FAPbI3 (belief: 1.00)
 
 FAPbI3 films without MDACl2 completely convert from the black alpha-phase to the yellow delta-phase within 24 hours when exposed to 80% relative humidity at 25C, as confirmed by X-ray diffraction (XRD) showing disappearance of the alpha-phase peaks at 14.3 and 28.6 degrees and appearance of the delta-phase peak at 11.6 degrees. Films with 1.9 mol% MDACl2 show strong phase transition toward delta-phase under the same conditions. However, films with 3.8 mol% and 5.7 mol% MDACl2 retain pure alpha-phase with no detectable delta-phase after 24 hours at 80% RH. This is the central stability finding: a critical minimum threshold of ~3.8 mol% MDACl2 is required for effective humidity-induced phase stabilization.
 
@@ -50,7 +182,7 @@ FAPbI3 films without MDACl2 completely convert from the black alpha-phase to the
 
 ---
 
-### MDACl2 preserves the inherent narrow bandgap of FAPbI3, with minimal widening to 1.49 eV at 3.8 mol% (belief: 0.90)
+### MDACl2 preserves the inherent narrow bandgap of FAPbI3, with minimal widening to 1.49 eV at 3.8 mol% (belief: 1.00)
 
 The optical bandgap of FAPbI3 with 3.8 mol% MDACl2 is 1.49 eV, compared to 1.45 eV for pristine FAPbI3 (a small increase of 0.04 eV). In contrast, the MAPbBr3-stabilized control (0.95 FAPbI3 / 0.05 MAPbBr3) has a bandgap of 1.53 eV. Photoluminescence (PL) emission peaks shift progressively with MDACl2 content: 826 nm (pristine), 824 nm (1.9 mol%), 822 nm (3.8 mol%), 820 nm (5.7 mol%), vs. 816 nm for the MAPbBr3 control. This confirms that MDACl2 causes much less bandgap widening than MAPbBr3 at comparable stabilizing amounts. DFT calculations support two incorporation mechanisms: FA vacancy (bandgap 1.47 eV) and Cl interstitial (bandgap 1.69 eV). The experimentally observed small bandgap increase is consistent with FA vacancies being the dominant mechanism, with minor contribution from Cl interstitials.
 
@@ -64,7 +196,7 @@ The optical bandgap of FAPbI3 with 3.8 mol% MDACl2 is 1.49 eV, compared to 1.45 
 
 ---
 
-### The target device achieves certified PCE of 23.73% and record JSC of 26.70 mA/cm2 (belief: 0.95)
+### The target device achieves certified PCE of 23.73% and record JSC of 26.70 mA/cm2 (belief: 0.99)
 
 Two devices were independently certified by Newport, USA using the quasi-steady-state (QSS) method. Device 1 achieved: JSC = 26.10 mA/cm2, VOC = 1.15 V, FF = 79.0%, stabilized PCE = 23.73%. Device 2 achieved: JSC = 26.70 mA/cm2 (highest reported for any FAPbI3-based PSC), VOC = 1.144 V, FF = 77.56%, stabilized PCE = 23.69%. The best-performing device in the lab (reverse bias sweep) showed JSC = 26.50 mA/cm2, VOC = 1.14 V, FF = 81.77%, PCE = 24.66%. The improvement over the MAPbBr3 control (JSC = 25.14 mA/cm2, PCE = 23.05%) is primarily from higher JSC (+1.36 mA/cm2) due to the narrower bandgap maintained with MDACl2.
 
@@ -77,7 +209,7 @@ Two devices were independently certified by Newport, USA using the quasi-steady-
 
 ---
 
-### MDACl2 achieves superior humidity, thermal, and photostability compared to the MAPbBr3 control (belief: 0.90)
+### MDACl2 achieves superior humidity, thermal, and photostability compared to the MAPbBr3 control (belief: 1.00)
 
 The target device retains >90% of initial PCE after 70 hours at 85% RH (25C), while the MAPbBr3 control retains only 40% of initial PCE under identical conditions. At 150C in air (~25% RH), the target retains >90% of initial PCE after 20 hours, while the control degrades to <20% (primarily due to MA evaporation). Under maximum power point tracking at full AM 1.5G illumination (100 mW/cm2) in ambient conditions without UV filtering (encapsulated, spiro-OMeTAD HTM), the target maintains ~90% of initial PCE (greater than 23.0%) over 600 hours of continuous irradiation. The control device cannot be meaningfully tested under identical photostability conditions due to faster degradation.
 
@@ -91,7 +223,7 @@ The target device retains >90% of initial PCE after 70 hours at 85% RH (25C), wh
 
 ---
 
-### The MDACl2 approach resolves the efficiency-stability trade-off in FAPbI3-based PSCs (belief: 0.85)
+### The MDACl2 approach resolves the efficiency-stability trade-off in FAPbI3-based PSCs (belief: 0.99)
 
 Prior to this work, the best mp-TiO2-based PSCs used MAPbBr3 to stabilize alpha-FAPbI3, achieving ~23% PCE but suffering from: (1) bandgap widening from Br incorporation (reducing JSC), (2) thermal instability from MA evaporation at elevated temperature, and (3) humidity sensitivity. The MDACl2-stabilized target simultaneously outperforms this control on all efficiency metrics (higher PCE: 24.66% vs 23.05%; higher JSC: 26.50 vs 25.14 mA/cm2) AND all three stability metrics (humidity, thermal, and photostability). This demonstrates that the inherent bandgap of alpha-FAPbI3 can be fully utilized without sacrificing stability, by using MDACl2 instead of MA/Br/Cs additives.
 
@@ -101,7 +233,7 @@ Prior to this work, the best mp-TiO2-based PSCs used MAPbBr3 to stabilize alpha-
 
 ---
 
-### Alpha-phase stabilization by MDACl2 operates through multiple complementary mechanisms (belief: 0.80)
+### Alpha-phase stabilization by MDACl2 operates through multiple complementary mechanisms (belief: 1.00)
 
 The paper proposes four stabilization mechanisms, each supported by independent evidence: (1) Hydrogen bonding between MDA's multiple H-N groups and I- in the lattice (supported by analogy to MA stabilization mechanisms in refs 33-35); (2) Goldschmidt tolerance factor optimization (MDA substitution brings t closer to the optimal 0.9 for cubic phase); (3) Entropic stabilization from cation mixing at FA sites (supported by solid-solution thermodynamics, ref 32); (4) Interstitial Cl- ions reducing lattice strain (supported by XRD peak shift to lower angles and DFT bandgap calculations). The combination of multiple mechanisms explains why stabilization is effective at such a low dopant concentration (3.8 mol%) and why the alpha-phase is stable under such diverse stresses (humidity, thermal, optical).
 
@@ -112,7 +244,7 @@ The paper proposes four stabilization mechanisms, each supported by independent 
 
 ---
 
-### Interstitial Cl- ions enriched at the TiO2/perovskite interface contribute to exceptional photostability (belief: 0.78)
+### Interstitial Cl- ions enriched at the TiO2/perovskite interface contribute to exceptional photostability (belief: 0.99)
 
 XPS depth profiling and ToF-SIMS show that the Cl content in the target (3.8 mol% MDACl2) is higher than in the control throughout the perovskite film, with Cl enrichment especially concentrated at the TiO2/perovskite interface. Prior literature (refs 41-42) demonstrated that Cl at this interface increases PSC photostability by suppressing TiO2 photocatalytic activity that would otherwise degrade the perovskite under UV illumination. The MDACl2 doping strategy naturally concentrates Cl at this critical interface, whereas the MAPbBr3 control does not provide this benefit. The exceptional 600-hour photostability (90% PCE retention) is attributed to the combination of interfacial Cl and alpha-phase stabilization.
 
@@ -129,70 +261,70 @@ XPS depth profiling and ToF-SIMS show that the Cl content in the target (3.8 mol
 
 | Label | Content | Prior | Belief |
 |-------|---------|-------|--------|
-| aberration_free_stability | Unlike mixed-cation-anion approaches that sacrifice thermal stability (MA), i... | 0.80 | 0.80 |
+| aberration_free_stability | Unlike mixed-cation-anion approaches that sacrifice thermal stability (MA), i... | 0.80 | 0.92 |
 | alpha_delta_transition | FAPbI3 readily transforms from the desired trigonal black alpha-phase into th... | 0.50 | — |
-| alpha_phase_retention_38 | FAPbI3 with 3.8 mol% MDACl2 retained the pure alpha-phase after 24 hours at 8... | 0.93 | 0.93 |
-| alpha_phase_retention_57 | FAPbI3 with 5.7 mol% MDACl2 also retained the pure alpha-phase after 24 hours... | 0.92 | 0.92 |
-| bandgap_values | The optical bandgap values derived from UV-vis spectra are: pristine FAPbI3 (... | 0.90 | 0.90 |
-| carrier_lifetime_target | Time-resolved PL measurements on quartz substrates showed that the target (3.... | 0.88 | 0.88 |
-| certified_pce | Two target devices were certified by Newport, USA using the quasi-steady-stat... | 0.95 | 0.95 |
-| cl_enriched_interface | XPS depth profiling and ToF-SIMS showed that the Cl content in the target (3.... | 0.83 | 0.83 |
-| cl_interface_photostability | The Cl enrichment at the TiO2/perovskite interface (confirmed by XPS and ToF-... | 0.78 | 0.78 |
-| conclusion_alpha_stabilization | MDACl2 doping at 3.8 mol% effectively stabilizes the alpha-phase of FAPbI3 wi... | 0.88 | 0.88 |
-| conclusion_no_tradeoff | The MDACl2 approach resolves the long-standing efficiency-stability trade-off... | 0.85 | 0.85 |
+| alpha_phase_retention_38 | FAPbI3 with 3.8 mol% MDACl2 retained the pure alpha-phase after 24 hours at 8... | 0.93 | 1.00 |
+| alpha_phase_retention_57 | FAPbI3 with 5.7 mol% MDACl2 also retained the pure alpha-phase after 24 hours... | 0.92 | 0.96 |
+| bandgap_values | The optical bandgap values derived from UV-vis spectra are: pristine FAPbI3 (... | 0.90 | 1.00 |
+| carrier_lifetime_target | Time-resolved PL measurements on quartz substrates showed that the target (3.... | 0.88 | 0.99 |
+| certified_pce | Two target devices were certified by Newport, USA using the quasi-steady-stat... | 0.95 | 0.99 |
+| cl_enriched_interface | XPS depth profiling and ToF-SIMS showed that the Cl content in the target (3.... | 0.83 | 1.00 |
+| cl_interface_photostability | The Cl enrichment at the TiO2/perovskite interface (confirmed by XPS and ToF-... | 0.78 | 0.86 |
+| conclusion_alpha_stabilization | MDACl2 doping at 3.8 mol% effectively stabilizes the alpha-phase of FAPbI3 wi... | 0.88 | 1.00 |
+| conclusion_no_tradeoff | The MDACl2 approach resolves the long-standing efficiency-stability trade-off... | 0.85 | 0.99 |
 | crystallinity_improvement | XRD signal intensity increased for MDACl2 addition up to 3.8 mol% without any... | 0.85 | 0.85 |
-| defect_density_sclc | Electron-only devices with structure FTO/SnO2/perovskite/PCBM/Au were fabrica... | 0.82 | 0.82 |
+| defect_density_sclc | Electron-only devices with structure FTO/SnO2/perovskite/PCBM/Au were fabrica... | 0.82 | 0.88 |
 | deposition_method | A thin film of FAPbI3 incorporating MDACl2 was deposited using a process simi... | 0.90 | 0.90 |
 | device_structure | PSC devices were fabricated with the structure: FTO/SnO2/mp-TiO2/perovskite/P... | 0.90 | 0.90 |
 | dft_bandgap_calculation | Density functional theory (DFT) calculations were performed to compute bandga... | 0.75 | 0.75 |
-| dft_bandgap_cl_interstitial | DFT calculations for the Cl interstitial composition (FA1-xMDAx)PbI3Clx yield... | 0.70 | 0.70 |
-| dft_bandgap_fa_vacancy | DFT calculations for the FA vacancy composition (FA1-2xMDAx)Pb(I1-xClx)3 yiel... | 0.70 | 0.70 |
-| electron_trap_density | Electron trap densities (N_defects) from SCLC measurements: x=0 (5.4x10^15 cm... | 0.82 | 0.82 |
-| eqe_expanded_range | External quantum efficiency (EQE) measurements showed that the target device ... | 0.85 | 0.85 |
+| dft_bandgap_cl_interstitial | DFT calculations for the Cl interstitial composition (FA1-xMDAx)PbI3Clx yield... | 0.70 | 1.00 |
+| dft_bandgap_fa_vacancy | DFT calculations for the FA vacancy composition (FA1-2xMDAx)Pb(I1-xClx)3 yiel... | 0.70 | 1.00 |
+| electron_trap_density | Electron trap densities (N_defects) from SCLC measurements: x=0 (5.4x10^15 cm... | 0.82 | 0.98 |
+| eqe_expanded_range | External quantum efficiency (EQE) measurements showed that the target device ... | 0.85 | 0.95 |
 | eqe_spectral_response | External quantum efficiency (EQE) was measured to characterize the wavelength... | 0.85 | 0.85 |
 | fapbi3_bandgap | FAPbI3 (formamidinium lead triiodide, FA+ = H2N=CH-NH2+) has the narrowest ba... | 0.50 | — |
 | fapbi3_stabilization_history | Prior approaches to alpha-FAPbI3 stabilization include: (1) mixing with MAPbB... | 0.85 | 0.85 |
-| ftir_confirms_mda | Fourier-transform infrared spectroscopy (FT-IR) and nuclear magnetic resonanc... | 0.80 | 0.80 |
-| giwaxs_analysis | Grazing-incidence wide-angle X-ray scattering (GIWAXS) analysis of x=3.8 mol%... | 0.85 | 0.85 |
+| ftir_confirms_mda | Fourier-transform infrared spectroscopy (FT-IR) and nuclear magnetic resonanc... | 0.80 | 0.96 |
+| giwaxs_analysis | Grazing-incidence wide-angle X-ray scattering (GIWAXS) analysis of x=3.8 mol%... | 0.85 | 0.89 |
 | giwaxs_no_impurity | GIWAXS analysis of x=3.8 mol% and control samples showed identical ring patte... | 0.88 | 0.88 |
-| highest_jsc | The certified JSC of 26.70 mA/cm2 represents the highest short-circuit curren... | 0.95 | 0.95 |
+| highest_jsc | The certified JSC of 26.70 mA/cm2 represents the highest short-circuit curren... | 0.95 | 1.00 |
 | hole_trap_reduction | Hole-only device measurements (not detailed in this module) showed that the h... | 0.75 | 0.75 |
-| humidity_phase_stability | After exposure to 80% relative humidity for 24 hours: pure FAPbI3 (x=0) compl... | 0.93 | 0.93 |
-| humidity_stability | Under 85% RH at 25C (unencapsulated devices), the target device retained more... | 0.90 | 0.90 |
-| j_v_measurement | Current density-voltage (J-V) characteristics were measured under standard AM... | 0.93 | 0.93 |
-| literature_comparison | Prior to this work, the highest efficiency for mp-TiO2-based PSCs was achieve... | 0.88 | 0.88 |
-| mapbbr3_control_efficiency | A control device using FAPbI3 stabilized by MAPbBr3 (with 5 mol% MAPbBr3) ach... | 0.90 | 0.90 |
+| humidity_phase_stability | After exposure to 80% relative humidity for 24 hours: pure FAPbI3 (x=0) compl... | 0.93 | 0.96 |
+| humidity_stability | Under 85% RH at 25C (unencapsulated devices), the target device retained more... | 0.90 | 0.98 |
+| j_v_measurement | Current density-voltage (J-V) characteristics were measured under standard AM... | 0.93 | 0.97 |
+| literature_comparison | Prior to this work, the highest efficiency for mp-TiO2-based PSCs was achieve... | 0.88 | 0.96 |
+| mapbbr3_control_efficiency | A control device using FAPbI3 stabilized by MAPbBr3 (with 5 mol% MAPbBr3) ach... | 0.90 | 1.00 |
 | mda_properties | Methylenediammonium (MDA2+, +H3N-CH2-NH3+) has an ionic radius of 262 pm, com... | 0.50 | — |
-| mda_superior_to_mapbbr3 | Compared to the MAPbBr3-stabilized control (the best prior mp-TiO2-based PSC ... | 0.88 | 0.88 |
+| mda_superior_to_mapbbr3 | Compared to the MAPbBr3-stabilized control (the best prior mp-TiO2-based PSC ... | 0.88 | 1.00 |
 | mixed_cation_problem | Mixed cation-anion approaches (FAxMA1-x, FA1-x-yMAxCry) stabilize alpha-FAPbI... | 0.50 | — |
 | morphology_unchanged | Scanning electron microscopy (SEM) comparison of target and control showed no... | 0.85 | 0.85 |
-| optimal_composition | The optimal MDACl2 composition for FAPbI3 is 3.8 mol%, which provides: (1) ef... | 0.88 | 0.88 |
-| pce_distributions | PCE distributions for FAPbI3:xMDACl2 PSCs (x = 0, 1.9, 3.8, 5.7 mol%) and con... | 0.88 | 0.88 |
+| optimal_composition | The optimal MDACl2 composition for FAPbI3 is 3.8 mol%, which provides: (1) ef... | 0.88 | 1.00 |
+| pce_distributions | PCE distributions for FAPbI3:xMDACl2 PSCs (x = 0, 1.9, 3.8, 5.7 mol%) and con... | 0.88 | 0.93 |
 | perovskite_structure | Lead halide perovskites (LHPs) have the general formula ABX3, where A is a ca... | 0.50 | — |
-| phase_stability_summary | The alpha-phase stabilization of FAPbI3 by MDACl2 arises from three factors: ... | 0.80 | 0.80 |
-| photostability | Under maximum power point tracking at full AM 1.5G illumination (100 mW/cm2) ... | 0.88 | 0.88 |
-| photostability_mechanism | The exceptional photostability (90% PCE retention after 600 hours MPP trackin... | 0.78 | 0.78 |
-| pl_lifetime | Time-resolved photoluminescence (TRPL) was measured on perovskite films depos... | 0.88 | 0.88 |
-| pl_peak_shifts | PL emission peaks for FAPbI3:xMDACl2 shifted progressively: 826 nm (x=0), 824... | 0.92 | 0.92 |
-| pl_quality_enhancement | Adding 3.8 mol% MDACl2 to FAPbI3 enhanced the PL quantum yield (measured with... | 0.82 | 0.82 |
+| phase_stability_summary | The alpha-phase stabilization of FAPbI3 by MDACl2 arises from three factors: ... | 0.80 | 1.00 |
+| photostability | Under maximum power point tracking at full AM 1.5G illumination (100 mW/cm2) ... | 0.88 | 0.98 |
+| photostability_mechanism | The exceptional photostability (90% PCE retention after 600 hours MPP trackin... | 0.78 | 0.99 |
+| pl_lifetime | Time-resolved photoluminescence (TRPL) was measured on perovskite films depos... | 0.88 | 0.93 |
+| pl_peak_shifts | PL emission peaks for FAPbI3:xMDACl2 shifted progressively: 826 nm (x=0), 824... | 0.92 | 0.95 |
+| pl_quality_enhancement | Adding 3.8 mol% MDACl2 to FAPbI3 enhanced the PL quantum yield (measured with... | 0.82 | 0.93 |
 | pl_spectra | Photoluminescence (PL) emission peaks for FAPbI3:xMDACl2 films shifted from 8... | 0.92 | 0.92 |
 | research_question | Can the alpha-phase of FAPbI3 be stabilized using MDACl2 doping (without MA, ... | 0.50 | — |
 | stability_test_protocols | Stability tests were conducted under three conditions: (1) humidity stability... | 0.88 | 0.88 |
-| stabilization_mechanism_cl_interstitial | Cl- ions (ionic radius 181 pm, much smaller than I- at 220 pm) introduced alo... | 0.75 | 0.75 |
-| stabilization_mechanism_entropic | Cation mixing at FA sites (MDA2+ substituting for FA+) affords entropic stabi... | 0.72 | 0.72 |
-| stabilization_mechanism_h_bonding | MDA2+ stabilizes the alpha-FAPbI3 phase through hydrogen bonding between the ... | 0.78 | 0.78 |
-| stabilization_mechanism_tolerance_factor | Goldschmidt tolerance factor t for FAPbI3 is approximately 1.0, above the opt... | 0.70 | 0.70 |
+| stabilization_mechanism_cl_interstitial | Cl- ions (ionic radius 181 pm, much smaller than I- at 220 pm) introduced alo... | 0.75 | 0.99 |
+| stabilization_mechanism_entropic | Cation mixing at FA sites (MDA2+ substituting for FA+) affords entropic stabi... | 0.72 | 0.82 |
+| stabilization_mechanism_h_bonding | MDA2+ stabilizes the alpha-FAPbI3 phase through hydrogen bonding between the ... | 0.78 | 0.86 |
+| stabilization_mechanism_tolerance_factor | Goldschmidt tolerance factor t for FAPbI3 is approximately 1.0, above the opt... | 0.70 | 0.80 |
 | surface_passivation | The surface of the target and control perovskite layers was passivated using ... | 0.85 | 0.85 |
-| target_best_jv | The best-performing target device (3.8 mol% MDACl2) showed: JSC = 26.50 mA/cm... | 0.92 | 0.92 |
-| thermal_stability | At 150C and approximately 25% RH (unencapsulated devices), the control device... | 0.90 | 0.90 |
-| tofsims_cl_mapping | Time-of-flight secondary-ion mass spectrometry (ToF-SIMS) of the FTO/Bi-TiO2/... | 0.80 | 0.80 |
+| target_best_jv | The best-performing target device (3.8 mol% MDACl2) showed: JSC = 26.50 mA/cm... | 0.92 | 1.00 |
+| thermal_stability | At 150C and approximately 25% RH (unencapsulated devices), the control device... | 0.90 | 0.98 |
+| tofsims_cl_mapping | Time-of-flight secondary-ion mass spectrometry (ToF-SIMS) of the FTO/Bi-TiO2/... | 0.80 | 0.87 |
 | uvvis_absorption | UV-vis absorption spectra were measured for FAPbI3:xMDACl2 (x = 0, 1.9, 3.8, ... | 0.92 | 0.92 |
-| uvvis_blue_shift | UV-vis absorption spectra of FAPbI3:xMDACl2 (x = 0, 1.9, 3.8, 5.7 mol%) showe... | 0.92 | 0.92 |
-| v_fa_defects_shallow | FA vacancy (V_FA) defects formed by MDA2+ substitution are shallow traps near... | 0.72 | 0.72 |
-| xps_cl_content | X-ray photoelectron spectroscopy (XPS) showed that the residual Cl content in... | 0.82 | 0.82 |
-| xrd_peak_lower_angle | The XRD (001) orientation peak shifted to a lower diffraction angle with incr... | 0.87 | 0.87 |
-| xrd_peak_shift | XRD patterns of FAPbI3:xMDACl2 films showed that the (001) orientation peak s... | 0.88 | 0.88 |
-| xrd_phase_analysis | X-ray diffraction (XRD) patterns of FAPbI3:xMDACl2 (x = 0, 1.9, 3.8, 5.7 mol%... | 0.93 | 0.93 |
+| uvvis_blue_shift | UV-vis absorption spectra of FAPbI3:xMDACl2 (x = 0, 1.9, 3.8, 5.7 mol%) showe... | 0.92 | 0.95 |
+| v_fa_defects_shallow | FA vacancy (V_FA) defects formed by MDA2+ substitution are shallow traps near... | 0.72 | 0.81 |
+| xps_cl_content | X-ray photoelectron spectroscopy (XPS) showed that the residual Cl content in... | 0.82 | 0.88 |
+| xrd_peak_lower_angle | The XRD (001) orientation peak shifted to a lower diffraction angle with incr... | 0.87 | 0.92 |
+| xrd_peak_shift | XRD patterns of FAPbI3:xMDACl2 films showed that the (001) orientation peak s... | 0.88 | 0.92 |
+| xrd_phase_analysis | X-ray diffraction (XRD) patterns of FAPbI3:xMDACl2 (x = 0, 1.9, 3.8, 5.7 mol%... | 0.93 | 0.97 |
 
 ## Weak Points
 
@@ -242,5 +374,4 @@ Three different hole-transporting materials (HTMs) are used across different tes
 
 ## Detailed Analysis
 
-For structural integrity verification (Pass 5), standalone readability checks (Pass 6),
-and complete package statistics, see [ANALYSIS.md](ANALYSIS.md).
+For per-module reasoning graphs with full claim details, see [detailed-reasoning.md](docs/detailed-reasoning.md).
