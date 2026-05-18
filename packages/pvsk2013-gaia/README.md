@@ -11,10 +11,82 @@ This paper introduces a sequential deposition method for fabricating perovskite 
 
 The key results include: achieving 15% power conversion efficiency (certified at 14.14%), demonstrating near-unity quantum yield (APCE >90% across the visible spectrum), and showing promising stability with >80% PCE retention after 500 hours under continuous illumination. The mechanistic insight is that confining PbI2 to ~22 nm nanocrystals within the TiO2 pores enables rapid complete conversion within seconds, whereas bulk PbI2 on flat substrates converts incompletely even after 45 minutes.
 
-> [!NOTE]
-> **[Per-module reasoning graphs with full claim details →](docs/detailed-reasoning.md)**
+> [!TIP]
+> **Reasoning graph information gain: `2.2 bits`**
 >
-> 5 Mermaid diagrams (one per section) with every claim, strategy, and belief value.
+> Total mutual information between leaf premises and exported conclusions — measures how much the reasoning structure reduces uncertainty about the results.
+
+```mermaid
+---
+config:
+  flowchart:
+    rankSpacing: 80
+    nodeSpacing: 30
+---
+graph TB
+    sequential_deposition_introduced["★ Sequential deposition method introduced\n(0.92 → 0.92)"]:::exported
+    control_improvement["★ Sequential method improves morphology control\n(0.50 → 0.85)"]:::exported
+    efficiency_achieved["★ 15% efficiency achieved with sequential deposition\n(0.50 → 0.79)"]:::exported
+    reproducibility_improvement["★ Sequential method improves reproducibility\n(0.50 → 0.84)"]:::exported
+    best_device_modification["★ Modified conditions for best-performing devices\n(0.88 → 0.88)"]:::exported
+    pbi2_complete_infiltration["★ PbI2 completely contained within TiO2 nanopores\n(0.90 → 0.90)"]:::exported
+    pbi2_crystal_size["★ PbI2 crystal size limited to ~22 nm in nanopores\n(0.88 → 0.88)"]:::exported
+    perovskite_xrd_confirmed["★ Tetragonal perovskite XRD peaks observed after conversion\n(0.90 → 0.90)"]:::exported
+    flat_substrate_incomplete_conversion["★ Flat substrate shows incomplete perovskite conversion\n(0.85 → 0.85)"]:::exported
+    conversion_rate_enhancement["★ Nanoscopic confinement dramatically accelerates conversion\n(0.50 → 0.80)"]:::exported
+    device_batch_statistics["★ Batch average PCE: 12.0% +/ 0.5%\n(0.90 → 0.90)"]:::exported
+    ipce_peak_value["★ IPCE peak exceeds 90% in short wavelengths\n(0.90 → 0.90)"]:::exported
+    integrated_current_match["★ Integrated IPCE current matches measured Jsc\n(0.50 → 0.86)"]:::exported
+    apce_exceeds_90_percent["★ APCE exceeds 90% indicating near-unity quantum yield\n(0.90 → 0.90)"]:::exported
+    best_device_performance["★ Best device: 15.0% PCE\n(0.50 → 0.77)"]:::exported
+    best_device_improvement_attributed["★ Higher photocurrent from increased loading and light scattering\n(0.78 → 0.78)"]:::exported
+    stability_result["★ Device retains >80% PCE after 500 hours\n(0.88 → 0.88)"]:::exported
+    no_photodegradation["★ No photodegradation observed\n(0.85 → 0.85)"]:::exported
+    pce_decrease_mechanism["★ PCE decrease due to Voc and FF reduction from shunt resistance loss\n(0.50 → 0.82)"]:::exported
+    conversion_facilitation["★ Nanoporous confinement facilitates perovskite conversion\n(0.50 → 0.77)"]:::exported
+    layered_pbi2_structure["★ Layered PbI2 structure enables cation insertion\n(0.90 → 0.90)"]:::exported
+    thermodynamic_driving_force["★ Lattice energy difference drives conversion\n(0.82 → 0.82)"]:::exported
+    reaction_kinetics_enhancement["★ Nanoscopic morphology combined with high formation energy enhances kinetics\n(0.85 → 0.85)"]:::exported
+    strat_0(["infer\n0.25 bits"]):::weak
+    apce_exceeds_90_percent --> strat_0
+    ipce_peak_value --> strat_0
+    strat_0 --> integrated_current_match
+    strat_1(["infer\n0.30 bits"]):::weak
+    best_device_improvement_attributed --> strat_1
+    best_device_modification --> strat_1
+    strat_1 --> best_device_performance
+    strat_2(["infer\n0.20 bits"]):::weak
+    control_improvement --> strat_2
+    conversion_rate_enhancement --> strat_2
+    strat_2 --> efficiency_achieved
+    strat_3(["infer\n0.29 bits"]):::weak
+    control_improvement --> strat_3
+    device_batch_statistics --> strat_3
+    strat_3 --> reproducibility_improvement
+    strat_4(["infer\n0.30 bits"]):::weak
+    flat_substrate_incomplete_conversion --> strat_4
+    pbi2_crystal_size --> strat_4
+    perovskite_xrd_confirmed --> strat_4
+    strat_4 --> conversion_rate_enhancement
+    strat_5(["infer\n0.31 bits"]):::weak
+    layered_pbi2_structure --> strat_5
+    reaction_kinetics_enhancement --> strat_5
+    thermodynamic_driving_force --> strat_5
+    strat_5 --> conversion_facilitation
+    strat_6(["infer\n0.28 bits"]):::weak
+    no_photodegradation --> strat_6
+    stability_result --> strat_6
+    strat_6 --> pce_decrease_mechanism
+    strat_7(["infer\n0.24 bits"]):::weak
+    pbi2_complete_infiltration --> strat_7
+    sequential_deposition_introduced --> strat_7
+    strat_7 --> control_improvement
+
+    classDef premise fill:#ddeeff,stroke:#4488bb,color:#333
+    classDef exported fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#333
+    classDef weak fill:#fff9c4,stroke:#f9a825,stroke-dasharray: 5 5,color:#333
+    classDef contra fill:#ffebee,stroke:#c62828,color:#333
+```
 
 ## Summary
 

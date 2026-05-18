@@ -8,6 +8,120 @@ This package formalizes the 2012 Science paper by Lee et al. that demonstrated a
 
 The reasoning graph contains 88 knowledge nodes and 15 strategies. The most strongly supported conclusions concern the direct experimental measurements (device performance, crystal structure, spectral response) and the chemical capacitance mechanism explaining the voltage improvement. The main achievement claim (10.9% efficiency) achieves high belief (0.85), but several derived conclusions about the MSSC mechanism and electron transport reach only moderate belief (0.68-0.71) due to the complexity of the multi-premise inference chains.
 
+> [!TIP]
+> **Reasoning graph information gain: `2.4 bits`**
+>
+> Total mutual information between leaf premises and exported conclusions — measures how much the reasoning structure reduces uncertainty about the results.
+
+```mermaid
+---
+config:
+  flowchart:
+    rankSpacing: 80
+    nodeSpacing: 30
+---
+graph TB
+    energy_loss_excitons["★ Energy losses from exciton separation and charge extraction\n(0.85 → 0.85)"]:::exported
+    dssc_losses["★ DSSC loss mechanisms\n(0.85 → 0.85)"]:::exported
+    organic_losses["★ Organic solar cell losses from low dielectric constant\n(0.85 → 0.85)"]:::exported
+    sensitized_voc_limitation["★ Sensitized solar cell Voc limitation\n(0.75 → 0.75)"]:::exported
+    perovskite_properties["★ Perovskite material properties\n(0.50 → 0.80)"]:::exported
+    prior_perovskite_work["★ Prior perovskite solar cell performance\n(0.90 → 0.92)"]:::exported
+    research_gap["★ Research gap: overcoming fundamental losses\n(0.50 → 0.61)"]:::exported
+    key_insight["★ Key insight: Al2O3 scaffold improves efficiency\n(0.50 → 0.89)"]:::exported
+    crystal_structure["★ Perovskite crystal structure\n(0.92 → 0.93)"]:::exported
+    film_crystallinity["★ Perovskite film crystallinity\n(0.90 → 0.92)"]:::exported
+    film_stability["★ Perovskite air stability\n(0.90 → 0.92)"]:::exported
+    pore_filling["★ Perovskite pore filling\n(0.80 → 0.83)"]:::exported
+    perovskite_conductivity["★ Perovskite conductivity\n(0.82 → 0.84)"]:::exported
+    spiro_conductivity["★ Spiro-OMeTAD conductivity\n(0.85 → 0.87)"]:::exported
+    al2o3_best_device["★ Best Al2O3 MSSC device performance\n(0.92 → 0.94)"]:::exported
+    tio2_device["★ TiO2 sensitized device performance\n(0.92 → 0.93)"]:::exported
+    voc_improvement["★ Voc improvement with Al2O3 scaffold\n(0.50 → 0.71)"]:::exported
+    ipce_spectral_range["★ IPCE spectral response\n(0.90 → 0.90)"]:::exported
+    optical_bandgap["★ Perovskite optical band gap\n(0.90 → 0.90)"]:::exported
+    voltage_deficit["★ Small voltage deficit\n(0.92 → 0.92)"]:::exported
+    absorbance_capability["★ Absorbance spectrum\n(0.50 → 0.76)"]:::exported
+    photostability["★ Long-term photostability\n(0.90 → 0.91)"]:::exported
+    tio2_sensitization["★ Effective TiO2 sensitization\n(0.88 → 0.88)"]:::exported
+    al2o3_insulating["★ Al2O3 acts as insulator\n(0.90 → 0.90)"]:::exported
+    hole_transfer_effective["★ Hole transfer to spiro-OMeTAD\n(0.88 → 0.88)"]:::exported
+    hole_conductor_required["★ Hole conductor requirement for MSSC\n(0.85 → 0.85)"]:::exported
+    charge_collection_speed["★ Faster charge collection with Al2O3\n(0.88 → 0.88)"]:::exported
+    perovskite_semicondo["★ Perovskite as semiconductor\n(0.50 → 0.68)"]:::exported
+    chemical_capacitance["★ Chemical capacitance mechanism for Voc improvement\n(0.80 → 0.81)"]:::exported
+    tio2_chemical_capacitance["★ TiO2 sub-band gap states cause voltage loss\n(0.78 → 0.79)"]:::exported
+    mssc_definition["★ MSSC definition and principle\n(0.50 → 0.69)"]:::exported
+    electron_transport_mssc["★ Electron transport in MSSC\n(0.50 → 0.70)"]:::exported
+    perovskite_transport_speed["★ Perovskite electron transport speed\n(0.80 → 0.80)"]:::exported
+    series_resistance_tradeoff["★ Series-shunt resistance tradeoff\n(0.80 → 0.83)"]:::exported
+    main_achievement["★ Main achievement: 10.9% efficiency\n(0.50 → 0.85)"]:::exported
+    fundamental_loss_reduction["★ Reduction of fundamental losses\n(0.50 → 0.74)"]:::exported
+    future_fill_factor["★ Future: fill factor improvement\n(0.50 → 0.68)"]:::exported
+    strat_0(["infer\n0.27 bits"]):::weak
+    absorbance_capability --> strat_0
+    al2o3_best_device --> strat_0
+    fundamental_loss_reduction --> strat_0
+    key_insight --> strat_0
+    perovskite_conductivity --> strat_0
+    perovskite_properties --> strat_0
+    photostability --> strat_0
+    series_resistance_tradeoff --> strat_0
+    spiro_conductivity --> strat_0
+    strat_0 --> main_achievement
+    strat_1(["infer\n0.19 bits"]):::weak
+    al2o3_best_device --> strat_1
+    film_crystallinity --> strat_1
+    film_stability --> strat_1
+    perovskite_properties --> strat_1
+    pore_filling --> strat_1
+    prior_perovskite_work --> strat_1
+    tio2_device --> strat_1
+    voc_improvement --> strat_1
+    strat_1 --> key_insight
+    strat_2(["infer\n0.26 bits"]):::weak
+    al2o3_insulating --> strat_2
+    tio2_sensitization --> strat_2
+    strat_2 --> electron_transport_mssc
+    strat_3(["infer\n0.30 bits"]):::weak
+    charge_collection_speed --> strat_3
+    perovskite_transport_speed --> strat_3
+    strat_3 --> perovskite_semicondo
+    strat_4(["infer\n0.20 bits"]):::weak
+    chemical_capacitance --> strat_4
+    tio2_chemical_capacitance --> strat_4
+    strat_4 --> voc_improvement
+    strat_5(["infer\n0.07 bits"]):::weak
+    crystal_structure --> strat_5
+    strat_5 --> perovskite_properties
+    strat_6(["infer\n0.29 bits"]):::weak
+    dssc_losses --> strat_6
+    energy_loss_excitons --> strat_6
+    organic_losses --> strat_6
+    sensitized_voc_limitation --> strat_6
+    strat_6 --> research_gap
+    strat_7(["infer\n0.28 bits"]):::weak
+    hole_conductor_required --> strat_7
+    hole_transfer_effective --> strat_7
+    strat_7 --> mssc_definition
+    strat_8(["infer\n0.12 bits"]):::weak
+    ipce_spectral_range --> strat_8
+    strat_8 --> absorbance_capability
+    strat_9(["infer\n0.27 bits"]):::weak
+    main_achievement --> strat_9
+    series_resistance_tradeoff --> strat_9
+    strat_9 --> future_fill_factor
+    strat_10(["infer\n0.16 bits"]):::weak
+    optical_bandgap --> strat_10
+    voltage_deficit --> strat_10
+    strat_10 --> fundamental_loss_reduction
+
+    classDef premise fill:#ddeeff,stroke:#4488bb,color:#333
+    classDef exported fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#333
+    classDef weak fill:#fff9c4,stroke:#f9a825,stroke-dasharray: 5 5,color:#333
+    classDef contra fill:#ffebee,stroke:#c62828,color:#333
+```
+
 ## Reasoning Structure
 
 ### The MSSC achieves 10.9% power conversion efficiency under AM1.5 illumination (belief: 0.85)

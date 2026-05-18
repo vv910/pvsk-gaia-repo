@@ -9,6 +9,85 @@
 
 This package formalizes a Nature Energy paper on homogeneous 2D perovskite passivation for scalable perovskite solar modules (PSMs). The core innovation is using formamidinium bromide (FABr) combined with n-dodecylammonium bromide (DABr) post-treatment to form a phase-pure n=2 2D perovskite capping layer on 3D perovskite films, solving a phase separation problem that occurs with long-chain alkylamine ligands. The approach achieves champion efficiencies of 25.61% (small device), 24.62% (large device), and 23.60% (mini-module), with scaling to 30x30 cm modules at 17.59% efficiency via slot-die printing. The key insight is that triple-halide composition (introducing Br) reduces formation enthalpy of n=2 2D perovskite, enabling preferential formation of phase-pure structures.
 
+> [!TIP]
+> **Reasoning graph information gain: `3.1 bits`**
+>
+> Total mutual information between leaf premises and exported conclusions — measures how much the reasoning structure reduces uncertainty about the results.
+
+```mermaid
+---
+config:
+  flowchart:
+    rankSpacing: 80
+    nodeSpacing: 30
+---
+graph TB
+    main_conclusion["★ FABr/DABr enables homogeneous phase-pure 2D passivation\n(0.50 → 0.58)"]:::exported
+    efficiency_summary["★ Efficiency achievements across device sizes\n(0.50 → 0.57)"]:::exported
+    stability_summary["★ Excellent operational stability (T80 > 2000 h)\n(0.50 → 0.65)"]:::exported
+    large_module_summary["★ Large module efficiencies (18.90% and 17.59%)\n(0.50 → 0.62)"]:::exported
+    mechanism_summary["★ Mechanism of homogeneous phase-pure n=2 formation\n(0.50 → 0.59)"]:::exported
+    scalability_contribution["★ Strategy compatible with scalable manufacturing\n(0.50 → 0.60)"]:::exported
+    operational_stability["★ Mini-module T80 lifetime exceeds 2000 hours\n(0.50 → 0.61)"]:::exported
+    champion_small_device["★ 25.61% champion efficiency for small device\n(0.50 → 0.58)"]:::exported
+    large_device_efficiency["★ 24.62% efficiency for 1.04 cm2 large device\n(0.50 → 0.60)"]:::exported
+    mini_module_efficiency["★ 23.60% efficiency for 13.44 cm2 mini-module\n(0.50 → 0.65)"]:::exported
+    dax_halide_pl["DAI and DACl show phase separation, DABr does not\n(0.90 → 0.90)"]:::premise
+    dft_formation_enthalpy_double["Double-halide alloys have increased formation enthalpy\n(0.80 → 0.80)"]:::premise
+    dft_formation_enthalpy_triple["Triple-halide alloys have decreased formation enthalpy\n(0.80 → 0.80)"]:::premise
+    triple_halide_eliminates_phase_sep["★ Triple-halide composition eliminates phase separation\n(0.50 → 0.64)"]:::exported
+    n_value_challenge["Multiple n-value structures form despite halide engineering\n(0.85 → 0.85)"]:::premise
+    fabr_enables_uniform_n2["★ FABr enables uniform phase-pure n=2 2D formation\n(0.50 → 0.63)"]:::exported
+    dabr_giwaxs["DABr forms mixed n=1 and n=2 phases\n(0.90 → 0.90)"]:::premise
+    scalable_manufacturing["Slot-die printing for scalable PSM fabrication\n(0.85 → 0.85)"]:::premise
+    module_20x20["★ 18.90% efficiency for 20x20 cm sub-module (310 cm2)\n(0.50 → 0.62)"]:::exported
+    module_30x30["★ 17.59% efficiency for 30x30 cm module (802 cm2)\n(0.50 → 0.66)"]:::exported
+    strat_0(["infer\n0.11 bits"]):::weak
+    champion_small_device --> strat_0
+    large_device_efficiency --> strat_0
+    mini_module_efficiency --> strat_0
+    strat_0 --> efficiency_summary
+    strat_1(["infer\n0.21 bits"]):::weak
+    champion_small_device --> strat_1
+    dabr_giwaxs --> strat_1
+    fabr_enables_uniform_n2 --> strat_1
+    strat_1 --> large_device_efficiency
+    strat_2(["infer\n0.07 bits"]):::weak
+    champion_small_device --> strat_2
+    large_device_efficiency --> strat_2
+    mini_module_efficiency --> strat_2
+    scalable_manufacturing --> strat_2
+    strat_2 --> module_20x20
+    strat_3(["infer\n0.28 bits"]):::weak
+    dabr_giwaxs --> strat_3
+    fabr_enables_uniform_n2 --> strat_3
+    strat_3 --> champion_small_device
+    strat_4(["infer\n0.18 bits"]):::weak
+    dabr_giwaxs --> strat_4
+    fabr_enables_uniform_n2 --> strat_4
+    triple_halide_eliminates_phase_sep --> strat_4
+    strat_4 --> main_conclusion
+    strat_5(["infer\n0.25 bits"]):::weak
+    dabr_giwaxs --> strat_5
+    dft_formation_enthalpy_triple --> strat_5
+    fabr_enables_uniform_n2 --> strat_5
+    strat_5 --> mechanism_summary
+    strat_6(["infer\n0.23 bits"]):::weak
+    dax_halide_pl --> strat_6
+    dft_formation_enthalpy_double --> strat_6
+    dft_formation_enthalpy_triple --> strat_6
+    strat_6 --> triple_halide_eliminates_phase_sep
+    strat_7(["infer\n0.20 bits"]):::weak
+    fabr_enables_uniform_n2 --> strat_7
+    triple_halide_eliminates_phase_sep --> strat_7
+    strat_7 --> scalability_contribution
+
+    classDef premise fill:#ddeeff,stroke:#4488bb,color:#333
+    classDef exported fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#333
+    classDef weak fill:#fff9c4,stroke:#f9a825,stroke-dasharray: 5 5,color:#333
+    classDef contra fill:#ffebee,stroke:#c62828,color:#333
+```
+
 > [!NOTE]
 > **[Per-module reasoning graphs with full claim details →](docs/detailed-reasoning.md)**
 

@@ -10,6 +10,78 @@
 
 This paper presents an asymmetric self-assembled monolayer (SAM) named HTL201 as a hole-selective layer for perovskite/silicon tandem solar cells (TSCs), achieving a certified power conversion efficiency (PCE) of 34.58% — a record for perovskite/silicon TSCs. The HTL201 molecule features an asymmetric carbazole-based structure with spacers and anchoring phosphonic acid groups flanking the phenyl ring, which minimizes steric hindrance and improves coverage on transparent conductive oxide (TCO) substrates. The strong coordination interaction between HTL201 and the perovskite film effectively reduces non-radiative recombination at the buried interface, enabling a Voc of nearly 2V. The certified efficiency represents a significant advance over symmetric SAMs (Me-4PACz: 32.18%, MeO-4PACz: 33.34% average PCE).
 
+> [!TIP]
+> **Reasoning graph information gain: `1.9 bits`**
+>
+> Total mutual information between leaf premises and exported conclusions — measures how much the reasoning structure reduces uncertainty about the results.
+
+```mermaid
+---
+config:
+  flowchart:
+    rankSpacing: 80
+    nodeSpacing: 30
+---
+graph TB
+    htl201_introduced["★ HTL201 asymmetric SAM introduced\n(0.50 → 0.64)"]:::exported
+    htl201_outcome["★ HTL201 enables near 2V Voc\n(0.50 → 0.78)"]:::exported
+    asymmetric_design["★ HTL201 asymmetric molecular design\n(0.85 → 0.88)"]:::exported
+    izo_htl201_strong_interaction["★ HTL201 shows strongest XPS shifts on IZO\n(0.85 → 0.88)"]:::exported
+    htl201_higher_coverage_factor["★ HTL201 always shows highest coverage factor\n(0.80 → 0.91)"]:::exported
+    htl201_strong_binding_perovskite["★ HTL201 has strongest binding to perovskite\n(0.80 → 0.82)"]:::exported
+    htl201_passivates_pb_defects["★ HTL201 coordinates with Pb2+ to passivate defects\n(0.75 → 0.77)"]:::exported
+    htl201_enhanced_voc_ff["★ HTL201 shows enhanced Voc and FF\n(0.50 → 0.69)"]:::exported
+    certified_pce_34_58["★ Certified PCE 34.58% by ESTI\n(0.90 → 0.94)"]:::exported
+    htl201_smooth_uniform["★ HTL201 gives smooth uniform surface\n(0.85 → 0.88)"]:::exported
+    htl201_perovskite_dense_uniform["★ HTL201 perovskite film dense with large grain size\n(0.80 → 0.90)"]:::exported
+    htl201_higher_carrier_lifetime["★ HTL201 perovskite has highest carrier lifetime 5860ns\n(0.85 → 0.88)"]:::exported
+    plqry_values["★ PLQY values: HTL201 highest at 0.399%\n(0.85 → 0.88)"]:::exported
+    qfls_values["★ QFLS values: HTL201 1.270V, Me-4PACz 1.267V\n(0.80 → 0.82)"]:::exported
+    htl201_minimal_energy_difference["★ HTL201 has minimal energy difference with perovskite\n(0.80 → 0.82)"]:::exported
+    htl201_smaller_pff_ff_difference["★ HTL201 devices have smaller pFF-FF difference\n(0.80 → 0.84)"]:::exported
+    htl201_shelf_life_98_9_percent["★ HTL201 retains 98.9% PCE after 1080h storage\n(0.85 → 0.85)"]:::exported
+    htl201_operational_25c_98_percent["★ HTL201 retains 98.0% PCE after 1020h at 25C\n(0.85 → 0.92)"]:::exported
+    htl201_better_electrochemical_stability["★ HTL201 has better electrochemical stability\n(0.80 → 0.84)"]:::exported
+    htl201_impeded_leakage_reduced_recombination["★ HTL201 stability mechanism: impeded leakage and reduced recombination\n(0.80 → 0.84)"]:::exported
+    strat_0(["infer\n0.22 bits"]):::weak
+    asymmetric_design --> strat_0
+    izo_htl201_strong_interaction --> strat_0
+    strat_0 --> htl201_higher_coverage_factor
+    strat_1(["infer\n0.27 bits"]):::weak
+    certified_pce_34_58 --> strat_1
+    htl201_enhanced_voc_ff --> strat_1
+    htl201_shelf_life_98_9_percent --> strat_1
+    strat_1 --> htl201_introduced
+    strat_2(["infer\n0.31 bits"]):::weak
+    htl201_better_electrochemical_stability --> strat_2
+    htl201_impeded_leakage_reduced_recombination --> strat_2
+    strat_2 --> htl201_operational_25c_98_percent
+    strat_3(["infer\n0.31 bits"]):::weak
+    htl201_higher_carrier_lifetime --> strat_3
+    htl201_smaller_pff_ff_difference --> strat_3
+    plqry_values --> strat_3
+    strat_3 --> certified_pce_34_58
+    strat_4(["infer\n0.31 bits"]):::weak
+    htl201_higher_coverage_factor --> strat_4
+    htl201_minimal_energy_difference --> strat_4
+    strat_4 --> htl201_enhanced_voc_ff
+    strat_5(["infer\n0.30 bits"]):::weak
+    htl201_higher_coverage_factor --> strat_5
+    htl201_smooth_uniform --> strat_5
+    strat_5 --> htl201_perovskite_dense_uniform
+    strat_6(["infer\n0.22 bits"]):::weak
+    htl201_minimal_energy_difference --> strat_6
+    htl201_passivates_pb_defects --> strat_6
+    htl201_strong_binding_perovskite --> strat_6
+    qfls_values --> strat_6
+    strat_6 --> htl201_outcome
+
+    classDef premise fill:#ddeeff,stroke:#4488bb,color:#333
+    classDef exported fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#333
+    classDef weak fill:#fff9c4,stroke:#f9a825,stroke-dasharray: 5 5,color:#333
+    classDef contra fill:#ffebee,stroke:#c62828,color:#333
+```
+
 > [!NOTE]
 > **[Per-module reasoning graphs with full claim details →](docs/detailed-reasoning.md)**
 >
