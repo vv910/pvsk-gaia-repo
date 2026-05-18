@@ -10,57 +10,308 @@
 This synthesis package does not re-formalize the original PVSK papers. It imports the public claims exported by 22 paper-level Gaia packages and builds a cross-package reasoning graph over agreement, directed support, mechanism tensions, induction laws, and final synthesis conclusions. The resulting graph supports perovskites as a validated photovoltaic platform across liquid, solid-state, planar, mesoporous, tandem, module, and roll-to-roll settings (belief 0.93). The strongest conclusions concern integrated stability control (0.97), interface-driven efficiency growth (0.96), bifacial module value (0.95), and tandem architectures as the main high-efficiency path (0.94); the most cautious conclusions are low-cost printable-contact deployment (0.79) and three-way industrialization alignment (0.80), where manufacturing and cost evidence is still less mature.
 
 > [!TIP]
-> **Reasoning graph scope:** 243 local knowledge claims, 114 local strategies, 12 exported synthesis conclusions.
+> **Reasoning graph information gain: `0.8 bits`**
 >
-> The full depth-1 inference also loads the 22 dependency graphs, producing 1577 beliefs and converging with exact junction-tree inference.
+> Total mutual information between leaf premises and exported conclusions — measures how much the reasoning structure reduces uncertainty about the results.
 
 ```mermaid
-graph TD
-    A[Absorber agreement 0.91] --> P[Validated PV platform 0.93]
-    L1[Absorber architecture law 0.91] --> P
-    S[Solid-state architecture evidence 0.76] --> P
+---
+config:
+  flowchart:
+    rankSpacing: 80
+    nodeSpacing: 30
+---
+graph TB
+    synthesis_perovskites_are_validated_pv_platform["★ Perovskites are a validated photovoltaic platform\n(0.50 → 0.93)"]:::exported
+    synthesis_efficiency_progression_is_interface_driven["★ Efficiency progression is interface and architecture driven\n(0.50 → 0.96)"]:::exported
+    synthesis_passivation_is_general_design_rule["★ Passivation is a general design rule\n(0.50 → 0.91)"]:::exported
+    synthesis_stability_requires_integrated_control["★ Stability requires integrated control\n(0.50 → 0.97)"]:::exported
+    synthesis_hysteresis_is_practically_suppressed["★ Hysteresis is practically suppressible\n(0.50 → 0.91)"]:::exported
+    synthesis_bandgap_and_contact_engineering_define_tradeoff_space["★ Bandgap and contact engineering define the trade-off space\n(0.50 → 0.93)"]:::exported
+    synthesis_tandems_are_primary_high_efficiency_path["★ Tandems are the primary high-efficiency path\n(0.50 → 0.94)"]:::exported
+    synthesis_mechanistic_tensions_are_conditionally_resolved["★ Mechanistic tensions are conditionally resolved\n(0.50 → 0.85)"]:::exported
+    synthesis_scalable_manufacturing_is_demonstrated["★ Scalable manufacturing is demonstrated across routes\n(0.50 → 0.81)"]:::exported
+    synthesis_low_cost_path_depends_on_printable_contacts["★ Low-cost path depends on printable contacts\n(0.50 → 0.79)"]:::exported
+    synthesis_bifacial_modules_add_system_value["★ Bifacial modules add system-level value\n(0.50 → 0.95)"]:::exported
+    synthesis_industrialization_requires_three_way_alignment["★ Industrialization requires efficiency-stability-scale alignment\n(0.50 → 0.80)"]:::exported
+    solid_state_dramatically_improved_stability["Solid-state configuration dramatically improves stability\n(0.50 → 0.86)"]:::premise
+    sequential_deposition_introduced["Sequential deposition method introduced\n(0.50 → 0.99)"]:::premise
+    bilayer_architecture["bilayer_architecture\n(0.50 → 0.77)"]:::premise
+    certified_efficiency_162["Certified PCE of 16.2% under AM 1.5 G full sun\n(0.50 → 1.00)"]:::premise
+    phase_stabilization_evidence["Evidence for perovskite phase stabilization\n(0.50 → 0.98)"]:::premise
+    synergetic_effect["Synergetic effect of MA+ and Br- co-substitution\n(0.50 → 0.91)"]:::premise
+    triple_cation_strategy["Triple cation Cs/MA/FA strategy\n(0.50 → 1.00)"]:::premise
+    best_stabilized_pce["Best device achieves 21.1% stabilized PCE\n(0.50 → 0.95)"]:::premise
+    one_year_stability_record["Record stability enables commercialization pathway\n(0.50 → 0.99)"]:::premise
+    t95_after_1200_hours["T95 retention after >1200 hours damp-heat test\n(0.50 → 1.00)"]:::premise
+    conclusion_alpha_stabilization["MDACl2 stabilizes alpha-FAPbI3 with high efficiency and stability\n(0.50 → 1.00)"]:::premise
+    passivation_frustrates_ion_migration["2D capping layer passivates iodine vacancies, frustrates ion migration\n(0.50 → 1.00)"]:::premise
+    formate_at_interfaces["Formate local environment at interfaces\n(0.50 → 0.91)"]:::premise
+    non_radiative_recombination_reduction["Formate treatment reduces non-radiative recombination 5x\n(0.50 → 0.99)"]:::premise
+    diffusion_length_increased_threefold["Diffusion length increased threefold with CF3-PA\n(0.50 → 1.00)"]:::premise
+    cb_upshift_2d_3d["DFT predicts 0.14 eV CB upshift at interface\n(0.50 → 0.99)"]:::premise
+    type_ii_energy_alignment["type_ii_energy_alignment\n(0.50 → 0.99)"]:::premise
+    type_two_band_alignment["Type II band alignment at PHJ\n(0.50 → 1.00)"]:::premise
+    certified_pce_264_percent["Certified PCE of 26.4% by JET\n(0.50 → 0.99)"]:::premise
+    tandem_champion["Champion tandem device achieves 28.5% PCE\n(0.50 → 1.00)"]:::premise
+    nrel_certified_pce["NREL certified 33.89% PCE\n(0.50 → 1.00)"]:::premise
+    certified_pce_34_58["Certified PCE 34.58% by ESTI\n(0.50 → 1.00)"]:::premise
+    htl201_strong_binding_perovskite["HTL201 has strongest binding to perovskite\n(0.50 → 0.86)"]:::premise
+    htl201_passivates_pb_defects["HTL201 coordinates with Pb2+ to passivate defects\n(0.50 → 0.83)"]:::premise
+    dipolar_passivation_strategy["dipolar_passivation_strategy\n(0.50 → 0.94)"]:::premise
+    diffusion_length_enhancement["diffusion_length_enhancement\n(0.50 → 0.91)"]:::premise
+    jet_certified_pce["jet_certified_pce\n(0.50 → 0.99)"]:::premise
+    iecs_standard_met["IEC 61215:2016 damp-heat standard met\n(0.50 → 0.98)"]:::premise
+    fabr_enables_uniform_n2["FABr enables uniform phase-pure n=2 2D formation\n(0.50 → 0.72)"]:::premise
+    conclusion_perovskite_sensitization["Perovskite efficiently sensitizes TiO2 for visible-light conversion\n(0.50 → 0.92)"]:::premise
+    panchromatic_absorption_leads_to_high_jsc["Panchromatic absorption enables high JSC\n(0.50 → 0.97)"]:::premise
+    perovskite_semicondo["Perovskite as semiconductor\n(0.50 → 0.94)"]:::premise
+    certified_efficiency["Certified PCE: 14.14%\n(0.50 → 0.53)"]:::premise
+    deep_in_gap_states_eliminated["Deep in-gap states eliminated by CF3-PA\n(0.50 → 1.00)"]:::premise
+    negligible_hysteresis_bilayer["Bilayer cell exhibits negligible hysteresis\n(0.50 → 0.87)"]:::premise
+    first_fully_r2r_cells["First fully R2R-fabricated PeSCs with 15.5% PCE\n(0.50 → 0.89)"]:::premise
+    first_fully_r2r_modules["First fully R2R-fabricated PeSC modules with 11% PCE\n(0.50 → 0.58)"]:::premise
+    nrel_certified_front_efficiency["NREL certified stabilized front efficiency 19.2%\n(0.50 → 1.00)"]:::premise
+    large_module_summary["Large module efficiencies (18.90% and 17.59%)\n(0.50 → 0.92)"]:::premise
+    durability_observation["Photocurrent decay observed under continuous irradiation\n(0.50 → 0.73)"]:::premise
+    stability_improvement["Excellent long-term stability demonstrated\n(0.50 → 0.94)"]:::premise
+    hysteresis_origin["Hysteresis originates from large diffusion capacitance\n(0.50 → 0.77)"]:::premise
+    hysteresis_observation["Hysteresis observed in HTM-free devices\n(0.50 → 0.53)"]:::premise
+    diammonium_field_effect["Diammonium ligands provide field-effect passivation\n(0.50 → 0.77)"]:::premise
+    methylthio_chemical_passivation["Methylthio molecules provide chemical passivation\n(0.50 → 0.77)"]:::premise
+    passivation_tradeoff["Passivation-transport tradeoff\n(0.50 → 0.79)"]:::premise
+    edai_ff_tradeoff["EDAI passivation-transport trade-off\n(0.50 → 0.47)"]:::premise
+    bilayer_no_tradeoff["Bilayer overcomes trade-off\n(0.50 → 0.37)"]:::premise
+    single_molecule_insufficient["Single molecule passivation insufficient\n(0.50 → 0.50)"]:::premise
+    dual_passivation_concept["Bimolecular dual-passivation strategy concept\n(0.50 → 0.95)"]:::premise
+    conventional_passivation_limitation["conventional_passivation_limitation\n(0.50 → 0.07)"]:::premise
+    charge_separation_well_aligned["Band alignment favorable for charge separation\n(0.50 → 0.98)"]:::premise
+    hole_transfer_effective["Hole transfer to spiro-OMeTAD\n(0.50 → 0.98)"]:::premise
+    vapour_deposition_enables_uniform_films["Vapour deposition creates uniform films\n(0.50 → 0.97)"]:::premise
+    bromide_cell_high_voltage["CH3NH3PbBr3 cell Voc 0.96 V\n(0.50 → 0.90)"]:::premise
+    iodide_ipce_spectrum["CH3NH3PbI3 IPCE 45% with extended spectral range to 800 nm\n(0.50 → 0.91)"]:::premise
+    bandgap_tuning_tradeoff["Bandgap tuning creates performance tradeoff\n(0.50 → 0.72)"]:::premise
+    carbon_electrode_replacement["Carbon ink replaces vacuum electrodes\n(0.50 → 0.75)"]:::premise
+    cost_prediction["R2R PeSC manufacturing cost prediction\n(0.50 → 0.72)"]:::premise
+    production_cost_power["Module production cost per peak watt\n(0.50 → 0.61)"]:::premise
+    high_throughput_capability["High-throughput R2R fabrication and testing\n(0.50 → 0.86)"]:::premise
+    bifacial_gain_percentage["15% bifacial power gain at albedo 0.2\n(0.50 → 0.91)"]:::premise
+    power_generation_density_measurement["PGD of 26.4 mW/cm2 at albedo 0.2\n(0.50 → 0.97)"]:::premise
+    strat_0(["infer\n0.13 bits"]):::weak
+    bromide_cell_high_voltage --> strat_0
+    iodide_ipce_spectrum --> strat_0
+    charge_separation_well_aligned --> strat_0
+    hole_transfer_effective --> strat_0
+    bandgap_tuning_tradeoff --> strat_0
+    cb_upshift_2d_3d --> strat_0
+    type_two_band_alignment --> strat_0
+    type_ii_energy_alignment --> strat_0
+    strat_0 --> synthesis_bandgap_and_contact_engineering_define_tradeoff_space
+    strat_1(["infer\n0.06 bits"]):::weak
+    conclusion_perovskite_sensitization --> strat_1
+    panchromatic_absorption_leads_to_high_jsc --> strat_1
+    solid_state_dramatically_improved_stability --> strat_1
+    perovskite_semicondo --> strat_1
+    certified_efficiency --> strat_1
+    bilayer_architecture --> strat_1
+    certified_efficiency_162 --> strat_1
+    strat_1 --> synthesis_perovskites_are_validated_pv_platform
+    strat_2(["infer"]):::weak
+    durability_observation --> strat_2
+    stability_improvement --> strat_2
+    hysteresis_origin --> strat_2
+    negligible_hysteresis_bilayer --> strat_2
+    phase_stabilization_evidence --> strat_2
+    synergetic_effect --> strat_2
+    hysteresis_observation --> strat_2
+    one_year_stability_record --> strat_2
+    best_stabilized_pce --> strat_2
+    triple_cation_strategy --> strat_2
+    formate_at_interfaces --> strat_2
+    non_radiative_recombination_reduction --> strat_2
+    deep_in_gap_states_eliminated --> strat_2
+    diffusion_length_increased_threefold --> strat_2
+    bilayer_no_tradeoff --> strat_2
+    edai_ff_tradeoff --> strat_2
+    passivation_tradeoff --> strat_2
+    htl201_passivates_pb_defects --> strat_2
+    htl201_strong_binding_perovskite --> strat_2
+    dipolar_passivation_strategy --> strat_2
+    conclusion_alpha_stabilization --> strat_2
+    t95_after_1200_hours --> strat_2
+    passivation_frustrates_ion_migration --> strat_2
+    diammonium_field_effect --> strat_2
+    dual_passivation_concept --> strat_2
+    methylthio_chemical_passivation --> strat_2
+    single_molecule_insufficient --> strat_2
+    strat_2 --> synthesis_mechanistic_tensions_are_conditionally_resolved
+    strat_3(["infer"]):::weak
+    charge_separation_well_aligned --> strat_3
+    hole_transfer_effective --> strat_3
+    cb_upshift_2d_3d --> strat_3
+    formate_at_interfaces --> strat_3
+    non_radiative_recombination_reduction --> strat_3
+    certified_pce_264_percent --> strat_3
+    deep_in_gap_states_eliminated --> strat_3
+    diffusion_length_increased_threefold --> strat_3
+    tandem_champion --> strat_3
+    type_two_band_alignment --> strat_3
+    nrel_certified_pce --> strat_3
+    certified_pce_34_58 --> strat_3
+    htl201_passivates_pb_defects --> strat_3
+    htl201_strong_binding_perovskite --> strat_3
+    conventional_passivation_limitation --> strat_3
+    diffusion_length_enhancement --> strat_3
+    dipolar_passivation_strategy --> strat_3
+    jet_certified_pce --> strat_3
+    type_ii_energy_alignment --> strat_3
+    dual_passivation_concept --> strat_3
+    strat_3 --> synthesis_tandems_are_primary_high_efficiency_path
+    strat_4(["infer\n0.26 bits"]):::weak
+    sequential_deposition_introduced --> strat_4
+    vapour_deposition_enables_uniform_films --> strat_4
+    first_fully_r2r_cells --> strat_4
+    bifacial_gain_percentage --> strat_4
+    nrel_certified_front_efficiency --> strat_4
+    power_generation_density_measurement --> strat_4
+    large_module_summary --> strat_4
+    iecs_standard_met --> strat_4
+    strat_4 --> synthesis_bifacial_modules_add_system_value
+    strat_5(["infer"]):::weak
+    sequential_deposition_introduced --> strat_5
+    phase_stabilization_evidence --> strat_5
+    synergetic_effect --> strat_5
+    one_year_stability_record --> strat_5
+    best_stabilized_pce --> strat_5
+    triple_cation_strategy --> strat_5
+    vapour_deposition_enables_uniform_films --> strat_5
+    first_fully_r2r_cells --> strat_5
+    nrel_certified_front_efficiency --> strat_5
+    large_module_summary --> strat_5
+    formate_at_interfaces --> strat_5
+    non_radiative_recombination_reduction --> strat_5
+    certified_pce_264_percent --> strat_5
+    deep_in_gap_states_eliminated --> strat_5
+    diffusion_length_increased_threefold --> strat_5
+    tandem_champion --> strat_5
+    nrel_certified_pce --> strat_5
+    certified_pce_34_58 --> strat_5
+    htl201_passivates_pb_defects --> strat_5
+    htl201_strong_binding_perovskite --> strat_5
+    diffusion_length_enhancement --> strat_5
+    dipolar_passivation_strategy --> strat_5
+    jet_certified_pce --> strat_5
+    conclusion_alpha_stabilization --> strat_5
+    iecs_standard_met --> strat_5
+    t95_after_1200_hours --> strat_5
+    passivation_frustrates_ion_migration --> strat_5
+    dual_passivation_concept --> strat_5
+    strat_5 --> synthesis_industrialization_requires_three_way_alignment
+    strat_6(["infer\n0.11 bits"]):::weak
+    sequential_deposition_introduced --> strat_6
+    vapour_deposition_enables_uniform_films --> strat_6
+    first_fully_r2r_cells --> strat_6
+    first_fully_r2r_modules --> strat_6
+    nrel_certified_front_efficiency --> strat_6
+    large_module_summary --> strat_6
+    strat_6 --> synthesis_scalable_manufacturing_is_demonstrated
+    strat_7(["infer"]):::weak
+    hysteresis_origin --> strat_7
+    negligible_hysteresis_bilayer --> strat_7
+    phase_stabilization_evidence --> strat_7
+    synergetic_effect --> strat_7
+    hysteresis_observation --> strat_7
+    one_year_stability_record --> strat_7
+    best_stabilized_pce --> strat_7
+    triple_cation_strategy --> strat_7
+    formate_at_interfaces --> strat_7
+    non_radiative_recombination_reduction --> strat_7
+    deep_in_gap_states_eliminated --> strat_7
+    diffusion_length_increased_threefold --> strat_7
+    htl201_passivates_pb_defects --> strat_7
+    htl201_strong_binding_perovskite --> strat_7
+    dipolar_passivation_strategy --> strat_7
+    conclusion_alpha_stabilization --> strat_7
+    t95_after_1200_hours --> strat_7
+    passivation_frustrates_ion_migration --> strat_7
+    dual_passivation_concept --> strat_7
+    strat_7 --> synthesis_hysteresis_is_practically_suppressed
+    strat_8(["infer"]):::weak
+    phase_stabilization_evidence --> strat_8
+    synergetic_effect --> strat_8
+    one_year_stability_record --> strat_8
+    best_stabilized_pce --> strat_8
+    triple_cation_strategy --> strat_8
+    formate_at_interfaces --> strat_8
+    non_radiative_recombination_reduction --> strat_8
+    certified_pce_264_percent --> strat_8
+    deep_in_gap_states_eliminated --> strat_8
+    diffusion_length_increased_threefold --> strat_8
+    tandem_champion --> strat_8
+    nrel_certified_pce --> strat_8
+    certified_pce_34_58 --> strat_8
+    htl201_passivates_pb_defects --> strat_8
+    htl201_strong_binding_perovskite --> strat_8
+    diffusion_length_enhancement --> strat_8
+    dipolar_passivation_strategy --> strat_8
+    jet_certified_pce --> strat_8
+    conclusion_alpha_stabilization --> strat_8
+    t95_after_1200_hours --> strat_8
+    passivation_frustrates_ion_migration --> strat_8
+    dual_passivation_concept --> strat_8
+    strat_8 --> synthesis_efficiency_progression_is_interface_driven
+    strat_9(["infer"]):::weak
+    phase_stabilization_evidence --> strat_9
+    synergetic_effect --> strat_9
+    one_year_stability_record --> strat_9
+    best_stabilized_pce --> strat_9
+    triple_cation_strategy --> strat_9
+    formate_at_interfaces --> strat_9
+    non_radiative_recombination_reduction --> strat_9
+    deep_in_gap_states_eliminated --> strat_9
+    diffusion_length_increased_threefold --> strat_9
+    bilayer_no_tradeoff --> strat_9
+    edai_ff_tradeoff --> strat_9
+    passivation_tradeoff --> strat_9
+    htl201_passivates_pb_defects --> strat_9
+    htl201_strong_binding_perovskite --> strat_9
+    dipolar_passivation_strategy --> strat_9
+    conclusion_alpha_stabilization --> strat_9
+    t95_after_1200_hours --> strat_9
+    passivation_frustrates_ion_migration --> strat_9
+    diammonium_field_effect --> strat_9
+    dual_passivation_concept --> strat_9
+    methylthio_chemical_passivation --> strat_9
+    single_molecule_insufficient --> strat_9
+    strat_9 --> synthesis_passivation_is_general_design_rule
+    strat_10(["infer\n0.02 bits"]):::weak
+    phase_stabilization_evidence --> strat_10
+    synergetic_effect --> strat_10
+    one_year_stability_record --> strat_10
+    best_stabilized_pce --> strat_10
+    triple_cation_strategy --> strat_10
+    conclusion_alpha_stabilization --> strat_10
+    t95_after_1200_hours --> strat_10
+    passivation_frustrates_ion_migration --> strat_10
+    strat_10 --> synthesis_stability_requires_integrated_control
+    strat_11(["infer\n0.24 bits"]):::weak
+    carbon_electrode_replacement --> strat_11
+    cost_prediction --> strat_11
+    high_throughput_capability --> strat_11
+    production_cost_power --> strat_11
+    fabr_enables_uniform_n2 --> strat_11
+    strat_11 --> synthesis_low_cost_path_depends_on_printable_contacts
 
-    C[Composition and phase agreement 0.93] --> E[Interface-driven efficiency growth 0.96]
-    R[Passivation reduces recombination 0.94] --> E
-    H[HTL201 certified tandem contact evidence] --> E
-
-    R --> D[Passivation as general design rule 0.91]
-    L2[Interface passivation law 0.95] --> D
-    T1[Passivation mechanism tensions 0.61-0.77] --> D
-
-    L3[Stability phase/interface law 0.98] --> ST[Integrated stability control 0.97]
-    I[Dimensional interface stability agreement 0.95] --> ST
-    T2[Condition-specific stability routes 0.94] --> ST
-
-    HY[Architecture suppresses hysteresis 0.86] --> HS[Practical hysteresis suppression 0.91]
-    T3[Multiple hysteresis sources 0.73] --> HS
-
-    B[Band alignment law 0.97] --> BG[Bandgap-contact trade-off space 0.93]
-    M[Halide and composition trade-offs] --> BG
-
-    TA[Tandem agreement 0.97] --> T[Tandems as high-efficiency path 0.94]
-    L4[Tandem efficiency law 0.97] --> T
-    BT[Buried-interface passivation tension 0.60] --> T
-
-    L5[Scalable deposition law 0.90] --> SC[Scalable manufacturing demonstrated 0.81]
-    MR[Multiple scale-up routes 0.72] --> SC
-    R2R[Roll-to-roll and large modules] --> SC
-
-    PC[Printable carbon contacts 0.75] --> LC[Low-cost printable-contact path 0.79]
-    COST[Cost and throughput evidence 0.61-0.86] --> LC
-
-    BF[Bifacial gain and power density] --> BV[Bifacial module value 0.95]
-    BS[Certified module stability] --> BV
-
-    T --> IND[Industrialization needs efficiency-stability-scale alignment 0.80]
-    ST --> IND
-    SC --> IND
+    classDef premise fill:#ddeeff,stroke:#4488bb,color:#333
+    classDef exported fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#333
+    classDef weak fill:#fff9c4,stroke:#f9a825,stroke-dasharray: 5 5,color:#333
+    classDef contra fill:#ffebee,stroke:#c62828,color:#333
 ```
 
 > [!NOTE]
 > **[Per-module reasoning details ->](docs/detailed-reasoning.md)**
 >
-> Generated documentation with every local claim, strategy reason, and belief value.
+> The detailed documentation is generated from the same Gaia graph and provides a module-level audit trail for claims, dependencies, and inferred beliefs.
 
 ## Source Corpus
 
@@ -199,22 +450,22 @@ This conclusion is intentionally conjunctive: industrialization requires record 
 
 **Verdict:** Scientifically conservative and deployment-focused. The belief is lower than the individual efficiency or stability conclusions because all three axes must hold together.
 
-## Key Findings
+## Conclusions
 
-| Exported label | Belief | Assessment |
-|---|---:|---|
-| `synthesis_stability_requires_integrated_control` | 0.97 | Strongest conclusion; repeated phase, interface, and ion-control evidence. |
-| `synthesis_efficiency_progression_is_interface_driven` | 0.96 | Strong support from composition, passivation, and contact-engineering packages. |
-| `synthesis_bifacial_modules_add_system_value` | 0.95 | Strong module evidence, with deployment context still relevant. |
-| `synthesis_tandems_are_primary_high_efficiency_path` | 0.94 | Strong for record efficiency; deployment depends on stability and scale. |
-| `synthesis_perovskites_are_validated_pv_platform` | 0.93 | Robust across architectures and time. |
-| `synthesis_bandgap_and_contact_engineering_define_tradeoff_space` | 0.93 | Strong design-space claim tying materials and contacts. |
-| `synthesis_hysteresis_is_practically_suppressed` | 0.91 | Good engineering support; microscopic causality remains plural. |
-| `synthesis_passivation_is_general_design_rule` | 0.91 | Strong but conditional on preserving charge extraction. |
-| `synthesis_mechanistic_tensions_are_conditionally_resolved` | 0.85 | Good synthesis claim; exact mechanism dominance remains context-dependent. |
-| `synthesis_scalable_manufacturing_is_demonstrated` | 0.81 | Demonstrated, but not yet equivalent to manufacturing maturity. |
-| `synthesis_industrialization_requires_three_way_alignment` | 0.80 | Conservative because all three axes must be satisfied together. |
-| `synthesis_low_cost_path_depends_on_printable_contacts` | 0.79 | Plausible, but cost and throughput assumptions carry the largest uncertainty. |
+| Label | Content | Prior | Belief |
+|-------|---------|-------|--------|
+| synthesis_bandgap_and_contact_engineering_define_tradeoff_space | PVSK optimization is governed by a bandgap-contact trade-off space: iodide, b... | 0.50 | 0.93 |
+| synthesis_bifacial_modules_add_system_value | Bifacial perovskite modules add system-level value because rear-side collecti... | 0.50 | 0.95 |
+| synthesis_efficiency_progression_is_interface_driven | The long-run efficiency progression is best explained by interface, architect... | 0.50 | 0.96 |
+| synthesis_hysteresis_is_practically_suppressed | Current-density hysteresis is not a single solved microscopic mechanism, but ... | 0.50 | 0.91 |
+| synthesis_industrialization_requires_three_way_alignment | PVSK industrialization requires simultaneous alignment of record efficiency, ... | 0.50 | 0.80 |
+| synthesis_low_cost_path_depends_on_printable_contacts | The low-cost PVSK path depends on printable high-throughput processing and lo... | 0.50 | 0.79 |
+| synthesis_mechanistic_tensions_are_conditionally_resolved | The major apparent conflicts across PVSK papers are conditionally resolved: t... | 0.50 | 0.85 |
+| synthesis_passivation_is_general_design_rule | Passivation is a general PVSK design rule: chemically bound passivators, fiel... | 0.50 | 0.91 |
+| synthesis_perovskites_are_validated_pv_platform | The 22-package evidence base supports perovskite photovoltaics as a validated... | 0.50 | 0.93 |
+| synthesis_scalable_manufacturing_is_demonstrated | PVSK scale-up is demonstrated at the synthesis level: roll-to-roll cells and ... | 0.50 | 0.81 |
+| synthesis_stability_requires_integrated_control | Durable PVSK devices require integrated control of phase stability, dimension... | 0.50 | 0.97 |
+| synthesis_tandems_are_primary_high_efficiency_path | Tandem architectures are the primary high-efficiency path for PVSK: their adv... | 0.50 | 0.94 |
 
 ## Weak Points
 
