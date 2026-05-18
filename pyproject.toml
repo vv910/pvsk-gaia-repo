@@ -2,7 +2,9 @@
 name = "pvsk-gaia-repo"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pvsk-gaia",
+]
 
 [tool.uv.workspace]
 members = [
@@ -12,3 +14,6 @@ members = [
 exclude = [
     "sources",
 ]
+
+[tool.uv.sources]
+pvsk-gaia = { workspace = true }

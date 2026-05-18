@@ -37,18 +37,64 @@ source = { editable = "pvsk-gaia" }
 dependencies = [
     { name = "pvsk2009-gaia" },
     { name = "pvsk2012-1-gaia" },
+    { name = "pvsk2012-2-gaia" },
+    { name = "pvsk2013-gaia" },
+    { name = "pvsk2014-gaia" },
+    { name = "pvsk2015-gaia" },
+    { name = "pvsk2017-gaia" },
+    { name = "pvskc5ee03874j-gaia" },
+    { name = "pvsknature12509-gaia" },
+    { name = "pvsks41467-024-46016-1-gaia" },
+    { name = "pvsks41560-023-01254-3-gaia" },
+    { name = "pvsks41560-024-01667-8-gaia" },
+    { name = "pvsks41586-021-03406-5-gaia" },
+    { name = "pvsks41586-021-04372-8-gaia" },
+    { name = "pvsks41586-023-06278-z-gaia" },
+    { name = "pvsks41586-024-07997-7-gaia" },
+    { name = "pvsks41586-025-09333-z-gaia" },
+    { name = "pvsks41586-025-09773-7-gaia" },
+    { name = "pvskscience-aay7044-gaia" },
+    { name = "pvskscience-abm5784-gaia" },
+    { name = "pvskscience-abn5679-gaia" },
+    { name = "pvskscience-adk1633-gaia" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "pvsk2009-gaia", editable = "packages/pvsk2009-gaia" },
     { name = "pvsk2012-1-gaia", editable = "packages/pvsk2012.1-gaia" },
+    { name = "pvsk2012-2-gaia", editable = "packages/pvsk2012.2-gaia" },
+    { name = "pvsk2013-gaia", editable = "packages/pvsk2013-gaia" },
+    { name = "pvsk2014-gaia", editable = "packages/pvsk2014-gaia" },
+    { name = "pvsk2015-gaia", editable = "packages/pvsk2015-gaia" },
+    { name = "pvsk2017-gaia", editable = "packages/pvsk2017-gaia" },
+    { name = "pvskc5ee03874j-gaia", editable = "packages/pvskc5ee03874j-gaia" },
+    { name = "pvsknature12509-gaia", editable = "packages/pvsknature12509-gaia" },
+    { name = "pvsks41467-024-46016-1-gaia", editable = "packages/pvsks41467-024-46016-1-gaia" },
+    { name = "pvsks41560-023-01254-3-gaia", editable = "packages/pvsks41560-023-01254-3-gaia" },
+    { name = "pvsks41560-024-01667-8-gaia", editable = "packages/pvsks41560-024-01667-8-gaia" },
+    { name = "pvsks41586-021-03406-5-gaia", editable = "packages/pvsks41586-021-03406-5-gaia" },
+    { name = "pvsks41586-021-04372-8-gaia", editable = "packages/pvsks41586-021-04372-8-gaia" },
+    { name = "pvsks41586-023-06278-z-gaia", editable = "packages/pvsks41586-023-06278-z-gaia" },
+    { name = "pvsks41586-024-07997-7-gaia", editable = "packages/pvsks41586-024-07997-7-gaia" },
+    { name = "pvsks41586-025-09333-z-gaia", editable = "packages/pvsks41586-025-09333-z-gaia" },
+    { name = "pvsks41586-025-09773-7-gaia", editable = "packages/pvsks41586-025-09773-7-gaia" },
+    { name = "pvskscience-aay7044-gaia", editable = "packages/pvskscience.aay7044-gaia" },
+    { name = "pvskscience-abm5784-gaia", editable = "packages/pvskscience.abm5784-gaia" },
+    { name = "pvskscience-abn5679-gaia", editable = "packages/pvskscience.abn5679-gaia" },
+    { name = "pvskscience-adk1633-gaia", editable = "packages/pvskscience.adk1633-gaia" },
 ]
 
 [[package]]
 name = "pvsk-gaia-repo"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "pvsk-gaia" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pvsk-gaia", editable = "pvsk-gaia" }]
 
 [[package]]
 name = "pvsk2009-gaia"
