@@ -9,25 +9,39 @@ from gaia.lang import claim, support
 
 from ._imports import (
     pvsk_bifacial_6000h,
-    pvsk_bifacial_gain,
     pvsk_bifacial_nrel_front,
-    pvsk_bifacial_power_density,
-    pvsk_damp_heat_iec,
-    pvsk_homogeneous_2d_large_module,
-    pvsk_htl201_certified,
-    pvsk_r2r_best_cell,
-    pvsk_r2r_carbon_electrode,
-    pvsk_r2r_cells,
-    pvsk_r2r_cost_prediction,
-    pvsk_r2r_modules,
-    pvsk_r2r_production_cost_power,
-    pvsk_r2r_throughput,
 )
-from .s1_agreement import agreement_scalability_has_multiple_routes
+from .s1_agreement import (
+    agreement_scalability_has_multiple_routes,
+    area_normalized_performance,
+    certification_status_normalized,
+    encapsulated_module_stability_axis,
+    encapsulation_and_lifetime_requirements,
+    module_yield_and_reproducibility,
+    printable_contacts_reduce_capex_but_require_lifetime_validation,
+    stabilized_output_vs_scan_pce,
+    throughput_and_material_utilization,
+)
+from .s3_contradictions import (
+    bifacial_gain_depends_on_albedo_and_installation_context,
+    cost_projection_depends_on_yield_lifetime_and_throughput,
+    record_efficiency_vs_module_scaling_is_not_automatic,
+    stability_under_single_stressor_does_not_guarantee_field_stability,
+)
 from .s4_induction import (
+    deployment_value_requires_efficiency_stability_and_area_scaling,
     law_scalable_deposition_can_preserve_device_quality,
-    law_stability_needs_phase_and_interface_control,
-    law_tandems_raise_perovskite_efficiency_ceiling,
+    scalable_manufacturing_requires_uniformity_yield_and_encapsulation,
+    sustained_improvement_comes_from_reusable_design_axes,
+    tandem_deployment_still_depends_on_scalable_stability,
+)
+from .s5_synthesis import (
+    synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
+    synthesis_efficiency_progression_is_interface_driven,
+    synthesis_hysteresis_is_practically_suppressed,
+    synthesis_passivation_is_general_design_rule,
+    synthesis_stability_requires_integrated_control,
+    synthesis_tandems_are_primary_high_efficiency_path,
 )
 
 
@@ -40,19 +54,34 @@ synthesis_scalable_manufacturing_is_demonstrated = claim(
 
 strat_synthesis_scale_from_law_and_agreement = support(
     [
-        law_scalable_deposition_can_preserve_device_quality,
+        scalable_manufacturing_requires_uniformity_yield_and_encapsulation,
         agreement_scalability_has_multiple_routes,
+        area_normalized_performance,
+        certification_status_normalized,
     ],
     synthesis_scalable_manufacturing_is_demonstrated,
-    reason="A scalable-deposition law plus cross-route agreement support manufacturing scale-up.",
-    prior=0.78,
+    reason=(
+        "Manufacturing scale-up is routed through uniformity, yield, "
+        "encapsulation, area-normalized performance, and certification evidence."
+    ),
+    prior=0.76,
 )
 
 strat_synthesis_scale_from_module_examples = support(
-    [pvsk_r2r_cells, pvsk_r2r_modules, pvsk_homogeneous_2d_large_module],
+    [
+        law_scalable_deposition_can_preserve_device_quality,
+        module_yield_and_reproducibility,
+        stabilized_output_vs_scan_pce,
+        encapsulation_and_lifetime_requirements,
+        record_efficiency_vs_module_scaling_is_not_automatic,
+    ],
     synthesis_scalable_manufacturing_is_demonstrated,
-    reason="Roll-to-roll cells/modules and homogeneous 2D large modules provide concrete examples.",
-    prior=0.70,
+    reason=(
+        "Concrete scale examples support manufacturability only after normalized "
+        "yield, stabilized-output, lifetime, and record-to-module limitations are "
+        "kept explicit."
+    ),
+    prior=0.64,
 )
 
 
@@ -64,17 +93,30 @@ synthesis_low_cost_path_depends_on_printable_contacts = claim(
 )
 
 strat_synthesis_low_cost_from_printable_contact = support(
-    [pvsk_r2r_carbon_electrode, pvsk_r2r_best_cell],
+    [
+        printable_contacts_reduce_capex_but_require_lifetime_validation,
+        throughput_and_material_utilization,
+    ],
     synthesis_low_cost_path_depends_on_printable_contacts,
-    reason="Carbon-electrode replacement and retained device quality support printable low-cost contacts.",
-    prior=0.68,
+    reason=(
+        "Printable contacts support a low-cost path as a capex and material-use "
+        "mechanism, while lifetime validation remains part of the premise."
+    ),
+    prior=0.64,
 )
 
 strat_synthesis_low_cost_from_cost_and_throughput = support(
-    [pvsk_r2r_cost_prediction, pvsk_r2r_production_cost_power, pvsk_r2r_throughput],
+    [
+        cost_projection_depends_on_yield_lifetime_and_throughput,
+        module_yield_and_reproducibility,
+        encapsulation_and_lifetime_requirements,
+    ],
     synthesis_low_cost_path_depends_on_printable_contacts,
-    reason="Cost modeling and throughput support the economic plausibility, with model uncertainty retained.",
-    prior=0.56,
+    reason=(
+        "Cost modeling remains a cautious inference because yield, lifetime, and "
+        "throughput are explicit conditions rather than established deployment facts."
+    ),
+    prior=0.54,
 )
 
 
@@ -86,17 +128,84 @@ synthesis_bifacial_modules_add_system_value = claim(
 )
 
 strat_synthesis_bifacial_from_gain_and_density = support(
-    [pvsk_bifacial_gain, pvsk_bifacial_power_density],
+    [
+        deployment_value_requires_efficiency_stability_and_area_scaling,
+        bifacial_gain_depends_on_albedo_and_installation_context,
+        area_normalized_performance,
+    ],
     synthesis_bifacial_modules_add_system_value,
-    reason="Bifacial gain and power-density evidence support system-level value.",
+    reason=(
+        "Bifacial value is routed through deployment value and installation-context "
+        "conditions instead of treating rear-side gain as universally portable."
+    ),
     prior=0.72,
 )
 
 strat_synthesis_bifacial_from_certified_stability = support(
-    [pvsk_bifacial_nrel_front, pvsk_bifacial_6000h],
+    [
+        pvsk_bifacial_nrel_front,
+        pvsk_bifacial_6000h,
+        encapsulated_module_stability_axis,
+    ],
     synthesis_bifacial_modules_add_system_value,
     reason="Certification and long operation support practical module relevance.",
     prior=0.68,
+)
+
+
+synthesis_perovskites_have_sustained_improvement_pathways = claim(
+    "PVSK performance has sustained improvement pathways because efficiency, "
+    "stability, hysteresis suppression, module value, and manufacturability can "
+    "be repeatedly improved through reusable design axes: composition control, "
+    "interface passivation, bandgap-contact engineering, dimensional/interface "
+    "design, and scalable processing. This is a technical-iteration claim, not "
+    "an environmental lifecycle-sustainability claim.",
+    title="Perovskites have sustained technical improvement pathways",
+)
+
+strat_synthesis_sustained_pathways_from_efficiency_axes = support(
+    [
+        sustained_improvement_comes_from_reusable_design_axes,
+        synthesis_efficiency_progression_is_interface_driven,
+        synthesis_passivation_is_general_design_rule,
+        synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
+    ],
+    synthesis_perovskites_have_sustained_improvement_pathways,
+    reason=(
+        "Efficiency, passivation, and bandgap-contact conclusions share reusable "
+        "technical design axes rather than isolated record claims."
+    ),
+    prior=0.72,
+)
+
+strat_synthesis_sustained_pathways_from_stability_axes = support(
+    [
+        sustained_improvement_comes_from_reusable_design_axes,
+        synthesis_stability_requires_integrated_control,
+        synthesis_hysteresis_is_practically_suppressed,
+    ],
+    synthesis_perovskites_have_sustained_improvement_pathways,
+    reason=(
+        "Stability and hysteresis suppression support sustained improvement when "
+        "ion migration, passivation, and dimensional-interface mechanisms are "
+        "treated as reusable controls."
+    ),
+    prior=0.66,
+)
+
+strat_synthesis_sustained_pathways_from_manufacturing_axes = support(
+    [
+        sustained_improvement_comes_from_reusable_design_axes,
+        synthesis_scalable_manufacturing_is_demonstrated,
+        scalable_manufacturing_requires_uniformity_yield_and_encapsulation,
+    ],
+    synthesis_perovskites_have_sustained_improvement_pathways,
+    reason=(
+        "The scalable-manufacturing connection keeps sustained improvement tied "
+        "to process iteration while preserving uniformity, yield, and lifetime "
+        "conditions."
+    ),
+    prior=0.62,
 )
 
 
@@ -109,17 +218,45 @@ synthesis_industrialization_requires_three_way_alignment = claim(
 
 strat_synthesis_industrialization_three_axes = support(
     [
-        law_tandems_raise_perovskite_efficiency_ceiling,
-        pvsk_htl201_certified,
-        law_stability_needs_phase_and_interface_control,
-        pvsk_damp_heat_iec,
-        law_scalable_deposition_can_preserve_device_quality,
-        pvsk_r2r_cells,
+        synthesis_efficiency_progression_is_interface_driven,
+        synthesis_stability_requires_integrated_control,
+        synthesis_scalable_manufacturing_is_demonstrated,
     ],
     synthesis_industrialization_requires_three_way_alignment,
     reason=(
-        "Industrialization requires all three axes together: certified high-efficiency "
-        "tandems, stress-tested stability, and scalable roll-to-roll-compatible manufacturing."
+        "The core industrialization claim requires efficiency, stability, and "
+        "scale axes to hold together rather than as isolated successes."
     ),
-    prior=0.78,
+    prior=0.72,
+)
+
+strat_synthesis_industrialization_from_tandem_cost_deployment_axes = support(
+    [
+        synthesis_tandems_are_primary_high_efficiency_path,
+        synthesis_low_cost_path_depends_on_printable_contacts,
+        deployment_value_requires_efficiency_stability_and_area_scaling,
+    ],
+    synthesis_industrialization_requires_three_way_alignment,
+    reason=(
+        "Tandem upside and printable-contact cost plausibility become industrial "
+        "only when deployment value also survives area and stability constraints."
+    ),
+    prior=0.66,
+)
+
+strat_synthesis_industrialization_from_limitation_nodes = support(
+    [
+        tandem_deployment_still_depends_on_scalable_stability,
+        record_efficiency_vs_module_scaling_is_not_automatic,
+        stability_under_single_stressor_does_not_guarantee_field_stability,
+        cost_projection_depends_on_yield_lifetime_and_throughput,
+        synthesis_perovskites_have_sustained_improvement_pathways,
+    ],
+    synthesis_industrialization_requires_three_way_alignment,
+    reason=(
+        "The industrialization conclusion stays cautious because the main "
+        "limitation nodes remain active: tandem deployment, record-to-module "
+        "transfer, field stability, and cost-model conditions."
+    ),
+    prior=0.58,
 )

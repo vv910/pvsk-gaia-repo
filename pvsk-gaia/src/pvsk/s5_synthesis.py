@@ -9,12 +9,6 @@ non-overlapping warrants so BP can raise belief without saturating it.
 from gaia.lang import claim, support
 
 from . import s2_support as _directed_support_edges
-from ._imports import (
-    pvsk2009_bromide_voc,
-    pvsk2009_iodide_ipce,
-    pvsk2015_bandgap_tradeoff,
-    pvsk_htl201_certified,
-)
 from .s1_agreement import (
     agreement_dimensional_interfaces_improve_stability,
     agreement_hysteresis_can_be_suppressed_by_architecture,
@@ -23,21 +17,52 @@ from .s1_agreement import (
     agreement_phase_and_composition_control_matter,
     agreement_solid_state_architectures_raise_efficiency,
     agreement_tandems_raise_efficiency_ceiling,
+    encapsulated_module_stability_axis,
+    humidity_thermal_stress_axis,
+    interface_stability_axis,
+    ion_migration_axis,
+    operational_stability_axis,
+    phase_stability_axis,
 )
 from .s3_contradictions import (
+    bifacial_gain_depends_on_albedo_and_installation_context,
+    effective_passivation_requires_defect_reduction_without_transport_penalty,
+    hysteresis_suppression_does_not_identify_single_microscopic_cause,
+    interface_recombination_amplifies_hysteresis,
+    ion_migration_contributes_to_hysteresis,
+    passivation_vs_transport_is_conditional,
+    planar_vs_mesoporous_is_process_conditioned,
+    record_efficiency_vs_module_scaling_is_not_automatic,
+    solution_vs_vapor_deposition_is_scale_quality_tradeoff,
+    stability_under_single_stressor_does_not_guarantee_field_stability,
     tension_conventional_vs_dipolar_buried_passivation,
     tension_hysteresis_has_multiple_sources,
     tension_liquid_vs_solid_stability,
     tension_passivation_mechanisms_are_complementary,
     tension_passivation_transport_tradeoff_is_conditional,
     tension_stability_routes_are_condition_specific,
+    cost_projection_depends_on_yield_lifetime_and_throughput,
+    dimensional_interface_engineering_suppresses_hysteresis_in_practice,
 )
 from .s4_induction import (
+    bandgap_contact_coupling_controls_voc_jsc_ff_tradeoff,
+    deployment_value_requires_efficiency_stability_and_area_scaling,
+    dimensional_interfaces_combine_defect_passivation_and_barrier_protection,
+    interface_control_improves_charge_selectivity,
+    interface_control_reduces_recombination,
+    ion_migration_links_hysteresis_and_stability,
     law_band_alignment_controls_charge_selectivity,
     law_interface_passivation_reduces_nonradiative_loss,
     law_perovskite_absorbers_scale_across_architectures,
     law_stability_needs_phase_and_interface_control,
     law_tandems_raise_perovskite_efficiency_ceiling,
+    low_loss_recombination_or_contact_layers_are_required,
+    passivation_benefit_is_conditioned_on_preserved_charge_extraction,
+    passivation_improves_tandem_voltage_retention,
+    passivation_reduces_nonradiative_loss,
+    tandem_deployment_still_depends_on_scalable_stability,
+    tandem_performance_requires_bandgap_matching_and_low_loss_contacts,
+    tandem_record_efficiency_depends_on_interface_contact_engineering,
 )
 
 
@@ -52,20 +77,28 @@ strat_synthesis_platform_from_absorber_and_law = support(
     [
         agreement_perovskite_absorber_validated,
         law_perovskite_absorbers_scale_across_architectures,
+        deployment_value_requires_efficiency_stability_and_area_scaling,
     ],
     synthesis_perovskites_are_validated_pv_platform,
     reason=(
         "The platform conclusion requires both cross-paper absorber agreement and "
-        "the induction law that the absorber works across architectures."
+        "the induction law that the absorber works across architectures, with "
+        "deployment value routed through efficiency, stability, and area scaling."
     ),
-    prior=0.82,
+    prior=0.80,
 )
 
 strat_synthesis_platform_from_architecture = support(
-    [agreement_solid_state_architectures_raise_efficiency],
+    [
+        agreement_solid_state_architectures_raise_efficiency,
+        dimensional_interfaces_combine_defect_passivation_and_barrier_protection,
+    ],
     synthesis_perovskites_are_validated_pv_platform,
-    reason="Solid-state architecture progress independently supports platform validity.",
-    prior=0.68,
+    reason=(
+        "Solid-state architecture progress and reusable dimensional-interface "
+        "control independently support platform validity."
+    ),
+    prior=0.66,
 )
 
 
@@ -78,19 +111,26 @@ synthesis_efficiency_progression_is_interface_driven = claim(
 
 strat_synthesis_efficiency_from_composition_and_passivation = support(
     [
-        agreement_phase_and_composition_control_matter,
-        agreement_passivation_reduces_recombination,
+        interface_control_reduces_recombination,
+        interface_control_improves_charge_selectivity,
+        bandgap_contact_coupling_controls_voc_jsc_ff_tradeoff,
     ],
     synthesis_efficiency_progression_is_interface_driven,
-    reason="Composition control and passivation convergence jointly support the efficiency-growth mechanism.",
-    prior=0.78,
+    reason=(
+        "Efficiency growth is routed through shared interface and contact "
+        "mechanisms rather than through a list of champion paper claims."
+    ),
+    prior=0.80,
 )
 
 strat_synthesis_efficiency_from_record_contact = support(
-    [pvsk_htl201_certified],
+    [tandem_record_efficiency_depends_on_interface_contact_engineering],
     synthesis_efficiency_progression_is_interface_driven,
-    reason="The HTL201 record supplies a later contact-engineering check on the synthesis.",
-    prior=0.68,
+    reason=(
+        "The tandem-record mechanism supplies a later contact-engineering check on "
+        "the interface-driven efficiency synthesis."
+    ),
+    prior=0.66,
 )
 
 
@@ -103,21 +143,28 @@ synthesis_passivation_is_general_design_rule = claim(
 
 strat_synthesis_passivation_from_agreement_and_law = support(
     [
-        agreement_passivation_reduces_recombination,
-        law_interface_passivation_reduces_nonradiative_loss,
+        passivation_reduces_nonradiative_loss,
+        passivation_benefit_is_conditioned_on_preserved_charge_extraction,
+        effective_passivation_requires_defect_reduction_without_transport_penalty,
     ],
     synthesis_passivation_is_general_design_rule,
-    reason="Agreement and induction jointly support passivation as a general design rule.",
+    reason=(
+        "The design rule is supported by nonradiative-loss reduction only when "
+        "charge extraction is preserved."
+    ),
     prior=0.82,
 )
 
 strat_synthesis_passivation_from_tension_resolution = support(
     [
         tension_passivation_mechanisms_are_complementary,
-        tension_passivation_transport_tradeoff_is_conditional,
+        passivation_vs_transport_is_conditional,
     ],
     synthesis_passivation_is_general_design_rule,
-    reason="Mechanistic complementarity and conditional transport penalties define the rule's scope.",
+    reason=(
+        "Mechanistic complementarity and conditional transport penalties define "
+        "the passivation rule's scope."
+    ),
     prior=0.62,
 )
 
@@ -131,18 +178,33 @@ synthesis_stability_requires_integrated_control = claim(
 
 strat_synthesis_stability_from_law_and_agreement = support(
     [
-        law_stability_needs_phase_and_interface_control,
-        agreement_dimensional_interfaces_improve_stability,
+        phase_stability_axis,
+        interface_stability_axis,
+        ion_migration_axis,
+        humidity_thermal_stress_axis,
+        operational_stability_axis,
+        encapsulated_module_stability_axis,
     ],
     synthesis_stability_requires_integrated_control,
-    reason="The stability law and dimensional-interface agreement jointly support integrated control.",
-    prior=0.84,
+    reason=(
+        "Integrated stability is decomposed into phase, interface, ion-migration, "
+        "humidity/thermal, operational, and encapsulated-module evidence axes."
+    ),
+    prior=0.78,
 )
 
 strat_synthesis_stability_from_conditional_routes = support(
-    [tension_stability_routes_are_condition_specific],
+    [
+        law_stability_needs_phase_and_interface_control,
+        ion_migration_links_hysteresis_and_stability,
+        dimensional_interfaces_combine_defect_passivation_and_barrier_protection,
+        stability_under_single_stressor_does_not_guarantee_field_stability,
+    ],
     synthesis_stability_requires_integrated_control,
-    reason="Condition-specific stability routes show why no single mechanism is sufficient.",
+    reason=(
+        "The stability law is narrowed by ion-migration, dimensional-interface, and "
+        "single-stressor limitation nodes."
+    ),
     prior=0.72,
 )
 
@@ -155,16 +217,29 @@ synthesis_hysteresis_is_practically_suppressed = claim(
 )
 
 strat_synthesis_hysteresis_from_architecture = support(
-    [agreement_hysteresis_can_be_suppressed_by_architecture],
+    [
+        ion_migration_contributes_to_hysteresis,
+        interface_recombination_amplifies_hysteresis,
+        dimensional_interface_engineering_suppresses_hysteresis_in_practice,
+    ],
     synthesis_hysteresis_is_practically_suppressed,
-    reason="Architecture-level agreement supports practical suppression.",
-    prior=0.76,
+    reason=(
+        "Practical hysteresis suppression is now tied to ion migration, interface "
+        "recombination, and dimensional-interface control."
+    ),
+    prior=0.78,
 )
 
 strat_synthesis_hysteresis_from_multisource_tension = support(
-    [tension_hysteresis_has_multiple_sources],
+    [
+        hysteresis_suppression_does_not_identify_single_microscopic_cause,
+        agreement_hysteresis_can_be_suppressed_by_architecture,
+    ],
     synthesis_hysteresis_is_practically_suppressed,
-    reason="A multi-source mechanism explains why practical suppression need not solve one universal microscopic cause.",
+    reason=(
+        "A multi-source mechanism explains why practical suppression need not "
+        "solve one universal microscopic cause."
+    ),
     prior=0.62,
 )
 
@@ -177,17 +252,29 @@ synthesis_bandgap_and_contact_engineering_define_tradeoff_space = claim(
 )
 
 strat_synthesis_bandgap_from_material_tradeoff = support(
-    [pvsk2009_bromide_voc, pvsk2009_iodide_ipce, pvsk2015_bandgap_tradeoff],
+    [
+        bandgap_contact_coupling_controls_voc_jsc_ff_tradeoff,
+        passivation_benefit_is_conditioned_on_preserved_charge_extraction,
+    ],
     synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
-    reason="Early halide contrast and later composition tuning define the material side of the trade-off space.",
-    prior=0.72,
+    reason=(
+        "The trade-off conclusion is routed through the shared bandgap-contact "
+        "mechanism and the passivation/transport condition."
+    ),
+    prior=0.78,
 )
 
 strat_synthesis_bandgap_from_contact_law = support(
-    [law_band_alignment_controls_charge_selectivity],
+    [
+        law_band_alignment_controls_charge_selectivity,
+        low_loss_recombination_or_contact_layers_are_required,
+    ],
     synthesis_bandgap_and_contact_engineering_define_tradeoff_space,
-    reason="The band-alignment law supplies the contact-selectivity side of the trade-off space.",
-    prior=0.74,
+    reason=(
+        "The band-alignment law supplies the contact-selectivity side of the "
+        "trade-off space, while tandem low-loss contacts expose the same bottleneck."
+    ),
+    prior=0.72,
 )
 
 
@@ -200,19 +287,32 @@ synthesis_tandems_are_primary_high_efficiency_path = claim(
 
 strat_synthesis_tandem_from_agreement_and_law = support(
     [
-        agreement_tandems_raise_efficiency_ceiling,
-        law_tandems_raise_perovskite_efficiency_ceiling,
+        tandem_performance_requires_bandgap_matching_and_low_loss_contacts,
+        tandem_record_efficiency_depends_on_interface_contact_engineering,
+        passivation_improves_tandem_voltage_retention,
     ],
     synthesis_tandems_are_primary_high_efficiency_path,
-    reason="Tandem agreement and tandem induction jointly support the high-efficiency path.",
+    reason=(
+        "The tandem conclusion is decomposed into bandgap matching, low-loss "
+        "contacts, passivation-enabled voltage retention, and record-efficiency "
+        "interface/contact engineering."
+    ),
     prior=0.84,
 )
 
 strat_synthesis_tandem_from_buried_interface_scope = support(
-    [tension_conventional_vs_dipolar_buried_passivation],
+    [
+        agreement_tandems_raise_efficiency_ceiling,
+        law_tandems_raise_perovskite_efficiency_ceiling,
+        tension_conventional_vs_dipolar_buried_passivation,
+        tandem_deployment_still_depends_on_scalable_stability,
+    ],
     synthesis_tandems_are_primary_high_efficiency_path,
-    reason="Buried-interface passivation tension explains why tandem records depend on contact design.",
-    prior=0.58,
+    reason=(
+        "Tandem records remain a high-efficiency path, but buried-interface and "
+        "scalable-stability conditions define the path's deployment scope."
+    ),
+    prior=0.60,
 )
 
 
@@ -225,21 +325,32 @@ synthesis_mechanistic_tensions_are_conditionally_resolved = claim(
 
 strat_synthesis_tensions_from_architecture_and_stability = support(
     [
-        tension_liquid_vs_solid_stability,
-        tension_stability_routes_are_condition_specific,
+        planar_vs_mesoporous_is_process_conditioned,
+        solution_vs_vapor_deposition_is_scale_quality_tradeoff,
+        record_efficiency_vs_module_scaling_is_not_automatic,
+        stability_under_single_stressor_does_not_guarantee_field_stability,
+        cost_projection_depends_on_yield_lifetime_and_throughput,
     ],
     synthesis_mechanistic_tensions_are_conditionally_resolved,
-    reason="Architecture-dependent stability and condition-specific stability routes support conditional resolution.",
-    prior=0.76,
+    reason=(
+        "Process, scale, stability, and cost tensions are resolved by explicit "
+        "scope conditions rather than by treating one paper as refuting another."
+    ),
+    prior=0.72,
 )
 
 strat_synthesis_tensions_from_interface_mechanisms = support(
     [
+        tension_liquid_vs_solid_stability,
         tension_hysteresis_has_multiple_sources,
         tension_passivation_mechanisms_are_complementary,
-        tension_passivation_transport_tradeoff_is_conditional,
+        passivation_vs_transport_is_conditional,
+        bifacial_gain_depends_on_albedo_and_installation_context,
     ],
     synthesis_mechanistic_tensions_are_conditionally_resolved,
-    reason="Interface-related mechanism tensions are resolved by scope conditions rather than exclusive mechanisms.",
-    prior=0.68,
+    reason=(
+        "Interface-related and deployment-context tensions are conditionally "
+        "resolved by architecture, passivation, stress, and installation context."
+    ),
+    prior=0.66,
 )

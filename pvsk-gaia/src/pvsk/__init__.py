@@ -21,6 +21,7 @@ from .s6_cost_analysis import (
     synthesis_bifacial_modules_add_system_value,
     synthesis_industrialization_requires_three_way_alignment,
     synthesis_low_cost_path_depends_on_printable_contacts,
+    synthesis_perovskites_have_sustained_improvement_pathways,
     synthesis_scalable_manufacturing_is_demonstrated,
 )
 
@@ -37,5 +38,6 @@ __all__ = [
     "synthesis_scalable_manufacturing_is_demonstrated",
     "synthesis_low_cost_path_depends_on_printable_contacts",
     "synthesis_bifacial_modules_add_system_value",
+    "synthesis_perovskites_have_sustained_improvement_pathways",
     "synthesis_industrialization_requires_three_way_alignment",
 ]
