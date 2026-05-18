@@ -6,7 +6,7 @@
 [![Science](https://img.shields.io/badge/Journal-Science%20366%2C%20749-red)](https://www.science.org/doi/10.1126/science.aay7044)
 
 > [!NOTE]
-> This README is an AI-generated analysis based on a [Gaia](https://github.com/SiliconEinstein/Gaia) reasoning graph formalization of the original work. Belief values reflect the graph's probabilistic assessment of each claim's support, not the original authors' confidence. See [ANALYSIS.md](ANALYSIS.md) for detailed verification results.
+> This README is an AI-generated analysis based on a [Gaia](https://github.com/SiliconEinstein/Gaia) reasoning graph formalization of the original work. Belief values reflect the graph's probabilistic assessment of each claim's support, not the original authors' confidence. For per-module reasoning graphs with full claim details, see [detailed-reasoning.md](docs/detailed-reasoning.md).
 
 ## Overview
 
