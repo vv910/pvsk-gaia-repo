@@ -70,6 +70,11 @@ graph LR
     tensions --> industrial
 ```
 
+> [!NOTE]
+> **[Per-module reasoning graphs with full claim details →](docs/detailed-reasoning.md)**
+>
+> 6 Mermaid diagrams (one per section) with every claim, strategy, and belief value.
+
 The complete generated graph and detailed node pages are in [docs/detailed-reasoning.md](docs/detailed-reasoning.md) and `.github-output/`.
 
 ## Core Claim Mapping
